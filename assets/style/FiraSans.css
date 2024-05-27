@@ -1,0 +1,63 @@
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 900;
+	font-display: swap;
+	src: local('FiraSans Black'), url(../font/FiraSans-Black.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 800;
+	font-display: swap;
+	src: local('FiraSans ExtraBold'), url(../font/FiraSans-ExtraBold.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 700;
+	font-display: swap;
+	src: local('FiraSans Bold'), url(../font/FiraSans-Bold.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 600;
+	font-display: swap;
+	src: local('FiraSans SemiBold'), url(../font/FiraSans-SemiBold.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 500;
+	font-display: swap;
+	src: local('FiraSans Medium'), url(../font/FiraSans-Medium.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 400;
+	font-display: swap;
+	src: local('FiraSans Regular'), url(../font/FiraSans-Regular.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 300;
+	font-display: swap;
+	src: local('FiraSans Light'), url(../font/FiraSans-Light.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 200;
+	font-display: swap;
+	src: local('FiraSans ExtraLight'), url(../font/FiraSans-ExtraLight.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	font-weight: 100;
+	font-display: swap;
+	src: local('FiraSans Thin'), url(../font/FiraSans-Thin.ttf) format('ttf');
+}
