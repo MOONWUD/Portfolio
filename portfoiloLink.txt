@@ -1,0 +1,19 @@
+래퍼런스 
+https://duck.school/en
+
+https://dontboardme.com/
+
+https://dontboardme.com/
+
+
+코드펜
+
+- 마우스에 따라 흩어지는 이벤트
+https://codepen.io/gayane-gasparyan/pen/LYJEoZM
+
+- 눈동자가 마우스 따라가는 이벤트
+https://codepen.io/benceagocs/pen/LNXOmb
+https://codepen.io/farshad/pen/WBExXm
+
+- 클릭시 새로운 요소가 생겨나는 이벤트
+https://codepen.io/jscottsmith/pen/VjPaLO
