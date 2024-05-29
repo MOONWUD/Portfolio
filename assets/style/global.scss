@@ -1,0 +1,114 @@
+/*===== color =====*/
+$mainColor: #C63D2F;
+$subColor: #FFDDB4;
+$subLightColor: #FFEDD8;
+$subDarkColor: #481E14;
+$mainBgColor: #F5F4EC;
+$subBgColor: #FFFDF3;
+$textColor: #333;
+$subTextColor: #666;
+
+/*===== font =====*/
+@mixin mainTitle {
+  font-family: 'LuckiestGuy', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 180px;
+  font-weight: 400;
+  color: $mainColor;
+}
+
+@mixin sectionTitle ($color: $textColor) {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  color: $color;
+}
+
+@mixin aboutText ($color: $textColor) {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $color;
+}
+
+@mixin sectionSubTitle ($color: $textColor) {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: $color;
+}
+
+@mixin sectionText ($color: $textColor) {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $color;
+}
+
+/*===== shadow =====*/
+
+/*===== border-radius =====*/
+$borderRadius: 30px;
+
+
+body {
+  background-color: $mainBgColor;
+}
+/*===== header =====*/
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .nav {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3vw;
+    @include aboutText();
+
+    .logo {
+      a {
+        width: 120px;
+
+        img {
+          width: 100%;
+          &:hover {
+            transform: rotate(10deg);
+          }
+        }
+      }
+    }
+    .navButton-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      li:hover {
+        color: $mainColor;
+      }
+    }
+    .githubLink {
+      a {
+        width: 120px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        background-color: $mainColor;
+        border-radius: $borderRadius;
+        border: 1px solid $mainColor;
+        color: #fff;
+        &:hover {
+          background-color: transparent;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+/*===== footer =====*/
+// .footer {}
