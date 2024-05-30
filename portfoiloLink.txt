@@ -24,3 +24,8 @@ https://codepen.io/cobra_winfrey/pen/OJRjBoj
 
 - svg 이벤트
 https://codepen.io/ghepting/pen/vYLqgr
+
+gsap
+https://gsap.com/docs/v3/Plugins/DrawSVGPlugin
+ScrollTrigger, SplitText
+
