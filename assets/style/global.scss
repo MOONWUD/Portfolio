@@ -111,4 +111,118 @@ body {
 }
 
 /*===== footer =====*/
-// .footer {}
+.footer {
+  .eyes {
+    text-indent: -9999px;
+    display: flex;
+    justify-content: center;
+    margin: 0 300px 30px 0;
+    .eye {
+      width: 132px;
+      height: 176px;
+      border-radius: 50%;
+      background-color: #fff;
+      .pupil {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $subDarkColor;
+        display: block;
+      }
+    }
+  }
+  .sectionTitle {
+    width: 100%;
+    text-align: center;
+    @include sectionTitle();
+    position: relative;
+    &::after {
+      content: "";
+      width: 35vw;
+      height: 1px;
+      background-color: $mainColor;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+    &::before {
+      content: "";
+      width: 35vw;
+      height: 1px;
+      background-color: $mainColor;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
+  .contactButton {
+    margin: 150px 5vw 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    @include sectionSubTitle(#fff);
+    .contactLink-left {
+      margin-left: 10vw;
+      li {
+        &:first-child {
+          margin-bottom: 50px;
+        }
+        a {
+          display: grid;
+          place-items: center;
+          width: 300px;
+          height: 50px;
+          background-color: $mainColor;
+          border-radius: $borderRadius;
+        }
+      }
+    }
+    .contactLink-right {
+      text-wrap: nowrap;
+      position: relative;
+      color: $textColor;
+      .svg {
+        position: absolute;
+        left: 240px;
+        top: 20px;
+        width: 200px;
+        transform: rotate(15deg);
+        img {
+          width: 100%;
+        }
+      }
+      .click {
+        position: absolute;
+        left: 450px;
+        top: -50px;
+        a {
+          position: relative;
+          .apple {
+            width: 300px;
+            img {
+              width: 100%;
+            }
+          }
+          .larva {
+            z-index: -9;
+            position: absolute;
+            bottom: 40px;
+            right: -50px;
+            width: 200px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .copyRights {
+    margin-top: 200px;
+    @include sectionText($subTextColor);
+    font-size: 16px;
+  }
+}

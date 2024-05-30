@@ -17,6 +17,10 @@ https://codepen.io/farshad/pen/WBExXm
 
 - 클릭시 새로운 요소가 생겨나는 이벤트
 https://codepen.io/jscottsmith/pen/VjPaLO
+https://blog.naver.com/curlicu/40139919243
 
 - title 글자 이벤트
 https://codepen.io/cobra_winfrey/pen/OJRjBoj
+
+- svg 이벤트
+https://codepen.io/ghepting/pen/vYLqgr

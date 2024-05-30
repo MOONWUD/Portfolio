@@ -59,4 +59,123 @@ body {
   color: #C63D2F;
 }
 
-/*===== footer =====*//*# sourceMappingURL=global.css.map */
+/*===== footer =====*/
+.footer .eyes {
+  text-indent: -9999px;
+  display: flex;
+  justify-content: center;
+  margin: 0 300px 30px 0;
+}
+.footer .eyes .eye {
+  width: 132px;
+  height: 176px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.footer .eyes .eye .pupil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #481E14;
+  display: block;
+}
+.footer .sectionTitle {
+  width: 100%;
+  text-align: center;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  color: #333;
+  position: relative;
+}
+.footer .sectionTitle::after {
+  content: "";
+  width: 35vw;
+  height: 1px;
+  background-color: #C63D2F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.footer .sectionTitle::before {
+  content: "";
+  width: 35vw;
+  height: 1px;
+  background-color: #C63D2F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.footer .contactButton {
+  margin: 150px 5vw 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #fff;
+}
+.footer .contactButton .contactLink-left {
+  margin-left: 10vw;
+}
+.footer .contactButton .contactLink-left li:first-child {
+  margin-bottom: 50px;
+}
+.footer .contactButton .contactLink-left li a {
+  display: grid;
+  place-items: center;
+  width: 300px;
+  height: 50px;
+  background-color: #C63D2F;
+  border-radius: 30px;
+}
+.footer .contactButton .contactLink-right {
+  text-wrap: nowrap;
+  position: relative;
+  color: #333;
+}
+.footer .contactButton .contactLink-right .svg {
+  position: absolute;
+  left: 240px;
+  top: 20px;
+  width: 200px;
+  transform: rotate(15deg);
+}
+.footer .contactButton .contactLink-right .svg img {
+  width: 100%;
+}
+.footer .contactButton .contactLink-right .click {
+  position: absolute;
+  left: 450px;
+  top: -50px;
+}
+.footer .contactButton .contactLink-right .click a {
+  position: relative;
+}
+.footer .contactButton .contactLink-right .click a .apple {
+  width: 300px;
+}
+.footer .contactButton .contactLink-right .click a .apple img {
+  width: 100%;
+}
+.footer .contactButton .contactLink-right .click a .larva {
+  z-index: -9;
+  position: absolute;
+  bottom: 40px;
+  right: -50px;
+  width: 200px;
+}
+.footer .contactButton .contactLink-right .click a .larva img {
+  width: 100%;
+}
+.footer .copyRights {
+  margin-top: 200px;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+  font-size: 16px;
+}/*# sourceMappingURL=global.css.map */
