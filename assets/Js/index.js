@@ -1,7 +1,6 @@
-/*===== main =====*/
+/*===== main text =====*/
 
 /*===== appleRotation =====*/
-
 gsap.to(".appleRotation img", {
   scrollTrigger: {
     trigger: '.appleRotation',//객체기준범위
