@@ -15,7 +15,7 @@ stagger: 0.05
 
 
 /*===== appleRotation =====*/
-/*
+
 gsap.to(".appleRotation img", {
   scrollTrigger: {
     trigger: '.appleRotation',//객체기준범위
@@ -29,4 +29,4 @@ gsap.to(".appleRotation img", {
   rotation: 360,
   scale: 3.5
 });
-*/
+
