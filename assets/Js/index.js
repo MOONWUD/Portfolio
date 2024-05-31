@@ -1,4 +1,5 @@
 /*===== main =====*/
+/*
 var split = new SplitText(".mainTitle", {
   type:"chars", 
 }), 
@@ -11,7 +12,7 @@ y:100,
 ease:"elastic", 
 stagger: 0.05
 });
-
+*/
 
 
 /*===== appleRotation =====*/
