@@ -1,5 +1,5 @@
 /*===== main =====*/
-
+/*
 var split = new SplitText(".mainTitle", {
   type:"chars", 
 }), 
@@ -12,7 +12,7 @@ y:100,
 ease:"elastic", 
 stagger: 0.05
 });
-
+8?
 
 /*===== appleRotation =====*/
 
@@ -22,7 +22,7 @@ gsap.to(".appleRotation img", {
     start: "5% 10%",//시작 지점
     end: "150% 100%",//끝 지점
     scrub: 1,//부드러운 스크러빙
-   //  markers: true, 개발가이드선
+    markers: true, //  개발가이드선
   },
   // x: 300,
   y: '180vh',

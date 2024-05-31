@@ -89,28 +89,92 @@ main .appleEating .apple-wrapper h3 {
   color: #333;
   font-weight: 400;
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: 0.3;
+  text-wrap: nowrap;
 }
 main .appleEating .apple-wrapper .svg {
   width: 120px;
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: 0.3;
 }
 main .appleEating .apple-wrapper .apple {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 420px;
+  transition: 0.3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 main .appleEating .apple-wrapper .larva {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   height: 100px;
+  transition: 0.3;
+}
+main .appleEating .apple1 h3 {
+  top: 30%;
+  left: 73%;
+}
+main .appleEating .apple1 .svg {
+  top: 30%;
+  left: 64%;
+}
+main .appleEating .apple1 .larva {
+  top: 20%;
+  left: 20%;
+  transform: rotate(5deg);
+}
+main .appleEating .apple2 h3 {
+  top: 40%;
+  left: 20%;
+}
+main .appleEating .apple2 .svg {
+  top: 45%;
+  left: 30%;
+}
+main .appleEating .apple2 .larva {
+  top: 40%;
+  left: 45%;
+  transform: rotate(10deg);
+}
+main .appleEating .apple3 h3 {
+  top: 55%;
+  left: 77%;
+}
+main .appleEating .apple3 .svg {
+  width: 200px;
+  top: 50%;
+  left: 63%;
+}
+main .appleEating .apple3 .larva {
+  top: 58%;
+  left: 60%;
+  transform: rotate(10deg);
+}
+main .appleEating .apple4 h3 {
+  top: 56%;
+  left: 68%;
+}
+main .appleEating .apple4 .svg {
+  width: 90px;
+  top: 60%;
+  left: 60%;
+}
+main .appleEating .apple4 .larva {
+  top: 50%;
+  left: 40%;
+  transform: rotate(20deg);
+}
+main .appleEating .apple5 h3 {
+  top: 38%;
+  left: 20%;
+}
+main .appleEating .apple5 .svg {
+  width: 110px;
+  top: 30%;
+  left: 32%;
+}
+main .appleEating .apple5 .larva {
+  top: 50%;
+  left: 20%;
+  transform: rotate(10deg);
 }/*# sourceMappingURL=index.css.map */

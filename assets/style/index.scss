@@ -129,36 +129,105 @@ main {
         @include sectionTitle();
         font-weight: 400;
         position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        transition: 0.3;
+        text-wrap: nowrap;
       }
       .svg {
         width: 120px;
         position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        transition: 0.3;
       }
       .apple {
         position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
         width: 420px;
+        transition: 0.3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .larva {
         position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         height: 100px;
+        transition: 0.3;
       }
     }
     .apple1 {
-      h3 {}
-      .svg {}
-      .apple {}
+      h3 {
+        top: 30%;
+        left: 73%;
+      }
+      .svg {
+        top: 30%;
+        left: 64%;
+      }
+      .larva {
+        top: 20%;
+        left: 20%;
+        transform: rotate(5deg);
+      }
+    }
+    .apple2 {
+      h3 {
+        top: 40%;
+        left: 20%;
+      }
+      .svg {
+        top: 45%;
+        left: 30%;
+      }
+      .larva {
+        top: 40%;
+        left: 45%;
+        transform: rotate(10deg);
+      }
+    }
+    .apple3 {
+      h3 {
+        top: 55%;
+        left: 77%;
+      }
+      .svg {
+        width: 200px;
+        top: 50%;
+        left: 63%;
+      }
+      .larva {
+        top: 58%;
+        left: 60%;
+        transform: rotate(10deg);
+      }
+    }
+    .apple4 {
+      h3 {
+        top: 56%;
+        left: 68%;
+      }
+      .svg {
+        width: 90px;
+        top: 60%;
+        left: 60%;
+      }
+      .larva {
+        top: 50%;
+        left: 40%;
+        transform: rotate(20deg);
+      }
+    }
+    .apple5 {
+      h3 {
+        top: 38%;
+        left: 20%;
+      }
+      .svg {
+        width: 110px;
+        top: 30%;
+        left: 32%;
+      }
+      .larva {
+        top: 50%;
+        left: 20%;
+        transform: rotate(10deg);
+      }
     }
   }
 }
