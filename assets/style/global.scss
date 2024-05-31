@@ -118,7 +118,8 @@ body {
     text-indent: -9999px;
     display: flex;
     justify-content: center;
-    margin: 0 300px 30px 0;
+    margin: 0 290px 30px 0;
+    transform: rotate(-5deg);
     .eye {
       width: 132px;
       height: 176px;
@@ -148,7 +149,7 @@ body {
     &::after {
       content: "";
       width: 35vw;
-      height: 1px;
+      height: 2px;
       background-color: $mainColor;
       position: absolute;
       top: 50%;
@@ -158,7 +159,7 @@ body {
     &::before {
       content: "";
       width: 35vw;
-      height: 1px;
+      height: 2px;
       background-color: $mainColor;
       position: absolute;
       top: 50%;
@@ -222,11 +223,17 @@ body {
           .larva {
             z-index: -9;
             position: absolute;
-            bottom: 40px;
-            right: -50px;
+            bottom: 50px;
+            right: 10px;
             width: 200px;
+            transition: 0.3s;
             img {
               width: 100%;
+            }
+          }
+          &:hover {
+            .larva {
+              right: -50px;
             }
           }
         }

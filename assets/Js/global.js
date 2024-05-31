@@ -23,6 +23,10 @@ const emojiMov = () => {
 
 emojiMov();
 
+
+/*===== header =====*/
+
+
 /*===== 눈알 굴러가는 이벤트 =====*/
 var eyeball = $(".pupil");
 
