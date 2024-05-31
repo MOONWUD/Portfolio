@@ -1,18 +1,4 @@
 /*===== main =====*/
-/*
-var split = new SplitText(".mainTitle", {
-  type:"chars", 
-}), 
-tl = gsap.timeline({repeat:1});
-
-// gsap.set(".mainTitle", {opacity:1}); 
-tl.from(split.chars, {
-duration:2.5, 
-y:100,
-ease:"elastic", 
-stagger: 0.05
-});
-8?
 
 /*===== appleRotation =====*/
 
