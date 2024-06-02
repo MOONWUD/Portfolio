@@ -13,7 +13,7 @@ anime.timeline({loop: 0})
     opacity: 1,
     duration: 1000,
     easing: "easeOutExpo",
-    delay: 1000
+    delay: 800
   });
 var textWrapper = document.querySelector('.mainTitle-wrapper2 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -36,7 +36,7 @@ anime.timeline({loop: 0})
 gsap.to(".appleRotation img", {
   scrollTrigger: {
     trigger: '.appleRotation',//객체기준범위
-    start: "5% 10%",//시작 지점
+    start: "0% 10%",//시작 지점
     end: "150% 100%",//끝 지점
     scrub: 1,//부드러운 스크러빙
     markers: true, //  개발가이드선

@@ -59,7 +59,15 @@ $subTextColor: #666;
     transform: translateY(0);
   }
 }
+@keyframes project {
+  0% {
+    transform: translateX(0);
+  }
 
+  100% {
+    transform: translateX(calc(-400px * 4))
+  }
+}
 main {
 
   /*===== main =====*/
@@ -331,10 +339,6 @@ main {
         transform: translateX(-50%);
         text-align: center;
 
-        &.show {
-          display: inline-block;
-        }
-
         .subTitle {
           @include sectionTitle();
           line-height: 1.3;
@@ -388,7 +392,7 @@ main {
     .title {
       @include sectionTitle();
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
       overflow: hidden;
       opacity: 0;
     }
@@ -406,16 +410,16 @@ main {
     .skill-wrapper {
       margin: 0 auto 30px;
       transition: 1s;
-      width: 900px;
+      width: 800px;
       background-color: $mainColor;
       border: 1px solid $mainColor;
       border-radius: 30px;
-      padding: 32px 30px 30px 70px;
+      padding: 32px 30px 30px 35px;
       @include sectionText(#fff);
       display: grid;
       grid-template-columns: 1fr 1fr;
       opacity: 0;
-      box-shadow: 0px -5px 20px #cecece94;
+      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 
       .subTitle {
         @include sectionSubTitle(#fff);
@@ -437,12 +441,13 @@ main {
 
 
   }
-  
+
   /*===== project=====*/
   .project {
     width: 100%;
     margin: 0 auto 200px;
     padding: 100px 5vw;
+    overflow: hidden;
     &.show {
       .title {
         opacity: 1;
@@ -450,6 +455,9 @@ main {
           display: inline-block;
           animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
+      }
+      .project-container {
+        opacity: 1
       }
     }
 
@@ -461,45 +469,55 @@ main {
     }
 
     .project-container {
+      opacity: 0;
+      transition: 1.5s;
       display: flex;
       gap: 30px;
-
-      .project-wrappers {
-        .project-wrapper {
-          box-shadow: 0px -5px 20px #cecece94;
-          margin: 20px auto;
-          border: 1px solid rgba(198, 62, 47, 0.3);
-          border-radius: 30px;
-          width: 500px;
-          height: 600px;
-          padding: 50px;
-          display: grid;
-          grid-template-columns: 1fr 1.5fr;
+      animation: project 35s linear infinite;
+      width: calc(400px * 8);
+      .project-wrapper {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        border: 1px solid rgba(198, 62, 47, 0.3);
+        border-radius: 30px;
+        padding: 50px 32px;
+        box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+        
+        &:hover {
+          .hoverImg {
+            display: block;
+          }
         }
-
         .text-wrapper {
           h3 {
             @include sectionSubTitle();
-            margin-bottom: 70px;
+            margin-bottom: 50px;
           }
-
           p {
             @include sectionText();
-            margin-bottom: 24px;
+            margin-bottom: 20px;
           }
-
-          div {
-            margin-top: 250px;
-            border-radius: 30px;
-            border: 1px solid $mainColor;
-            width: 250px;
-            height: 45px;
+          div { 
+            width: 150px;
+            height: 30px;
             display: grid;
             place-items: center;
-            @include sectionSubTitle();
-            font-weight: 400;
-            color: $mainColor;
+            @include sectionText($mainColor);
+            border: 1px solid $mainColor;
+            border-radius: 30px;
+            margin-top: 200px;
           }
+        }
+        .hoverImg {
+          background-color: #C63D2F;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+          display: none;
         }
       }
     }

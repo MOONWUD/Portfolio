@@ -215,6 +215,9 @@ body {
         a {
           position: relative;
           .apple {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 300px;
             img {
               width: 100%;
@@ -223,17 +226,18 @@ body {
           .larva {
             z-index: -9;
             position: absolute;
-            bottom: 50px;
-            right: 10px;
+            top: 150px;
+            left: 100px;
             width: 200px;
             transition: 0.3s;
+            transform: rotate(15deg);
             img {
               width: 100%;
             }
           }
           &:hover {
             .larva {
-              right: -50px;
+              left: 140px;
             }
           }
         }

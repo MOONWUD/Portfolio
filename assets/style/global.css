@@ -169,6 +169,9 @@ body {
   position: relative;
 }
 .footer .contactButton .contactLink-right .click a .apple {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 300px;
 }
 .footer .contactButton .contactLink-right .click a .apple img {
@@ -177,16 +180,17 @@ body {
 .footer .contactButton .contactLink-right .click a .larva {
   z-index: -9;
   position: absolute;
-  bottom: 50px;
-  right: 10px;
+  top: 150px;
+  left: 100px;
   width: 200px;
   transition: 0.3s;
+  transform: rotate(15deg);
 }
 .footer .contactButton .contactLink-right .click a .larva img {
   width: 100%;
 }
 .footer .contactButton .contactLink-right .click a:hover .larva {
-  right: -50px;
+  left: 140px;
 }
 .footer .copyRights {
   margin-top: 200px;
