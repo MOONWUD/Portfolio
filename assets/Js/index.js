@@ -44,45 +44,32 @@ gsap.to(".appleRotation img", {
   // x: 300,
   y: '180vh',
   rotation: 360,
-  scale: 3.5
+  scale: 2.5
 });
 
-/*===== 화살표 svg =====*/
+/*===== appleEating =====*/
+/*=== 화살표 svg ===*/
 
-/*=====  skill & tool =====*/
-
+/*===== skill & tool =====*/
 /*=== title ===*/
-/*
-var textWrapper = document.querySelector('.subTitle .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-$(window).on('scroll', () => {
-  let dropHt = $('.circularDrop').offset().top - 390;
-  if(scrollY >= dropHt) {
-      anime.timeline({loop: false})
-        .add({
-          targets: '.subTitle .letter',
-          scale: [0, 1],
-          duration: 1500,
-          elasticity: 600,
-          delay: (el, i) => 45 * (i+1)
-        }).add({
-          targets: '.subTitle',
-          opacity: 1,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 500
-        });
-    } 
-  })
-  */
 /*=== 날라오는 박스 ===*/
 $(window).on('scroll', () => {
-  let skillHt = $('.skillTool').offset().top - 390;
+  let skillHt = $('.skillTool').offset().top - 400;
   if(scrollY > skillHt) {
-    $('.skill-wrapper').addClass('on')
-
+    $('.skillTool').addClass('show');
+    
   } else {
-    $('.skill-wrapper').removeClass('on')
+    $('.skillTool').removeClass('show');
+  }
+})
+
+/*===== project =====*/
+$(window).on('scroll', () => {
+  let projectHt = $('.project').offset().top - 400;
+  if(scrollY > projectHt) {
+    $('.project').addClass('show');
+    
+  } else {
+    $('.project').removeClass('show');
   }
 })

@@ -13,7 +13,7 @@ $subTextColor: #666;
 
 @mixin mainTitle {
   font-family: 'Luckiest Guy', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive;
-  font-size: 180px;
+  font-size: 150px;
   font-weight: 400;
   color: $mainColor;
 }
@@ -49,12 +49,14 @@ $subTextColor: #666;
 }
 
 /*===== animation =====*/
-@keyframes popup {
+@keyframes title {
   0% {
+    transform: translateY(100%);
     opacity: 0;
   }
+
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -76,13 +78,14 @@ main {
       height: 100vw;
       border-radius: 50%;
       display: block;
+      text-indent: -9999px;
     }
 
     .eyes {
       text-indent: -9999px;
       display: flex;
       justify-content: center;
-      margin: 200px auto;
+      margin: 20vh auto;
 
       .eye {
         width: 132px;
@@ -151,14 +154,13 @@ main {
       height: 160vh;
       position: relative;
 
-      // overflow: hidden;
       img {
         width: 120px;
         position: absolute;
         left: 50%;
         top: 100px;
         transform: translateX(-50%);
-        transition: 0.1s;
+        transition: 0.5s;
       }
     }
 
@@ -189,11 +191,15 @@ main {
 
         .apple {
           position: absolute;
-          width: 420px;
+          width: 300px;
           transition: 0.3;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+
+          img {
+            width: 100%;
+          }
         }
 
         .larva {
@@ -303,7 +309,7 @@ main {
       height: 100vh;
       position: relative;
       overflow: hidden;
-      margin-bottom: 300px;
+      margin-bottom: 200px;
 
       .backGroundColor {
         position: absolute;
@@ -354,29 +360,43 @@ main {
 
   /*===== skillTool =====*/
   .skillTool {
-    padding: 100px 5vw;
+    padding: 0 5vw;
     position: relative;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     overflow: hidden;
+
+    &.show {
+      .title {
+        opacity: 1;
+        .letter {
+          display: inline-block;
+          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+      }
+
+      .skill2 {
+        opacity: 1;
+        transform: translateX(250px);
+      }
+
+      .skill1 {
+        opacity: 1;
+        transform: translateX(-250px);
+      }
+    }
 
     .title {
       @include sectionTitle();
       text-align: center;
       margin-bottom: 60px;
+      overflow: hidden;
+      opacity: 0;
     }
 
-    .skill2.on {
-      opacity: 1;
-      transform: translateX(250px);
-    }
+
 
     .skill2 {
       transform: translateX(1000px);
-    }
-
-    .skill1.on {
-      opacity: 1;
-      transform: translateX(-250px);
     }
 
     .skill1 {
@@ -395,6 +415,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       opacity: 0;
+      box-shadow: 0px -5px 20px #cecece94;
 
       .subTitle {
         @include sectionSubTitle(#fff);
@@ -404,91 +425,80 @@ main {
         line-height: 1.7;
       }
 
-      &:hover {
-        background-color: transparent;
-        color: $mainColor;
+      // &:hover {
+      //   background-color: transparent;
+      //   color: $mainColor;
 
-        .subTitle {
-          color: $mainColor;
-        }
-      }
+      //   .subTitle {
+      //     color: $mainColor;
+      //   }
+      // }
     }
-  }
 
+
+  }
+  
   /*===== project=====*/
   .project {
     width: 100%;
-    margin: 0 auto 300px;
+    margin: 0 auto 200px;
     padding: 100px 5vw;
-    
+    &.show {
+      .title {
+        opacity: 1;
+        .letter {
+          display: inline-block;
+          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+      }
+    }
+
     .title {
       @include sectionTitle();
       text-align: center;
       margin-bottom: 60px;
+      opacity: 0;
     }
-    
-    .sticky {
-      position: relative;
+
+    .project-container {
+      display: flex;
+      gap: 30px;
+
       .project-wrappers {
         .project-wrapper {
-          position: sticky;
-          top: 100px;
           box-shadow: 0px -5px 20px #cecece94;
           margin: 20px auto;
-          background-color: #FFEDD8;
           border: 1px solid rgba(198, 62, 47, 0.3);
           border-radius: 30px;
-          width: 1300px;
+          width: 500px;
           height: 600px;
           padding: 50px;
           display: grid;
           grid-template-columns: 1fr 1.5fr;
-          .popup {
-            background-color: $mainColor;
-            width: 350px;
-            height: 80px;
+        }
+
+        .text-wrapper {
+          h3 {
+            @include sectionSubTitle();
+            margin-bottom: 70px;
+          }
+
+          p {
+            @include sectionText();
+            margin-bottom: 24px;
+          }
+
+          div {
+            margin-top: 250px;
+            border-radius: 30px;
+            border: 1px solid $mainColor;
+            width: 250px;
+            height: 45px;
             display: grid;
             place-items: center;
-            border-radius: 50px;
             @include sectionSubTitle();
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(20deg);
-            transition: 0.3;
-            animation: popup 1s linear infinite;
-            display: none;
-          }
-          &:hover {
-            .popup {
-              display: grid
-            }
-          }
-  
-          .text-wrapper {
-            h3 {
-              @include sectionSubTitle();
-              margin-bottom: 70px;
-            }
-  
-            p {
-              @include sectionText();
-              margin-bottom: 24px;
-            }
-  
-            div {
-              margin-top: 250px;
-              border-radius: 30px;
-              border: 1px solid $mainColor;
-              width: 250px;
-              height: 45px;
-              display: grid;
-              place-items: center;
-              @include sectionSubTitle();
-              font-weight: 400;
-              color: $mainColor;
-            }
+            font-weight: 400;
+            color: $mainColor;
           }
         }
       }
