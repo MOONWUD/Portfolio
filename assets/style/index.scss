@@ -372,11 +372,11 @@ main {
     /*=== appleRoration ===*/
     .appleRotation {
       background-color: $subBgColor;
-      height: 150vh;
+      height: 200vh;
       position: relative;
 
       img {
-        width: 120px;
+        width: 200px;
         position: absolute;
         left: 50%;
         top: 50px;
@@ -386,7 +386,33 @@ main {
     }
 
     /*=== appleEating ===*/
-    .appleEating {}
+    // .appleEating {
+    //   position: relative;
+    //   // height: 100vh;
+    //   // background-color: $subBgColor;
+
+    //   #target {
+    //     // display: none;
+    //     width: 100%;
+    //     height: 140vh;
+    //     position: relative;
+    //     &.show {
+    //       display: block;
+    //     }
+    //     .imageBox {
+    //       width: 500px;
+    //       height: 500px;
+    //       position: fixed;
+    //       top: 50%;
+    //       left: 50%;
+    //       transform: translate(-50%, -80%) rotate(-15deg);
+    //       background-image: url('./images/apple1.png');
+    //       background-repeat: no-repeat;
+    //       background-size: cover;
+    //       animation: apple 0.3s  forwards;
+    //     }
+    //   }
+    // }
 
 
     /*=== circularDrop ===*/
@@ -409,8 +435,45 @@ main {
         border-radius: 50%;
         display: block;
       }
-
       .text-wrapper {
+        .item {
+          border-radius: 30px;
+          border: 1px solid $mainColor;
+          background-color: $mainColor;
+
+          width: 100px;
+          height: 40px;
+          display: grid;
+          place-items: center;
+          position: absolute;
+          @include sectionText(#fff);
+          font-weight: 600;
+        }
+        .item1 {
+          top: -2%; 
+          left: 40%;
+          transform: rotate(-15deg);
+        }
+        .item2 {
+          top:  80%; 
+          left: 20%;
+          transform: rotate(15deg);
+        }
+        .item3 {
+          top:  65%; 
+          left: 75%;
+          transform: rotate(-25deg);
+        }
+        .item4 {
+          top:  15%; 
+          left: 75%;
+          transform: rotate(30deg);
+        }
+        .item5 {
+          top:  40%; 
+          left: 15%;
+          transform: rotate(-30deg);
+        }
         position: relative;
         top: 40%;
         left: 50%;
@@ -419,6 +482,7 @@ main {
 
         .subTitle {
           @include mainTitle();
+          color: $textColor;
           font-size: 80px;
           line-height: 1.3;
           margin-bottom: 50px;

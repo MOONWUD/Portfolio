@@ -38,19 +38,48 @@ gsap.to(".appleRotation img", {
   scrollTrigger: {
     trigger: '.appleRotation',//객체기준범위
     start: "0% 0%",//시작 지점
-    end: "120% 100%",//끝 지점
+    end: "100% 100%",//끝 지점
     scrub: 1,//부드러운 스크러빙
-    markers: true, //  개발가이드선
+   markers: true,  //  개발가이드선
   },
   // x: 300,
   y: '180vh',
   rotation: 360,
-  scale: 2.5
-  
+  scale: 2.5,
+  easing: "easeOutExpo",
+  opacity: 0,
 });
 
 /*===== appleEating =====*/
+    // const layerImage = {
+    //   1: './assets/images/apple1.png',
+    //   2: './assets/images/apple2.png',
+    //   3: './assets/images/apple3.png',
+    //   4: './assets/images/apple4.png',
+    //   5: './assets/images/apple5.png',
+    // }
+    // function checkScroll() {
+    //   const y = window.scrollY;
+    //   const scrollPixels = Math.min(Math.floor(y / 100) + 1, 12);
+    //   const imageToUse = layerImage[scrollPixels];
+    //   // Change the background image
+    //   $('.imageBox').css('background-image', `url('${imageToUse}')`);
+    // }
+    // $(document).ready(() => {
+    //   $(window).scroll(() => {
+    //     checkScroll();
+    //   })
+    // })
 
+
+    // $(window).on('scroll', () => {
+    //   let appleEatingHt = $('.appleEating').offset().top;
+    //   if (scrollY > appleEatingHtHt) {
+    //     $('#target').addClass('show');
+    //   } else {
+    //     $('#targer').removeClass('show');
+    //   }
+    // })
 
 /*===== skill & tool =====*/
 /*=== title ===*/
