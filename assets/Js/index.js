@@ -37,7 +37,7 @@ anime.timeline({ loop: 0 })
 gsap.to(".appleRotation img", {
   scrollTrigger: {
     trigger: '.appleRotation',//객체기준범위
-    start: "0% 10%",//시작 지점
+    start: "0% 0%",//시작 지점
     end: "120% 100%",//끝 지점
     scrub: 1,//부드러운 스크러빙
     markers: true, //  개발가이드선
@@ -46,6 +46,7 @@ gsap.to(".appleRotation img", {
   y: '180vh',
   rotation: 360,
   scale: 2.5
+  
 });
 
 /*===== appleEating =====*/
