@@ -36,6 +36,17 @@
     transform: translate(-50%, -50%) rotate(0deg);
   }
 }
+@keyframes item {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
 body {
   background-color: #F5F4EC;
 }
@@ -362,9 +373,6 @@ main .appleContainer .circularDrop .text-wrapper .item {
   color: #fff;
   font-weight: 600;
 }
-main .appleContainer .circularDrop .text-wrapper .item.hover {
-  display: none;
-}
 main .appleContainer .circularDrop .text-wrapper .item1 {
   top: -2%;
   left: 40%;
@@ -479,10 +487,23 @@ main .appleContainer .circularDrop .text-wrapper .text span {
 
 /*===== project=====*/
 .project {
+  height: 100vw;
   width: 100%;
-  margin: 0 auto 200px;
+  margin: 100px auto 200px;
   padding: 100px 5vw;
   overflow: hidden;
+  position: relative;
+}
+.project .backGroundColor {
+  background-color: #FFFDF3;
+  width: 130vw;
+  height: 100vw;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .project.show .title {
   opacity: 1;
@@ -501,7 +522,7 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   font-size: 50px;
   color: #333;
   text-align: center;
-  margin-bottom: 60px;
+  margin: 100px 0;
   opacity: 0;
 }
 .project .project-container {

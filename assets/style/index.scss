@@ -93,6 +93,17 @@ $borderRadius: 30px;
 
   }
 }
+@keyframes item {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+} 
 
 body {
   background-color: $mainBgColor;
@@ -440,7 +451,6 @@ main {
           border-radius: 30px;
           border: 1px solid $mainColor;
           background-color: $mainColor;
-
           width: 100px;
           height: 40px;
           display: grid;
@@ -448,6 +458,7 @@ main {
           position: absolute;
           @include sectionText(#fff);
           font-weight: 600;
+          // animation: item 0.5s infinite;
         }
         .item1 {
           top: -2%; 
@@ -573,11 +584,24 @@ main {
 
 /*===== project=====*/
 .project {
+  height: 100vw;
   width: 100%;
-  margin: 0 auto 200px;
+  margin: 100px auto 200px;
   padding: 100px 5vw;
   overflow: hidden;
+  position: relative;
 
+  .backGroundColor {
+    background-color: $subBgColor;
+    width: 130vw;
+    height: 100vw;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   &.show {
     .title {
       opacity: 1;
@@ -597,7 +621,7 @@ main {
   .title {
     @include sectionTitle();
     text-align: center;
-    margin-bottom: 60px;
+    margin: 100px 0 ;
     opacity: 0;
   }
 
