@@ -462,7 +462,8 @@ main .about .circularDrop .text-wrapper .text {
   color: #333;
 }
 main .about .circularDrop .text-wrapper .text span {
-  background-color: #FFF6EA;
+  background-color: #FFB531;
+  color: #fff;
 }
 main .skillTool {
   padding: 100px 5vw 0;

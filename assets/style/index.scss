@@ -524,7 +524,8 @@ main {
           @include aboutText();
 
           span {
-            background-color: $subColor;
+            background-color: #FFB531;
+            color: #fff;
           }
         }
       }
