@@ -397,15 +397,15 @@ main {
         .svg {
           #facePaths {
             .facePath:first-child {
-              animation: svg1 2s ease-in alternate;
+              animation: svg1 1s ease-in alternate;
             }
             .facePath:last-child {
-              animation: svg2 1s 2s ease-in-out forwards;
+              animation: svg2 0.5s 1s ease-in-out forwards;
             }
           }
         }
         .text {
-          animation: aboutTitle 0.5s 2s ease-in-out forwards;
+          animation: aboutTitle 0.5s 1s ease-in-out forwards;
         }
       }
       padding: 0 5vw;
@@ -421,7 +421,6 @@ main {
             stroke-width: 10;
             stroke-dasharray:  2007.6986083984375;
             stroke-dashoffset: 1000;
-            // animation: svg1 2s ease-in alternate;
           }
           .facePath:last-child {
             fill: $textColor;
@@ -430,7 +429,6 @@ main {
             stroke-dasharray: 33.02588653564453;
             stroke-dashoffset: 0;
             opacity: 0;
-            // animation: svg2 1s 2s ease-in-out forwards;
           }
         }
       }
@@ -442,12 +440,11 @@ main {
         transition: 0.5s;
         transform: scale(1);
         opacity: 0;
-        // animation: aboutTitle 0.5s 2s ease-in-out forwards;
       }
     }
 
-    /*=== circularDrop ===*/
-    .circularDrop {
+    /*=== Drop ===*/
+    .drop {
       width: 100%;
       height: 100vh;
       position: relative;
@@ -467,7 +464,21 @@ main {
         display: block;
       }
       .text-wrapper {
+        &.show {
+          .item {
+            opacity: 1;
+          }
+          .subTitle {
+            opacity: 1;
+            transform: translateY(-15px);
+          }
+          .text {
+            opacity: 1;
+            transform: translateY(-15px);
+          }
+        }
         .item {
+          opacity: 0;
           border-radius: 30px;
           border: 1px solid $mainColor;
           background-color: $mainColor;
@@ -517,11 +528,14 @@ main {
           font-size: 80px;
           line-height: 1.3;
           margin-bottom: 50px;
-
+          opacity: 0;
+          transform: translateY(0px);
         }
 
         .text {
           @include aboutText();
+          opacity: 0;
+          transform: translateY(0px);
 
           span {
             background-color: #FFB531;
@@ -580,8 +594,12 @@ main {
   
     .skill-wrapper {
       &:hover {
-        .subTitle {
-          color: #FFB531;
+        .text-wrapper {
+          p {
+            span {
+              color: #f4cc86;
+            }
+          }
         }
       }
       margin: 0 auto 30px;
@@ -603,6 +621,7 @@ main {
   
       .text-wrapper {
         line-height: 1.7;
+        transition: 0.3s;
       }
     }
   }

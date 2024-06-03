@@ -39,11 +39,22 @@ $(window).on('scroll', () => {
   let faceHt = $('.face').offset().top - 400;
   if (scrollY > faceHt) {
     $('.face').addClass('show');
-
+    
   } else {
     $('.face').removeClass('show');
   }
 })
+/*=== drop ===*/
+$(window).on('scroll', () => {
+  let dropHt = $('.drop').offset().top - 50;
+  if (scrollY > dropHt) {
+    $('.drop .text-wrapper').addClass('show');
+    
+  } else {
+    $('.drop .text-wrapper' ).removeClass('show');
+  }
+})
+
 
 /*===== skill & tool =====*/
 /*=== title ===*/

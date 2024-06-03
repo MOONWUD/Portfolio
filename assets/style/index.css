@@ -331,7 +331,7 @@ main .main .mainTitle-container .mainTitle-wrapper2 .letter {
 }
 main .about {
   /*=== face ===*/
-  /*=== circularDrop ===*/
+  /*=== Drop ===*/
 }
 main .about .face {
   padding: 0 5vw;
@@ -340,13 +340,13 @@ main .about .face {
   background-color: #FFFDF3;
 }
 main .about .face.show .svg #facePaths .facePath:first-child {
-  animation: svg1 2s ease-in alternate;
+  animation: svg1 1s ease-in alternate;
 }
 main .about .face.show .svg #facePaths .facePath:last-child {
-  animation: svg2 1s 2s ease-in-out forwards;
+  animation: svg2 0.5s 1s ease-in-out forwards;
 }
 main .about .face.show .text {
-  animation: aboutTitle 0.5s 2s ease-in-out forwards;
+  animation: aboutTitle 0.5s 1s ease-in-out forwards;
 }
 main .about .face .svg {
   width: 70%;
@@ -378,14 +378,14 @@ main .about .face .text {
   transform: scale(1);
   opacity: 0;
 }
-main .about .circularDrop {
+main .about .drop {
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
   margin-bottom: 100px;
 }
-main .about .circularDrop .backGroundColor {
+main .about .drop .backGroundColor {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -396,14 +396,26 @@ main .about .circularDrop .backGroundColor {
   border-radius: 50%;
   display: block;
 }
-main .about .circularDrop .text-wrapper {
+main .about .drop .text-wrapper {
   position: relative;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
-main .about .circularDrop .text-wrapper .item {
+main .about .drop .text-wrapper.show .item {
+  opacity: 1;
+}
+main .about .drop .text-wrapper.show .subTitle {
+  opacity: 1;
+  transform: translateY(-15px);
+}
+main .about .drop .text-wrapper.show .text {
+  opacity: 1;
+  transform: translateY(-15px);
+}
+main .about .drop .text-wrapper .item {
+  opacity: 0;
   border-radius: 30px;
   border: 1px solid #89B2F4;
   background-color: #89B2F4;
@@ -419,32 +431,32 @@ main .about .circularDrop .text-wrapper .item {
   color: #fff;
   font-weight: 600;
 }
-main .about .circularDrop .text-wrapper .item1 {
+main .about .drop .text-wrapper .item1 {
   top: -2%;
   left: 40%;
   transform: rotate(-15deg);
 }
-main .about .circularDrop .text-wrapper .item2 {
+main .about .drop .text-wrapper .item2 {
   top: 80%;
   left: 20%;
   transform: rotate(15deg);
 }
-main .about .circularDrop .text-wrapper .item3 {
+main .about .drop .text-wrapper .item3 {
   top: 65%;
   left: 75%;
   transform: rotate(-25deg);
 }
-main .about .circularDrop .text-wrapper .item4 {
+main .about .drop .text-wrapper .item4 {
   top: 15%;
   left: 75%;
   transform: rotate(30deg);
 }
-main .about .circularDrop .text-wrapper .item5 {
+main .about .drop .text-wrapper .item5 {
   top: 40%;
   left: 15%;
   transform: rotate(-30deg);
 }
-main .about .circularDrop .text-wrapper .subTitle {
+main .about .drop .text-wrapper .subTitle {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
   font-size: 120px;
   font-weight: 800;
@@ -453,15 +465,19 @@ main .about .circularDrop .text-wrapper .subTitle {
   font-size: 80px;
   line-height: 1.3;
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(0px);
 }
-main .about .circularDrop .text-wrapper .text {
+main .about .drop .text-wrapper .text {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
   color: #333;
+  opacity: 0;
+  transform: translateY(0px);
 }
-main .about .circularDrop .text-wrapper .text span {
+main .about .drop .text-wrapper .text span {
   background-color: #FFB531;
   color: #fff;
 }
@@ -521,8 +537,8 @@ main .skillTool .skill-wrapper {
   opacity: 0;
   box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 }
-main .skillTool .skill-wrapper:hover .subTitle {
-  color: #FFB531;
+main .skillTool .skill-wrapper:hover .text-wrapper p span {
+  color: #f4cc86;
 }
 main .skillTool .skill-wrapper .subTitle {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -532,6 +548,7 @@ main .skillTool .skill-wrapper .subTitle {
 }
 main .skillTool .skill-wrapper .text-wrapper {
   line-height: 1.7;
+  transition: 0.3s;
 }
 main .project {
   height: 100vw;
