@@ -20,66 +20,30 @@ var textWrapper = document.querySelector('.mainTitle-wrapper2 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({ loop: 0 })
-  .add({
-    targets: '.mainTitle-wrapper2 .letter',
-    rotateY: [-90, 0],
-    duration: 1300,
-    delay: (el, i) => 45 * i + 1000
-  }).add({
-    targets: '.mainTitle-wrapper2',
-    opacity: 1,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 0
-  });
-
-/*===== appleRotation =====*/
-gsap.to(".appleRotation img", {
-  scrollTrigger: {
-    trigger: '.appleRotation',//객체기준범위
-    start: "0% 0%",//시작 지점
-    end: "100% 100%",//끝 지점
-    scrub: 1,//부드러운 스크러빙
-   markers: true,  //  개발가이드선
-  },
-  // x: 300,
-  y: '180vh',
-  rotation: 360,
-  scale: 2.5,
+.add({
+  targets: '.mainTitle-wrapper2 .letter',
+  rotateY: [-90, 0],
+  duration: 1300,
+  delay: (el, i) => 45 * i + 1000
+}).add({
+  targets: '.mainTitle-wrapper2',
+  opacity: 1,
+  duration: 1000,
   easing: "easeOutExpo",
-  opacity: 0,
+  delay: 0
 });
 
-/*===== appleEating =====*/
-    // const layerImage = {
-    //   1: './assets/images/apple1.png',
-    //   2: './assets/images/apple2.png',
-    //   3: './assets/images/apple3.png',
-    //   4: './assets/images/apple4.png',
-    //   5: './assets/images/apple5.png',
-    // }
-    // function checkScroll() {
-    //   const y = window.scrollY;
-    //   const scrollPixels = Math.min(Math.floor(y / 100) + 1, 12);
-    //   const imageToUse = layerImage[scrollPixels];
-    //   // Change the background image
-    //   $('.imageBox').css('background-image', `url('${imageToUse}')`);
-    // }
-    // $(document).ready(() => {
-    //   $(window).scroll(() => {
-    //     checkScroll();
-    //   })
-    // })
+/*===== about =====*/
+/*=== face ===*/
+$(window).on('scroll', () => {
+  let faceHt = $('.face').offset().top - 400;
+  if (scrollY > faceHt) {
+    $('.face').addClass('show');
 
-
-    // $(window).on('scroll', () => {
-    //   let appleEatingHt = $('.appleEating').offset().top;
-    //   if (scrollY > appleEatingHtHt) {
-    //     $('#target').addClass('show');
-    //   } else {
-    //     $('#targer').removeClass('show');
-    //   }
-    // })
+  } else {
+    $('.face').removeClass('show');
+  }
+})
 
 /*===== skill & tool =====*/
 /*=== title ===*/
@@ -99,8 +63,15 @@ $(window).on('scroll', () => {
   let projectHt = $('.project').offset().top - 400;
   if (scrollY > projectHt) {
     $('.project').addClass('show');
-
+    
   } else {
     $('.project').removeClass('show');
   }
 })
+
+// 패스 길이 구하는 식
+const logo = document.querySelectorAll("#facePaths .facePath");
+
+for(let i = 0; i < logo.length; i++) {
+    console.log(`${i+1}번째 path의 총 길이 ${logo[i].getTotalLength()}`);
+}

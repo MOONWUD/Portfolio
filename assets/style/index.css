@@ -1,6 +1,7 @@
 /*===== color =====*/
 /*===== font =====*/
 @import url("https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*===== border-radius =====*/
 /*===== animation =====*/
 @keyframes title {
@@ -20,20 +21,34 @@
     transform: translateX(-1480px);
   }
 }
-@keyframes svg {
+@keyframes svg1 {
   0% {
-    stroke-dashoffset: 300;
+    stroke-dashoffset: 2007.6986083984;
   }
   100% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1000;
   }
 }
-@keyframes apple {
+@keyframes svg2 {
   0% {
-    transform: translate(-50%, -80%) rotate(-15deg);
+    opacity: 0;
   }
   100% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes aboutTitle {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes item {
@@ -75,11 +90,8 @@ body {
   line-height: 1.5;
   color: #333;
 }
-.header .nav .logo a {
-  width: 120px;
-}
 .header .nav .logo a img {
-  width: 100%;
+  width: 50px;
 }
 .header .nav .logo a img:hover {
   transform: rotate(10deg);
@@ -89,21 +101,21 @@ body {
   justify-content: space-evenly;
 }
 .header .nav .navButton-wrapper li:hover {
-  color: #C63D2F;
+  color: #89B2F4;
 }
 .header .nav .githubLink a {
   width: 120px;
   height: 30px;
   display: grid;
   place-items: center;
-  background-color: #C63D2F;
+  background-color: #89B2F4;
   border-radius: 30px;
-  border: 1px solid #C63D2F;
+  border: 1px solid #89B2F4;
   color: #fff;
 }
 .header .nav .githubLink a:hover {
   background-color: transparent;
-  color: #C63D2F;
+  color: #89B2F4;
 }
 
 /*===== footer =====*/
@@ -125,7 +137,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #481E14;
+  background-color: #32160f;
   display: block;
   position: absolute;
   left: calc(50% - 5px - 2px);
@@ -140,7 +152,7 @@ body {
   align-items: center;
 }
 .footer .title .sectionTitle {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #333;
@@ -149,7 +161,7 @@ body {
 .footer .title .line {
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #C63D2F;
+  border-bottom: 1px solid #89B2F4;
   opacity: 0.5;
   height: 0;
 }
@@ -157,7 +169,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  border: 1px solid #C63D2F;
+  border: 1px solid #89B2F4;
   border-radius: 50%;
   position: absolute;
   right: -10px;
@@ -168,7 +180,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  border: 1px solid #C63D2F;
+  border: 1px solid #89B2F4;
   border-radius: 50%;
   position: absolute;
   left: -10px;
@@ -220,7 +232,7 @@ body {
 
 /****** mouseEmoji ******/
 .logo-emoji {
-  width: 30px;
+  width: 40px;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -236,9 +248,12 @@ body {
 
 main {
   /*===== main =====*/
-  /*===== appleContainer =====*/
+  /*===== about =====*/
+  /*===== skillTool =====*/
+  /*===== project=====*/
 }
 main .main {
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -273,7 +288,7 @@ main .main .eyes .eye .pupil {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #481E14;
+  background-color: #32160f;
   display: block;
   position: absolute;
   left: calc(50% - 5px - 2px);
@@ -284,10 +299,10 @@ main .main .mainTitle-container {
   vertical-align: top;
   text-transform: uppercase;
   width: 100%;
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
   font-size: 120px;
   font-weight: 800;
-  color: #C63D2F;
+  color: #89B2F4;
   position: absolute;
   top: 380px;
   padding: 0 10vw;
@@ -314,32 +329,63 @@ main .main .mainTitle-container .mainTitle-wrapper2 .letter {
   line-height: 1em;
   transform-origin: 0 0;
 }
-main .appleContainer {
-  /*=== appleRoration ===*/
-  /*=== appleEating ===*/
+main .about {
+  /*=== face ===*/
   /*=== circularDrop ===*/
 }
-main .appleContainer .appleRotation {
+main .about .face {
+  padding: 0 5vw;
+  display: flex;
+  width: 100%;
   background-color: #FFFDF3;
-  height: 200vh;
-  position: relative;
 }
-main .appleContainer .appleRotation img {
-  width: 200px;
-  position: absolute;
-  left: 50%;
-  top: 50px;
-  transform: translateX(-50%);
-  transition: 0.1s;
+main .about .face.show .svg #facePaths .facePath:first-child {
+  animation: svg1 2s ease-in alternate;
 }
-main .appleContainer .circularDrop {
+main .about .face.show .svg #facePaths .facePath:last-child {
+  animation: svg2 1s 2s ease-in-out forwards;
+}
+main .about .face.show .text {
+  animation: aboutTitle 0.5s 2s ease-in-out forwards;
+}
+main .about .face .svg {
+  width: 70%;
+}
+main .about .face .svg #facePaths .facePath:first-child {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+  stroke-dasharray: 2007.6986083984;
+  stroke-dashoffset: 1000;
+}
+main .about .face .svg #facePaths .facePath:last-child {
+  fill: #333;
+  stroke: #333;
+  stroke-width: 8;
+  stroke-dasharray: 33.0258865356;
+  stroke-dashoffset: 0;
+  opacity: 0;
+}
+main .about .face .text {
+  margin-top: 600px;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  color: #333;
+  font-size: 70px;
+  align-self: center;
+  transition: 0.5s;
+  transform: scale(1);
+  opacity: 0;
+}
+main .about .circularDrop {
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
   margin-bottom: 100px;
 }
-main .appleContainer .circularDrop .backGroundColor {
+main .about .circularDrop .backGroundColor {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -350,17 +396,17 @@ main .appleContainer .circularDrop .backGroundColor {
   border-radius: 50%;
   display: block;
 }
-main .appleContainer .circularDrop .text-wrapper {
+main .about .circularDrop .text-wrapper {
   position: relative;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
-main .appleContainer .circularDrop .text-wrapper .item {
+main .about .circularDrop .text-wrapper .item {
   border-radius: 30px;
-  border: 1px solid #C63D2F;
-  background-color: #C63D2F;
+  border: 1px solid #89B2F4;
+  background-color: #89B2F4;
   width: 100px;
   height: 40px;
   display: grid;
@@ -373,76 +419,75 @@ main .appleContainer .circularDrop .text-wrapper .item {
   color: #fff;
   font-weight: 600;
 }
-main .appleContainer .circularDrop .text-wrapper .item1 {
+main .about .circularDrop .text-wrapper .item1 {
   top: -2%;
   left: 40%;
   transform: rotate(-15deg);
 }
-main .appleContainer .circularDrop .text-wrapper .item2 {
+main .about .circularDrop .text-wrapper .item2 {
   top: 80%;
   left: 20%;
   transform: rotate(15deg);
 }
-main .appleContainer .circularDrop .text-wrapper .item3 {
+main .about .circularDrop .text-wrapper .item3 {
   top: 65%;
   left: 75%;
   transform: rotate(-25deg);
 }
-main .appleContainer .circularDrop .text-wrapper .item4 {
+main .about .circularDrop .text-wrapper .item4 {
   top: 15%;
   left: 75%;
   transform: rotate(30deg);
 }
-main .appleContainer .circularDrop .text-wrapper .item5 {
+main .about .circularDrop .text-wrapper .item5 {
   top: 40%;
   left: 15%;
   transform: rotate(-30deg);
 }
-main .appleContainer .circularDrop .text-wrapper .subTitle {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
+main .about .circularDrop .text-wrapper .subTitle {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
   font-size: 120px;
   font-weight: 800;
-  color: #C63D2F;
+  color: #89B2F4;
   color: #333;
   font-size: 80px;
   line-height: 1.3;
   margin-bottom: 50px;
 }
-main .appleContainer .circularDrop .text-wrapper .text {
+main .about .circularDrop .text-wrapper .text {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
   color: #333;
 }
-main .appleContainer .circularDrop .text-wrapper .text span {
-  background-color: #FFDDB4;
+main .about .circularDrop .text-wrapper .text span {
+  background-color: #FFF6EA;
 }
-
-/*===== skillTool =====*/
-.skillTool {
+main .skillTool {
   padding: 100px 5vw 0;
   position: relative;
   margin-bottom: 100px;
   overflow: hidden;
+  width: 100%;
 }
-.skillTool.show .title {
+main .skillTool.show .title {
   opacity: 1;
 }
-.skillTool.show .title .letter {
+main .skillTool.show .title .letter {
   display: inline-block;
   animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
-.skillTool.show .skill2 {
+main .skillTool.show .skill2 {
   opacity: 1;
   transform: translateX(250px);
 }
-.skillTool.show .skill1 {
+main .skillTool.show .skill1 {
   opacity: 1;
   transform: translateX(-250px);
 }
-.skillTool .title {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+main .skillTool .title {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 50px;
   color: #333;
@@ -451,18 +496,18 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   overflow: hidden;
   opacity: 0;
 }
-.skillTool .skill2 {
+main .skillTool .skill2 {
   transform: translateX(1000px);
 }
-.skillTool .skill1 {
+main .skillTool .skill1 {
   transform: translateX(-1000px);
 }
-.skillTool .skill-wrapper {
+main .skillTool .skill-wrapper {
   margin: 0 auto 30px;
   transition: 1s;
   width: 800px;
-  background-color: #C63D2F;
-  border: 1px solid #C63D2F;
+  background-color: #89B2F4;
+  border: 1px solid #89B2F4;
   border-radius: 30px;
   padding: 32px 30px 30px 35px;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -475,18 +520,19 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   opacity: 0;
   box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 }
-.skillTool .skill-wrapper .subTitle {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+main .skillTool .skill-wrapper:hover .subTitle {
+  color: #FFB531;
+}
+main .skillTool .skill-wrapper .subTitle {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #fff;
 }
-.skillTool .skill-wrapper .text-wrapper {
+main .skillTool .skill-wrapper .text-wrapper {
   line-height: 1.7;
 }
-
-/*===== project=====*/
-.project {
+main .project {
   height: 100vw;
   width: 100%;
   margin: 100px auto 200px;
@@ -494,7 +540,7 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   overflow: hidden;
   position: relative;
 }
-.project .backGroundColor {
+main .project .backGroundColor {
   background-color: #FFFDF3;
   width: 130vw;
   height: 100vw;
@@ -505,19 +551,19 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.project.show .title {
+main .project.show .title {
   opacity: 1;
 }
-.project.show .title .letter {
+main .project.show .title .letter {
   display: inline-block;
   animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
-.project.show .project-container {
+main .project.show .project-container {
   opacity: 1;
   transform: translateY(-30px);
 }
-.project .title {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+main .project .title {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 50px;
   color: #333;
@@ -525,7 +571,7 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   margin: 100px 0;
   opacity: 0;
 }
-.project .project-container {
+main .project .project-container {
   opacity: 0;
   transition: 0.5s;
   display: flex;
@@ -533,26 +579,26 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   animation: project 35s linear infinite;
   width: 3200px;
 }
-.project .project-container .project-wrapper {
+main .project .project-container .project-wrapper {
   position: relative;
   width: 400px;
   height: 500px;
-  border: 1px solid rgba(198, 62, 47, 0.3);
+  border: 1px solid rgba(137, 178, 244, 0.5);
   border-radius: 30px;
   padding: 50px 32px;
   box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 }
-.project .project-container .project-wrapper:hover .hoverImg {
+main .project .project-container .project-wrapper:hover .hoverImg {
   display: block;
 }
-.project .project-container .project-wrapper .text-wrapper h3 {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+main .project .project-container .project-wrapper .text-wrapper h3 {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #333;
   margin-bottom: 50px;
 }
-.project .project-container .project-wrapper .text-wrapper p {
+main .project .project-container .project-wrapper .text-wrapper p {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -560,7 +606,7 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   color: #333;
   margin-bottom: 20px;
 }
-.project .project-container .project-wrapper .text-wrapper div {
+main .project .project-container .project-wrapper .text-wrapper div {
   width: 200px;
   height: 40px;
   display: grid;
@@ -569,13 +615,13 @@ main .appleContainer .circularDrop .text-wrapper .text span {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  color: #C63D2F;
-  border: 1px solid #C63D2F;
+  color: #89B2F4;
+  border: 1px solid #89B2F4;
   border-radius: 30px;
   margin-top: 200px;
 }
-.project .project-container .project-wrapper .hoverImg {
-  background-color: #C63D2F;
+main .project .project-container .project-wrapper .hoverImg {
+  background-color: #89B2F4;
   position: absolute;
   top: 0;
   left: 0;

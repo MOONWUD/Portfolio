@@ -1,8 +1,8 @@
 /*===== color =====*/
-$mainColor: #C63D2F;
-$subColor: #FFDDB4;
+$mainColor: #89B2F4;
+$subColor: #FFF6EA;
 $subLightColor: #FFEDD8;
-$subDarkColor: #481E14;
+$subDarkColor: #32160f;
 $mainBgColor: #F5F4EC;
 $subBgColor: #FFFDF3;
 $textColor: #333;
@@ -10,16 +10,17 @@ $subTextColor: #666;
 
 /*===== font =====*/
 @import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @mixin mainTitle {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive;
   font-size: 120px;
   font-weight: 800;
   color: $mainColor;
 }
 
 @mixin sectionTitle ($color: $textColor) {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   font-size: 50px;
   color: $color;
@@ -34,7 +35,7 @@ $subTextColor: #666;
 }
 
 @mixin sectionSubTitle ($color: $textColor) {
-  font-family: "Bellota", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: $color;
@@ -73,26 +74,38 @@ $borderRadius: 30px;
   }
 }
 
-@keyframes svg {
+@keyframes svg1 {
   0% {
-    stroke-dashoffset: 300;
+    stroke-dashoffset:  2007.6986083984375;
   }
 
   100% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1000;
   }
 }
-
-@keyframes apple {
+@keyframes svg2 {
   0% {
-    transform: translate(-50%, -80%) rotate(-15deg);
+    opacity: 0;
   }
-
   100% {
-    transform: translate(-50%, -50%) rotate(0deg);
-
+    opacity: 1;
   }
 }
+@keyframes aboutTitle {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes item {
   0% {
     transform: rotate(5deg);
@@ -129,10 +142,9 @@ body {
 
     .logo {
       a {
-        width: 120px;
-
+        
         img {
-          width: 100%;
+          width: 50px;
           &:hover {
             transform: rotate(10deg);
           }
@@ -278,7 +290,7 @@ body {
 
 /****** mouseEmoji ******/
 .logo-emoji {
-  width: 30px;
+  width: 40px;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -292,9 +304,9 @@ body {
 }
 
 main {
-
   /*===== main =====*/
   .main {
+    width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -377,54 +389,62 @@ main {
     }
   }
 
-  /*===== appleContainer =====*/
-  .appleContainer {
-
-    /*=== appleRoration ===*/
-    .appleRotation {
+  /*===== about =====*/
+  .about {
+    /*=== face ===*/
+    .face {
+      &.show {
+        .svg {
+          #facePaths {
+            .facePath:first-child {
+              animation: svg1 2s ease-in alternate;
+            }
+            .facePath:last-child {
+              animation: svg2 1s 2s ease-in-out forwards;
+            }
+          }
+        }
+        .text {
+          animation: aboutTitle 0.5s 2s ease-in-out forwards;
+        }
+      }
+      padding: 0 5vw;
+      display: flex;
+      width: 100%;
       background-color: $subBgColor;
-      height: 200vh;
-      position: relative;
-
-      img {
-        width: 200px;
-        position: absolute;
-        left: 50%;
-        top: 50px;
-        transform: translateX(-50%);
-        transition: 0.1s;
+      .svg {
+        width: 70%;
+        #facePaths {
+          .facePath:first-child {
+            fill: none;
+            stroke: $textColor;
+            stroke-width: 10;
+            stroke-dasharray:  2007.6986083984375;
+            stroke-dashoffset: 1000;
+            // animation: svg1 2s ease-in alternate;
+          }
+          .facePath:last-child {
+            fill: $textColor;
+            stroke: $textColor;
+            stroke-width: 8;
+            stroke-dasharray: 33.02588653564453;
+            stroke-dashoffset: 0;
+            opacity: 0;
+            // animation: svg2 1s 2s ease-in-out forwards;
+          }
+        }
+      }
+      .text {
+        margin-top: 600px;
+        @include sectionTitle();
+        font-size: 70px;
+        align-self: center;
+        transition: 0.5s;
+        transform: scale(1);
+        opacity: 0;
+        // animation: aboutTitle 0.5s 2s ease-in-out forwards;
       }
     }
-
-    /*=== appleEating ===*/
-    // .appleEating {
-    //   position: relative;
-    //   // height: 100vh;
-    //   // background-color: $subBgColor;
-
-    //   #target {
-    //     // display: none;
-    //     width: 100%;
-    //     height: 140vh;
-    //     position: relative;
-    //     &.show {
-    //       display: block;
-    //     }
-    //     .imageBox {
-    //       width: 500px;
-    //       height: 500px;
-    //       position: fixed;
-    //       top: 50%;
-    //       left: 50%;
-    //       transform: translate(-50%, -80%) rotate(-15deg);
-    //       background-image: url('./images/apple1.png');
-    //       background-repeat: no-repeat;
-    //       background-size: cover;
-    //       animation: apple 0.3s  forwards;
-    //     }
-    //   }
-    // }
-
 
     /*=== circularDrop ===*/
     .circularDrop {
@@ -510,176 +530,181 @@ main {
       }
     }
   }
-}
-
-/*===== skillTool =====*/
-.skillTool {
-  padding: 100px 5vw 0;
-  position: relative;
-  margin-bottom: 100px;
-  overflow: hidden;
-
-  &.show {
-    .title {
-      opacity: 1;
-
-      .letter {
-        display: inline-block;
-        animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-      }
-    }
-
-    .skill2 {
-      opacity: 1;
-      transform: translateX(250px);
-    }
-
-    .skill1 {
-      opacity: 1;
-      transform: translateX(-250px);
-    }
-  }
-
-  .title {
-    @include sectionTitle();
-    text-align: center;
-    margin-bottom: 50px;
+  /*===== skillTool =====*/
+  .skillTool {
+    padding: 100px 5vw 0;
+    position: relative;
+    margin-bottom: 100px;
     overflow: hidden;
-    opacity: 0;
-  }
-
-
-
-  .skill2 {
-    transform: translateX(1000px);
-  }
-
-  .skill1 {
-    transform: translateX(-1000px);
-  }
-
-  .skill-wrapper {
-    margin: 0 auto 30px;
-    transition: 1s;
-    width: 800px;
-    background-color: $mainColor;
-    border: 1px solid $mainColor;
-    border-radius: 30px;
-    padding: 32px 30px 30px 35px;
-    @include sectionText(#fff);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    opacity: 0;
-    box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
-
-    .subTitle {
-      @include sectionSubTitle(#fff);
+    width: 100%;
+  
+    &.show {
+      .title {
+        opacity: 1;
+  
+        .letter {
+          display: inline-block;
+          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+      }
+  
+      .skill2 {
+        opacity: 1;
+        transform: translateX(250px);
+      }
+  
+      .skill1 {
+        opacity: 1;
+        transform: translateX(-250px);
+      }
     }
-
-    .text-wrapper {
-      line-height: 1.7;
-    }
-  }
-}
-
-/*===== project=====*/
-.project {
-  height: 100vw;
-  width: 100%;
-  margin: 100px auto 200px;
-  padding: 100px 5vw;
-  overflow: hidden;
-  position: relative;
-
-  .backGroundColor {
-    background-color: $subBgColor;
-    width: 130vw;
-    height: 100vw;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &.show {
+  
     .title {
-      opacity: 1;
-
-      .letter {
-        display: inline-block;
-        animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-      }
+      @include sectionTitle();
+      text-align: center;
+      margin-bottom: 50px;
+      overflow: hidden;
+      opacity: 0;
     }
-
-    .project-container {
-      opacity: 1;
-      transform: translateY(-30px)
+  
+  
+  
+    .skill2 {
+      transform: translateX(1000px);
     }
-  }
-
-  .title {
-    @include sectionTitle();
-    text-align: center;
-    margin: 100px 0 ;
-    opacity: 0;
-  }
-
-  .project-container {
-    opacity: 0;
-    transition: 0.5s;
-    display: flex;
-    gap: 30px;
-    animation: project 35s linear infinite;
-    width: calc(400px * 8);
-
-    .project-wrapper {
-      position: relative;
-      width: 400px;
-      height: 500px;
-      border: 1px solid rgba(198, 62, 47, 0.3);
-      border-radius: 30px;
-      padding: 50px 32px;
-      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
-
+  
+    .skill1 {
+      transform: translateX(-1000px);
+    }
+  
+    .skill-wrapper {
       &:hover {
-        .hoverImg {
-          display: block;
+        .subTitle {
+          color: #FFB531;
         }
       }
-
+      margin: 0 auto 30px;
+      transition: 1s;
+      width: 800px;
+      background-color: $mainColor;
+      border: 1px solid $mainColor;
+      border-radius: 30px;
+      padding: 32px 30px 30px 35px;
+      @include sectionText(#fff);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      opacity: 0;
+      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+  
+      .subTitle {
+        @include sectionSubTitle(#fff);
+      }
+  
       .text-wrapper {
-        h3 {
-          @include sectionSubTitle();
-          margin-bottom: 50px;
-        }
-
-        p {
-          @include sectionText();
-          margin-bottom: 20px;
-        }
-
-        div {
-          width: 200px;
-          height: 40px;
-          display: grid;
-          place-items: center;
-          @include sectionText($mainColor);
-          border: 1px solid $mainColor;
-          border-radius: 30px;
-          margin-top: 200px;
+        line-height: 1.7;
+      }
+    }
+  }
+  
+  /*===== project=====*/
+  .project {
+    height: 100vw;
+    width: 100%;
+    margin: 100px auto 200px;
+    padding: 100px 5vw;
+    overflow: hidden;
+    position: relative;
+  
+    .backGroundColor {
+      background-color: $subBgColor;
+      width: 130vw;
+      height: 100vw;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.show {
+      .title {
+        opacity: 1;
+  
+        .letter {
+          display: inline-block;
+          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
       }
-
-      .hoverImg {
-        background-color: #C63D2F;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+  
+      .project-container {
+        opacity: 1;
+        transform: translateY(-30px)
+      }
+    }
+  
+    .title {
+      @include sectionTitle();
+      text-align: center;
+      margin: 100px 0 ;
+      opacity: 0;
+    }
+  
+    .project-container {
+      opacity: 0;
+      transition: 0.5s;
+      display: flex;
+      gap: 30px;
+      animation: project 35s linear infinite;
+      width: calc(400px * 8);
+  
+      .project-wrapper {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        border: 1px solid rgba(137, 178, 244, 0.5);
         border-radius: 30px;
-        display: none;
+        padding: 50px 32px;
+        box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+  
+        &:hover {
+          .hoverImg {
+            display: block;
+          }
+        }
+  
+        .text-wrapper {
+          h3 {
+            @include sectionSubTitle();
+            margin-bottom: 50px;
+          }
+  
+          p {
+            @include sectionText();
+            margin-bottom: 20px;
+          }
+  
+          div {
+            width: 200px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            @include sectionText($mainColor);
+            border: 1px solid $mainColor;
+            border-radius: 30px;
+            margin-top: 200px;
+          }
+        }
+  
+        .hoverImg {
+          background-color: $mainColor;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+          display: none;
+        }
       }
     }
   }
