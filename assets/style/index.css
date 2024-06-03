@@ -19,11 +19,25 @@
     transform: translateX(-1600px);
   }
 }
+@keyframes svg {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes apple {
+  0% {
+    transform: translate(-50%, -80%) rotate(-15deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
 main {
   /*===== main =====*/
   /*===== appleContainer =====*/
-  /*===== skillTool =====*/
-  /*===== project=====*/
 }
 main .main {
   height: 100vh;
@@ -106,131 +120,23 @@ main .appleContainer {
 }
 main .appleContainer .appleRotation {
   background-color: #FFFDF3;
-  height: 160vh;
+  height: 230vh;
   position: relative;
 }
 main .appleContainer .appleRotation img {
   width: 120px;
   position: absolute;
   left: 50%;
-  top: 100px;
+  top: 50px;
   transform: translateX(-50%);
   transition: 0.5s;
-}
-main .appleContainer .appleEating {
-  background-color: #FFFDF3;
-}
-main .appleContainer .appleEating .apple-wrapper {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-main .appleContainer .appleEating .apple-wrapper h3 {
-  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  font-size: 50px;
-  color: #333;
-  font-weight: 400;
-  position: absolute;
-  transition: 0.3;
-  text-wrap: nowrap;
-  animation: titleMov 0.5s 0.3s linear forwards;
-}
-main .appleContainer .appleEating .apple-wrapper .svg {
-  width: 200px;
-  position: absolute;
-  transition: 0.3;
-}
-main .appleContainer .appleEating .apple-wrapper .apple {
-  position: absolute;
-  width: 300px;
-  transition: 0.3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main .appleContainer .appleEating .apple-wrapper .apple img {
-  width: 100%;
-}
-main .appleContainer .appleEating .apple-wrapper .larva {
-  position: absolute;
-  height: 100px;
-  transition: 0.3;
-}
-main .appleContainer .appleEating .apple1 h3 {
-  top: 30%;
-  left: 73%;
-}
-main .appleContainer .appleEating .apple1 .svg {
-  top: 30%;
-  left: 62%;
-  fill: #333;
-}
-main .appleContainer .appleEating .apple1 .larva {
-  top: 20%;
-  left: 20%;
-  transform: rotate(5deg);
-}
-main .appleContainer .appleEating .apple2 h3 {
-  top: 43%;
-  left: 23%;
-}
-main .appleContainer .appleEating .apple2 .svg {
-  width: 180px;
-  top: 45%;
-  left: 31%;
-}
-main .appleContainer .appleEating .apple2 .larva {
-  top: 40%;
-  left: 45%;
-  transform: rotate(10deg);
-}
-main .appleContainer .appleEating .apple3 h3 {
-  top: 53%;
-  left: 70%;
-}
-main .appleContainer .appleEating .apple3 .svg {
-  top: 45%;
-  left: 60%;
-}
-main .appleContainer .appleEating .apple3 .larva {
-  top: 58%;
-  left: 60%;
-  transform: rotate(10deg);
-}
-main .appleContainer .appleEating .apple4 h3 {
-  top: 50%;
-  left: 60%;
-}
-main .appleContainer .appleEating .apple4 .svg {
-  width: 90px;
-  top: 55%;
-  left: 58%;
-}
-main .appleContainer .appleEating .apple4 .larva {
-  top: 50%;
-  left: 40%;
-  transform: rotate(20deg);
-}
-main .appleContainer .appleEating .apple5 h3 {
-  top: 38%;
-  left: 21%;
-}
-main .appleContainer .appleEating .apple5 .svg {
-  top: 40%;
-  left: 33%;
-}
-main .appleContainer .appleEating .apple5 .larva {
-  top: 50%;
-  left: 20%;
-  transform: rotate(10deg);
 }
 main .appleContainer .circularDrop {
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 main .appleContainer .circularDrop .backGroundColor {
   position: absolute;
@@ -271,28 +177,30 @@ main .appleContainer .circularDrop .text-wrapper .text {
 main .appleContainer .circularDrop .text-wrapper .text span {
   background-color: #FFDDB4;
 }
-main .skillTool {
-  padding: 0 5vw;
+
+/*===== skillTool =====*/
+.skillTool {
+  padding: 100px 5vw 0;
   position: relative;
   margin-bottom: 100px;
   overflow: hidden;
 }
-main .skillTool.show .title {
+.skillTool.show .title {
   opacity: 1;
 }
-main .skillTool.show .title .letter {
+.skillTool.show .title .letter {
   display: inline-block;
   animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
-main .skillTool.show .skill2 {
+.skillTool.show .skill2 {
   opacity: 1;
   transform: translateX(250px);
 }
-main .skillTool.show .skill1 {
+.skillTool.show .skill1 {
   opacity: 1;
   transform: translateX(-250px);
 }
-main .skillTool .title {
+.skillTool .title {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 50px;
@@ -302,13 +210,13 @@ main .skillTool .title {
   overflow: hidden;
   opacity: 0;
 }
-main .skillTool .skill2 {
+.skillTool .skill2 {
   transform: translateX(1000px);
 }
-main .skillTool .skill1 {
+.skillTool .skill1 {
   transform: translateX(-1000px);
 }
-main .skillTool .skill-wrapper {
+.skillTool .skill-wrapper {
   margin: 0 auto 30px;
   transition: 1s;
   width: 800px;
@@ -326,32 +234,34 @@ main .skillTool .skill-wrapper {
   opacity: 0;
   box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 }
-main .skillTool .skill-wrapper .subTitle {
+.skillTool .skill-wrapper .subTitle {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #fff;
 }
-main .skillTool .skill-wrapper .text-wrapper {
+.skillTool .skill-wrapper .text-wrapper {
   line-height: 1.7;
 }
-main .project {
+
+/*===== project=====*/
+.project {
   width: 100%;
   margin: 0 auto 200px;
   padding: 100px 5vw;
   overflow: hidden;
 }
-main .project.show .title {
+.project.show .title {
   opacity: 1;
 }
-main .project.show .title .letter {
+.project.show .title .letter {
   display: inline-block;
   animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
-main .project.show .project-container {
+.project.show .project-container {
   opacity: 1;
 }
-main .project .title {
+.project .title {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 50px;
@@ -360,7 +270,7 @@ main .project .title {
   margin-bottom: 60px;
   opacity: 0;
 }
-main .project .project-container {
+.project .project-container {
   opacity: 0;
   transition: 1.5s;
   display: flex;
@@ -368,7 +278,7 @@ main .project .project-container {
   animation: project 35s linear infinite;
   width: 3200px;
 }
-main .project .project-container .project-wrapper {
+.project .project-container .project-wrapper {
   position: relative;
   width: 400px;
   height: 500px;
@@ -377,17 +287,17 @@ main .project .project-container .project-wrapper {
   padding: 50px 32px;
   box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 }
-main .project .project-container .project-wrapper:hover .hoverImg {
+.project .project-container .project-wrapper:hover .hoverImg {
   display: block;
 }
-main .project .project-container .project-wrapper .text-wrapper h3 {
+.project .project-container .project-wrapper .text-wrapper h3 {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #333;
   margin-bottom: 50px;
 }
-main .project .project-container .project-wrapper .text-wrapper p {
+.project .project-container .project-wrapper .text-wrapper p {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -395,7 +305,7 @@ main .project .project-container .project-wrapper .text-wrapper p {
   color: #333;
   margin-bottom: 20px;
 }
-main .project .project-container .project-wrapper .text-wrapper div {
+.project .project-container .project-wrapper .text-wrapper div {
   width: 150px;
   height: 30px;
   display: grid;
@@ -409,7 +319,7 @@ main .project .project-container .project-wrapper .text-wrapper div {
   border-radius: 30px;
   margin-top: 200px;
 }
-main .project .project-container .project-wrapper .hoverImg {
+.project .project-container .project-wrapper .hoverImg {
   background-color: #C63D2F;
   position: absolute;
   top: 0;

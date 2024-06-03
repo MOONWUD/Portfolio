@@ -59,6 +59,7 @@ $subTextColor: #666;
     transform: translateY(0);
   }
 }
+
 @keyframes project {
   0% {
     transform: translateX(0);
@@ -68,6 +69,28 @@ $subTextColor: #666;
     transform: translateX(calc(-400px * 4))
   }
 }
+
+@keyframes svg {
+  0% {
+    stroke-dashoffset: 300;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes apple {
+  0% {
+    transform: translate(-50%, -80%) rotate(-15deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+
+  }
+}
+
 main {
 
   /*===== main =====*/
@@ -157,159 +180,23 @@ main {
 
     /*=== appleRoration ===*/
     .appleRotation {
-      // padding-top: 100px;
       background-color: $subBgColor;
-      height: 160vh;
+      height: 230vh;
       position: relative;
 
       img {
         width: 120px;
         position: absolute;
         left: 50%;
-        top: 100px;
+        top: 50px;
         transform: translateX(-50%);
         transition: 0.5s;
       }
     }
 
     /*=== appleEating ===*/
-    .appleEating {
-      background-color: $subBgColor;
+    .appleEating {}
 
-      .apple-wrapper {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-
-        h3 {
-          @include sectionTitle();
-          font-weight: 400;
-          position: absolute;
-          transition: 0.3;
-          text-wrap: nowrap;
-          animation: titleMov 0.5s 0.3s linear forwards;
-        }
-
-        .svg {
-          width: 200px;
-          position: absolute;
-          transition: 0.3;
-          // opacity: 0;
-        }
-
-        .apple {
-          position: absolute;
-          width: 300px;
-          transition: 0.3;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-
-          img {
-            width: 100%;
-          }
-        }
-
-        .larva {
-          position: absolute;
-          height: 100px;
-          transition: 0.3;
-        }
-      }
-
-      .apple1 {
-        h3 {
-          top: 30%;
-          left: 73%;
-        }
-
-        .svg {
-          top: 30%;
-          left: 62%;
-          fill: $textColor;
-        }
-
-        .larva {
-          top: 20%;
-          left: 20%;
-          transform: rotate(5deg);
-        }
-      }
-
-      .apple2 {
-        h3 {
-          top: 43%;
-          left: 23%;
-        }
-
-        .svg {
-          width: 180px;
-          top: 45%;
-          left: 31%;
-        }
-
-        .larva {
-          top: 40%;
-          left: 45%;
-          transform: rotate(10deg);
-        }
-      }
-
-      .apple3 {
-        h3 {
-          top: 53%;
-          left: 70%;
-        }
-
-        .svg {
-          top: 45%;
-          left: 60%;
-        }
-
-        .larva {
-          top: 58%;
-          left: 60%;
-          transform: rotate(10deg);
-        }
-      }
-
-      .apple4 {
-        h3 {
-          top: 50%;
-          left: 60%;
-        }
-
-        .svg {
-          width: 90px;
-          top: 55%;
-          left: 58%;
-        }
-
-        .larva {
-          top: 50%;
-          left: 40%;
-          transform: rotate(20deg);
-        }
-      }
-
-      .apple5 {
-        h3 {
-          top: 38%;
-          left: 21%;
-        }
-
-        .svg {
-          top: 40%;
-          left: 33%;
-        }
-
-        .larva {
-          top: 50%;
-          left: 20%;
-          transform: rotate(10deg);
-        }
-      }
-    }
 
     /*=== circularDrop ===*/
     .circularDrop {
@@ -317,7 +204,7 @@ main {
       height: 100vh;
       position: relative;
       overflow: hidden;
-      margin-bottom: 200px;
+      margin-bottom: 100px;
 
       .backGroundColor {
         position: absolute;
@@ -358,167 +245,164 @@ main {
           }
         }
       }
-
     }
   }
+}
 
-  /*===== skillTool =====*/
-  .skillTool {
-    padding: 0 5vw;
-    position: relative;
-    margin-bottom: 100px;
-    overflow: hidden;
+/*===== skillTool =====*/
+.skillTool {
+  padding: 100px 5vw 0;
+  position: relative;
+  margin-bottom: 100px;
+  overflow: hidden;
 
-    &.show {
-      .title {
-        opacity: 1;
-        .letter {
-          display: inline-block;
-          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-        }
-      }
-
-      .skill2 {
-        opacity: 1;
-        transform: translateX(250px);
-      }
-
-      .skill1 {
-        opacity: 1;
-        transform: translateX(-250px);
-      }
-    }
-
+  &.show {
     .title {
-      @include sectionTitle();
-      text-align: center;
-      margin-bottom: 50px;
-      overflow: hidden;
-      opacity: 0;
+      opacity: 1;
+
+      .letter {
+        display: inline-block;
+        animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+      }
     }
-
-
 
     .skill2 {
-      transform: translateX(1000px);
+      opacity: 1;
+      transform: translateX(250px);
     }
 
     .skill1 {
-      transform: translateX(-1000px);
+      opacity: 1;
+      transform: translateX(-250px);
     }
-
-    .skill-wrapper {
-      margin: 0 auto 30px;
-      transition: 1s;
-      width: 800px;
-      background-color: $mainColor;
-      border: 1px solid $mainColor;
-      border-radius: 30px;
-      padding: 32px 30px 30px 35px;
-      @include sectionText(#fff);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      opacity: 0;
-      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
-
-      .subTitle {
-        @include sectionSubTitle(#fff);
-      }
-
-      .text-wrapper {
-        line-height: 1.7;
-      }
-
-      // &:hover {
-      //   background-color: transparent;
-      //   color: $mainColor;
-
-      //   .subTitle {
-      //     color: $mainColor;
-      //   }
-      // }
-    }
-
-
   }
 
-  /*===== project=====*/
-  .project {
-    width: 100%;
-    margin: 0 auto 200px;
-    padding: 100px 5vw;
+  .title {
+    @include sectionTitle();
+    text-align: center;
+    margin-bottom: 50px;
     overflow: hidden;
-    &.show {
-      .title {
-        opacity: 1;
-        .letter {
-          display: inline-block;
-          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-        }
-      }
-      .project-container {
-        opacity: 1
-      }
+    opacity: 0;
+  }
+
+
+
+  .skill2 {
+    transform: translateX(1000px);
+  }
+
+  .skill1 {
+    transform: translateX(-1000px);
+  }
+
+  .skill-wrapper {
+    margin: 0 auto 30px;
+    transition: 1s;
+    width: 800px;
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    border-radius: 30px;
+    padding: 32px 30px 30px 35px;
+    @include sectionText(#fff);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0;
+    box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+
+    .subTitle {
+      @include sectionSubTitle(#fff);
     }
 
+    .text-wrapper {
+      line-height: 1.7;
+    }
+  }
+}
+
+/*===== project=====*/
+.project {
+  width: 100%;
+  margin: 0 auto 200px;
+  padding: 100px 5vw;
+  overflow: hidden;
+
+  &.show {
     .title {
-      @include sectionTitle();
-      text-align: center;
-      margin-bottom: 60px;
-      opacity: 0;
+      opacity: 1;
+
+      .letter {
+        display: inline-block;
+        animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+      }
     }
 
     .project-container {
-      opacity: 0;
-      transition: 1.5s;
-      display: flex;
-      gap: 30px;
-      animation: project 35s linear infinite;
-      width: calc(400px * 8);
-      .project-wrapper {
-        position: relative;
-        width: 400px;
-        height: 500px;
-        border: 1px solid rgba(198, 62, 47, 0.3);
-        border-radius: 30px;
-        padding: 50px 32px;
-        box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
-        
-        &:hover {
-          .hoverImg {
-            display: block;
-          }
-        }
-        .text-wrapper {
-          h3 {
-            @include sectionSubTitle();
-            margin-bottom: 50px;
-          }
-          p {
-            @include sectionText();
-            margin-bottom: 20px;
-          }
-          div { 
-            width: 150px;
-            height: 30px;
-            display: grid;
-            place-items: center;
-            @include sectionText($mainColor);
-            border: 1px solid $mainColor;
-            border-radius: 30px;
-            margin-top: 200px;
-          }
-        }
+      opacity: 1
+    }
+  }
+
+  .title {
+    @include sectionTitle();
+    text-align: center;
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+
+  .project-container {
+    opacity: 0;
+    transition: 1.5s;
+    display: flex;
+    gap: 30px;
+    animation: project 35s linear infinite;
+    width: calc(400px * 8);
+
+    .project-wrapper {
+      position: relative;
+      width: 400px;
+      height: 500px;
+      border: 1px solid rgba(198, 62, 47, 0.3);
+      border-radius: 30px;
+      padding: 50px 32px;
+      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+
+      &:hover {
         .hoverImg {
-          background-color: #C63D2F;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 30px;
-          display: none;
+          display: block;
         }
+      }
+
+      .text-wrapper {
+        h3 {
+          @include sectionSubTitle();
+          margin-bottom: 50px;
+        }
+
+        p {
+          @include sectionText();
+          margin-bottom: 20px;
+        }
+
+        div {
+          width: 150px;
+          height: 30px;
+          display: grid;
+          place-items: center;
+          @include sectionText($mainColor);
+          border: 1px solid $mainColor;
+          border-radius: 30px;
+          margin-top: 200px;
+        }
+      }
+
+      .hoverImg {
+        background-color: #C63D2F;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: none;
       }
     }
   }
