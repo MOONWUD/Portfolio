@@ -124,6 +124,29 @@ $borderRadius: 30px;
   }
 }
 
+// Breakpoints
+$breakpoint-tablet: 1000px;
+$breakpoint-desktop: 1400px;
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+/*===== style =====*/
 *::selection {
   background-color: rgba(252, 134, 158, 0.5);
 }
@@ -422,66 +445,6 @@ main {
 
   /*===== about =====*/
   .about {
-
-    /*=== face ===*/
-    .face {
-      &.show {
-        .svg {
-          #facePaths {
-            .facePath:first-child {
-              animation: svg1 1s ease-in alternate;
-            }
-
-            .facePath:last-child {
-              animation: svg2 0.5s 1s ease-in-out forwards;
-            }
-          }
-        }
-
-        .text {
-          animation: aboutTitle 0.5s 1s ease-in-out forwards;
-        }
-      }
-
-      padding: 0 5vw;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      background-color: $subBgColor;
-
-      .svg {
-        width: 50%;
-
-        #facePaths {
-          .facePath:first-child {
-            fill: none;
-            stroke: $textColor;
-            stroke-width: 4;
-            stroke-dasharray: 2007.6986083984375;
-            stroke-dashoffset: 1000;
-          }
-
-          .facePath:last-child {
-            fill: $textColor;
-            stroke: $textColor;
-            stroke-width: 5;
-            stroke-dasharray: 33.02588653564453;
-            stroke-dashoffset: 0;
-            opacity: 0;
-          }
-        }
-      }
-
-      .text {
-        margin-top: 600px;
-        @include sectionSubTitle();
-        font-size: 70px;
-        align-self: center;
-        transition: 0.5s;
-        transform: scale(1);
-        opacity: 0;
-      }
-    }
 
     /*=== Drop ===*/
     .drop {
@@ -889,6 +852,163 @@ main {
           display: none;
           text-indent: -99999px;
         }
+      }
+    }
+  }
+}
+
+/************ 1400 */
+@include tablet {
+  main {
+
+    /*===== main =====*/
+    .main {
+      .mainTitle-container {
+        font-size: 100px;
+        }
+    }
+
+    /*===== about =====*/
+    .about {
+      /*=== Drop ===*/
+      .drop {
+
+        .backGroundColor {
+          border-radius: 0 0 50% 50%;
+        }
+        .contentsWrapper {
+          top: 40%;
+          .glitters {
+            .item1 {
+              left: 15%;
+            }
+            .item5 {
+              right: 15%;
+            }
+            .glitter3 {
+              top: 55%;
+            }
+            .glitter4 {
+              top: 80%;
+              left: 80%;
+              transform: scale(0.5);
+              animation: glitter4 2s infinite;
+              @keyframes glitter4 {
+                50% {
+                  transform: scale(1);
+                }
+                100% {
+                  transform: scale(0.5);
+                }
+              }
+            }
+            .glitter6 {
+              top: 0%;
+            }
+          }
+        }
+      }
+    }
+
+    /*===== skillTool =====*/
+    .skillTool {
+      &.show {
+        .skill2 {
+          transform: translateX(0px);
+        }
+
+        .skill1 {
+          transform: translateX(0px);
+        }
+      }
+    }
+    /*===== project=====*/
+    .project {
+      height: 100vw;
+      .backGroundColor {
+        height: 100vw;
+      }
+     .title {
+       padding: 0 0 30px;
+     }
+    }
+  }
+}
+
+/*********** 1000 */
+@include mobile {
+  main {
+
+    /*===== main =====*/
+    .main {
+      .mainTitle-container {
+        font-size: 80px;
+        }
+    }
+
+    /*===== about =====*/
+    .about {
+      /*=== Drop ===*/
+      .drop {
+
+        .backGroundColor {
+          top: 0;
+          border-radius: 0 0 50% 50%;
+        }
+        .contentsWrapper {
+          top: 30%;
+          .glitters {
+            .item1 {
+              left: 15%;
+            }
+            .item5 {
+              right: 15%;
+            }
+            .glitter3 {
+              top: 55%;
+            }
+            .glitter4 {
+              top: 80%;
+              left: 80%;
+              transform: scale(0.5);
+              animation: glitter4 2s infinite;
+              @keyframes glitter4 {
+                50% {
+                  transform: scale(1);
+                }
+                100% {
+                  transform: scale(0.5);
+                }
+              }
+            }
+            .glitter6 {
+              top: 0%;
+            }
+          }
+        }
+      }
+    }
+
+    /*===== skillTool =====*/
+    .skillTool {
+      &.show {
+        .skill2 {
+          transform: translateX(0px);
+        }
+
+        .skill1 {
+          transform: translateX(0px);
+        }
+      }
+    }
+    /*===== project=====*/
+    .project {
+      height: 100vw;
+      .backGroundColor {
+        height: 100vw;
+      }
+      .title {
+        padding: 0 0 30px;
       }
     }
   }

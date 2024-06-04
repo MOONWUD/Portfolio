@@ -61,6 +61,7 @@
     transform: rotate(-5deg);
   }
 }
+/*===== style =====*/
 *::-moz-selection {
   background-color: rgba(252, 134, 158, 0.5);
 }
@@ -337,54 +338,7 @@ main .main .mainTitle-container .mainTitle-wrapper2 .letter {
   transform-origin: 0 0;
 }
 main .about {
-  /*=== face ===*/
   /*=== Drop ===*/
-}
-main .about .face {
-  padding: 0 5vw;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #FFFDF3;
-}
-main .about .face.show .svg #facePaths .facePath:first-child {
-  animation: svg1 1s ease-in alternate;
-}
-main .about .face.show .svg #facePaths .facePath:last-child {
-  animation: svg2 0.5s 1s ease-in-out forwards;
-}
-main .about .face.show .text {
-  animation: aboutTitle 0.5s 1s ease-in-out forwards;
-}
-main .about .face .svg {
-  width: 50%;
-}
-main .about .face .svg #facePaths .facePath:first-child {
-  fill: none;
-  stroke: #333;
-  stroke-width: 4;
-  stroke-dasharray: 2007.6986083984;
-  stroke-dashoffset: 1000;
-}
-main .about .face .svg #facePaths .facePath:last-child {
-  fill: #333;
-  stroke: #333;
-  stroke-width: 5;
-  stroke-dasharray: 33.0258865356;
-  stroke-dashoffset: 0;
-  opacity: 0;
-}
-main .about .face .text {
-  margin-top: 600px;
-  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  font-size: 30px;
-  color: #333;
-  font-size: 70px;
-  align-self: center;
-  transition: 0.5s;
-  transform: scale(1);
-  opacity: 0;
 }
 main .about .drop {
   width: 100%;
@@ -771,4 +725,130 @@ main .project .project-container .project-wrapper .hoverImg {
   border-radius: 30px;
   display: none;
   text-indent: -99999px;
+}
+
+/************ 1400 */
+@media (min-width: 1000px) and (max-width: 1399px) {
+  main {
+    /*===== main =====*/
+    /*===== about =====*/
+    /*===== skillTool =====*/
+    /*===== project=====*/
+  }
+  main .main .mainTitle-container {
+    font-size: 100px;
+  }
+  main .about {
+    /*=== Drop ===*/
+  }
+  main .about .drop .backGroundColor {
+    border-radius: 0 0 50% 50%;
+  }
+  main .about .drop .contentsWrapper {
+    top: 40%;
+  }
+  main .about .drop .contentsWrapper .glitters .item1 {
+    left: 15%;
+  }
+  main .about .drop .contentsWrapper .glitters .item5 {
+    right: 15%;
+  }
+  main .about .drop .contentsWrapper .glitters .glitter3 {
+    top: 55%;
+  }
+  main .about .drop .contentsWrapper .glitters .glitter4 {
+    top: 80%;
+    left: 80%;
+    transform: scale(0.5);
+    animation: glitter4 2s infinite;
+  }
+  @keyframes glitter4 {
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
+  main .about .drop .contentsWrapper .glitters .glitter6 {
+    top: 0%;
+  }
+  main .skillTool.show .skill2 {
+    transform: translateX(0px);
+  }
+  main .skillTool.show .skill1 {
+    transform: translateX(0px);
+  }
+  main .project {
+    height: 100vw;
+  }
+  main .project .backGroundColor {
+    height: 100vw;
+  }
+  main .project .title {
+    padding: 0 0 30px;
+  }
+}
+/*********** 1000 */
+@media (max-width: 1001px) {
+  main {
+    /*===== main =====*/
+    /*===== about =====*/
+    /*===== skillTool =====*/
+    /*===== project=====*/
+  }
+  main .main .mainTitle-container {
+    font-size: 80px;
+  }
+  main .about {
+    /*=== Drop ===*/
+  }
+  main .about .drop .backGroundColor {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  main .about .drop .contentsWrapper {
+    top: 30%;
+  }
+  main .about .drop .contentsWrapper .glitters .item1 {
+    left: 15%;
+  }
+  main .about .drop .contentsWrapper .glitters .item5 {
+    right: 15%;
+  }
+  main .about .drop .contentsWrapper .glitters .glitter3 {
+    top: 55%;
+  }
+  main .about .drop .contentsWrapper .glitters .glitter4 {
+    top: 80%;
+    left: 80%;
+    transform: scale(0.5);
+    animation: glitter4 2s infinite;
+  }
+  @keyframes glitter4 {
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
+  main .about .drop .contentsWrapper .glitters .glitter6 {
+    top: 0%;
+  }
+  main .skillTool.show .skill2 {
+    transform: translateX(0px);
+  }
+  main .skillTool.show .skill1 {
+    transform: translateX(0px);
+  }
+  main .project {
+    height: 100vw;
+  }
+  main .project .backGroundColor {
+    height: 100vw;
+  }
+  main .project .title {
+    padding: 0 0 30px;
+  }
 }/*# sourceMappingURL=index.css.map */

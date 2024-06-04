@@ -60,17 +60,6 @@ gsap.to(".box1", {
 });
 
 /*===== about =====*/
-/*=== face ===*/
-$(window).on('scroll', () => {
-  let faceHt = $('.face').offset().top - 400;
-  if (scrollY > faceHt) {
-    $('.face').addClass('show');
-    
-  } else {
-    $('.face').removeClass('show');
-  }
-})
-
 /*=== drop ===*/
 
 gsap.to(".drop .contentsWrapper .text-wrapper", {
