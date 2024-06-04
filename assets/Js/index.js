@@ -45,15 +45,15 @@ $(window).on('scroll', () => {
   }
 })
 /*=== drop ===*/
-$(window).on('scroll', () => {
-  let dropHt = $('.drop').offset().top - 50;
-  if (scrollY > dropHt) {
-    $('.drop .text-wrapper').addClass('show');
+// $(window).on('scroll', () => {
+//   let dropHt = $('.drop').offset().top - 50;
+//   if (scrollY > dropHt) {
+//     $('.drop .contentsWrapper').addClass('show');
     
-  } else {
-    $('.drop .text-wrapper' ).removeClass('show');
-  }
-})
+//   } else {
+//     $('.drop .contentsWrapper' ).removeClass('show');
+//   }
+// })
 
 
 /*===== skill & tool =====*/

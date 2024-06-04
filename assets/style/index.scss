@@ -9,19 +9,18 @@ $textColor: #333;
 $subTextColor: #666;
 
 /*===== font =====*/
-@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @mixin mainTitle {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive;
   font-size: 120px;
-  font-weight: 800;
+  font-weight: 600;
   color: $mainColor;
 }
 
 @mixin sectionTitle ($color: $textColor) {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 50px;
   color: $color;
 }
@@ -29,22 +28,22 @@ $subTextColor: #666;
 @mixin aboutText ($color: $textColor) {
   font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   color: $color;
 }
 
 @mixin sectionSubTitle ($color: $textColor) {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 30px;
   color: $color;
 }
 
 @mixin sectionText ($color: $textColor) {
   font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 1.5;
   color: $color;
 }
@@ -70,36 +69,41 @@ $borderRadius: 30px;
   }
 
   100% {
-    transform: translateX(calc(-370px * 4 ))
+    transform: translateX(calc(-370px * 4))
   }
 }
 
 @keyframes svg1 {
   0% {
-    stroke-dashoffset:  2007.6986083984375;
+    stroke-dashoffset: 2007.6986083984375;
   }
 
   100% {
     stroke-dashoffset: 1000;
   }
 }
+
 @keyframes svg2 {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes aboutTitle {
   0% {
     opacity: 0;
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.5);
     opacity: 1;
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -110,17 +114,20 @@ $borderRadius: 30px;
   0% {
     transform: rotate(5deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-5deg);
   }
-} 
+}
 
 body {
   background-color: $mainBgColor;
 }
+
 /*===== header =====*/
 .header {
   transition: 0.5s;
@@ -128,6 +135,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+
   .nav {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
@@ -142,22 +150,26 @@ body {
 
     .logo {
       a {
-        
+
         img {
           width: 50px;
+
           &:hover {
             transform: rotate(10deg);
           }
         }
       }
     }
+
     .navButton-wrapper {
       display: flex;
       justify-content: space-evenly;
+
       li:hover {
         color: $mainColor;
       }
     }
+
     .githubLink {
       a {
         width: 120px;
@@ -168,6 +180,7 @@ body {
         border-radius: $borderRadius;
         border: 1px solid $mainColor;
         color: #fff;
+
         &:hover {
           background-color: transparent;
           color: $mainColor;
@@ -179,11 +192,14 @@ body {
 
 /*===== footer =====*/
 .footer {
+  width: 100%;
+
   .eyes {
     text-indent: -9999px;
     display: flex;
     justify-content: center;
     margin: 0 auto 20px;
+
     .eye {
       width: 50px;
       height: 70px;
@@ -191,6 +207,7 @@ body {
       background-color: #fff;
       position: relative;
       overflow: hidden;
+
       .pupil {
         width: 20px;
         height: 20px;
@@ -205,38 +222,43 @@ body {
       }
     }
   }
+
   .title {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
     gap: 10px;
     align-items: center;
+
     .sectionTitle {
       @include sectionSubTitle();
       text-align: center;
     }
+
     .line {
       position: relative;
       width: 100%;
-      border-bottom: 1px solid $mainColor; 
+      border-bottom: 1px solid $textColor;
       opacity: 0.5;
       height: 0;
+
       &:first-child::after {
         content: "";
         width: 10px;
         height: 10px;
-        border: 1px solid $mainColor;
+        border: 1px solid $textColor;
         border-radius: 50%;
         position: absolute;
         right: -10px;
         top: 50%;
         transform: translateY(-50%);
       }
+
       &:last-child::after {
         content: "";
         width: 10px;
         height: 10px;
-        border: 1px solid $mainColor;
+        border: 1px solid $textColor;
         border-radius: 50%;
         position: absolute;
         left: -10px;
@@ -245,45 +267,50 @@ body {
       }
     }
   }
-  .contactButton {
-    display: flex;
-    gap: 100px;
+
+  .text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    width: 100%;
     padding: 50px 5vw;
-    justify-content: center;
     @include sectionText();
-    font-weight: 500;
-    div {
+
+    .copyRights {
+      color: $subTextColor;
+      justify-content: start;
+
+    }
+
+    .click {
+      display: flex;
+      gap: 30px;
+      justify-self: end;
+
       a {
+        position: relative;
+
+        &::after {
+          z-index: -1;
+          content: "";
+          width: 0;
+          height: 20px;
+          background-color: $mainColor;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 0.3s all;
+        }
+
         &:hover {
           &::after {
             content: "";
-            opacity: 0;
-            width: 0%;
+            width: 100%;
           }
         }
-        position: relative;
-        overflow: hidden;
-        &::after {
-          content: "";
-          opacity: 1;
-          width: 110%;
-          height: 1.5px;
-          position: absolute;
-          bottom: -3px;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #333;
-          transition: 0.5s;
-        }
-      }  
+      }
     }
-  }
 
-
-  .copyRights {
-    margin: 0 5vw 50px;
-    @include sectionText($subTextColor);
-    font-size: 16px;
   }
 }
 
@@ -304,6 +331,7 @@ body {
 }
 
 main {
+
   /*===== main =====*/
   .main {
     width: 100%;
@@ -391,6 +419,7 @@ main {
 
   /*===== about =====*/
   .about {
+
     /*=== face ===*/
     .face {
       &.show {
@@ -399,42 +428,50 @@ main {
             .facePath:first-child {
               animation: svg1 1s ease-in alternate;
             }
+
             .facePath:last-child {
               animation: svg2 0.5s 1s ease-in-out forwards;
             }
           }
         }
+
         .text {
           animation: aboutTitle 0.5s 1s ease-in-out forwards;
         }
       }
+
       padding: 0 5vw;
       display: flex;
+      justify-content: center;
       width: 100%;
       background-color: $subBgColor;
+
       .svg {
-        width: 70%;
+        width: 50%;
+
         #facePaths {
           .facePath:first-child {
             fill: none;
             stroke: $textColor;
-            stroke-width: 10;
-            stroke-dasharray:  2007.6986083984375;
+            stroke-width: 4;
+            stroke-dasharray: 2007.6986083984375;
             stroke-dashoffset: 1000;
           }
+
           .facePath:last-child {
             fill: $textColor;
             stroke: $textColor;
-            stroke-width: 8;
+            stroke-width: 5;
             stroke-dasharray: 33.02588653564453;
             stroke-dashoffset: 0;
             opacity: 0;
           }
         }
       }
+
       .text {
         margin-top: 600px;
-        @include sectionTitle();
+        @include sectionSubTitle();
         font-size: 70px;
         align-self: center;
         transition: 0.5s;
@@ -463,59 +500,8 @@ main {
         border-radius: 50%;
         display: block;
       }
-      .text-wrapper {
-        &.show {
-          .item {
-            opacity: 1;
-          }
-          .subTitle {
-            opacity: 1;
-            transform: translateY(-15px);
-          }
-          .text {
-            opacity: 1;
-            transform: translateY(-15px);
-          }
-        }
-        .item {
-          opacity: 0;
-          border-radius: 30px;
-          border: 1px solid $mainColor;
-          background-color: $mainColor;
-          width: 100px;
-          height: 40px;
-          display: grid;
-          place-items: center;
-          position: absolute;
-          @include sectionText(#fff);
-          font-weight: 600;
-          // animation: item 0.5s infinite;
-        }
-        .item1 {
-          top: -2%; 
-          left: 40%;
-          transform: rotate(-15deg);
-        }
-        .item2 {
-          top:  80%; 
-          left: 20%;
-          transform: rotate(15deg);
-        }
-        .item3 {
-          top:  65%; 
-          left: 75%;
-          transform: rotate(-25deg);
-        }
-        .item4 {
-          top:  15%; 
-          left: 75%;
-          transform: rotate(30deg);
-        }
-        .item5 {
-          top:  40%; 
-          left: 15%;
-          transform: rotate(-30deg);
-        }
+
+      .contentsWrapper {
         position: relative;
         top: 40%;
         left: 50%;
@@ -528,23 +514,156 @@ main {
           font-size: 80px;
           line-height: 1.3;
           margin-bottom: 50px;
-          opacity: 0;
+          opacity: 1;
           transform: translateY(0px);
         }
-
+        
         .text {
           @include aboutText();
-          opacity: 0;
+          opacity: 1;
           transform: translateY(0px);
-
+          
           span {
             background-color: #FFB531;
             color: #fff;
           }
         }
+        .glitters {
+          .item {
+            transition: 0.8s;
+            opacity: 0.8;
+            border-radius: 30px;
+            border: 1px solid $mainColor;
+            background-color: $mainColor;
+            padding: 5px 10px;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            @include sectionText(#fff);
+            font-weight: 600;
+            // animation: item 0.5s infinite;
+          }
+          .item1 {
+            top: 10%;
+            left: 20%;
+            transform: rotate(15deg);
+          }
+          .item2 {
+            top: 0%;
+            left: 40%;
+            transform: rotate(-10deg);
+          }
+          .item3 {
+            top: 110%;
+            left: 50%;
+            transform: rotate(20deg);
+          }
+          .item4 {
+            top: 30%;
+            left: 80%;
+            transform: rotate(-20deg);
+          }
+          .item5 {
+            top: 50%;
+            right: 25%;
+            transform: rotate(15deg);
+          }
+
+          .glitter {
+            position: absolute;
+            width: 50px;
+            opacity: 0.8;
+            img {
+              width: 100%;
+            }
+          }
+          .glitter1 {
+            top: 0%;
+            right: 10%;
+            transform: rotate(0deg);
+            animation: glitter1 3s infinite;
+            @keyframes glitter1 {
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          }
+          .glitter2 {
+            top: 20%;
+            left: 10%;
+            transform: rotate(0);
+            animation: glitter2 3s infinite;
+            @keyframes glitter2 {
+              100% {
+                transform: rotate(-360deg);
+              }
+            }
+          }
+          .glitter3 {
+            top: 40%;
+            left: 30%;
+            transform: scale(1) rotate(0deg);
+            animation: glitter3 3s infinite;
+            @keyframes glitter3 {
+              50% {
+                transform: scale(1.2) rotate(180deg);
+              }
+              100% {
+                transform: scale(1) rotate(360deg);
+              }
+            }
+          }
+          .glitter4 {
+            top: 80%;
+            left: 80%;
+            transform: scale(0.5);
+            animation: glitter4 2s infinite;
+            @keyframes glitter4 {
+              50% {
+                transform: scale(1);
+              }
+              100% {
+                transform: scale(0.5);
+              }
+            }
+
+          }
+          .glitter5 {
+            top: 60%;
+            left: 20%;
+            transform: scale(0.8);
+            animation: glitter5 2s 0.5s infinite;
+            @keyframes glitter5 {
+              50% {
+                transform: scale(1);
+              }
+              100% {
+                transform: scale(0.8);
+              }
+            }
+          }
+          .glitter6 {
+            top: 10%;
+            left: 70%;
+            transform: scale(1);
+            opacity: 0;
+            animation: glitter6 2s 1s infinite;
+            @keyframes glitter6 {
+              50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+              }
+              100% {
+                transform: scale(1);
+                opacity: 0;
+              }
+            }
+          }
+        }
       }
     }
   }
+
   /*===== skillTool =====*/
   .skillTool {
     padding: 100px 5vw 0;
@@ -552,28 +671,28 @@ main {
     margin-bottom: 100px;
     overflow: hidden;
     width: 100%;
-  
+
     &.show {
       .title {
         opacity: 1;
-  
+
         .letter {
           display: inline-block;
           animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
       }
-  
+
       .skill2 {
         opacity: 1;
         transform: translateX(250px);
       }
-  
+
       .skill1 {
         opacity: 1;
         transform: translateX(-250px);
       }
     }
-  
+
     .title {
       @include sectionTitle();
       text-align: center;
@@ -581,17 +700,17 @@ main {
       overflow: hidden;
       opacity: 0;
     }
-  
-  
-  
+
+
+
     .skill2 {
       transform: translateX(1000px);
     }
-  
+
     .skill1 {
       transform: translateX(-1000px);
     }
-  
+
     .skill-wrapper {
       &:hover {
         .text-wrapper {
@@ -602,6 +721,7 @@ main {
           }
         }
       }
+
       margin: 0 auto 30px;
       transition: 1s;
       width: 800px;
@@ -614,31 +734,31 @@ main {
       grid-template-columns: 1fr 1fr;
       opacity: 0;
       box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
-  
+
       .subTitle {
         @include sectionSubTitle(#fff);
       }
-  
+
       .text-wrapper {
         line-height: 1.7;
         transition: 0.3s;
       }
     }
   }
-  
+
   /*===== project=====*/
   .project {
-    height: 100vw;
+    height: 80vw;
     width: 100%;
     margin: 100px auto 200px;
     padding: 100px 5vw;
     overflow: hidden;
     position: relative;
-  
+
     .backGroundColor {
       background-color: $subBgColor;
       width: 130vw;
-      height: 100vw;
+      height: 80vw;
       border-radius: 50%;
       display: block;
       position: absolute;
@@ -646,29 +766,31 @@ main {
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
     &.show {
       .title {
         opacity: 1;
-  
+
         .letter {
           display: inline-block;
           animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
         }
       }
-  
+
       .project-container {
         opacity: 1;
         transform: translateY(-30px)
       }
+
     }
-  
+
     .title {
       @include sectionTitle();
       text-align: center;
-      margin: 100px 0 ;
+      padding: 200px 0 100px;
       opacity: 0;
     }
-  
+
     .project-container {
       opacity: 0;
       transition: 0.5s;
@@ -676,7 +798,7 @@ main {
       gap: 30px;
       animation: project 35s linear infinite;
       width: calc(400px * 8);
-  
+
       .project-wrapper {
         position: relative;
         width: 400px;
@@ -685,24 +807,24 @@ main {
         border-radius: 30px;
         padding: 50px 32px;
         box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
-  
+
         &:hover {
           .hoverImg {
             display: block;
           }
         }
-  
+
         .text-wrapper {
           h3 {
             @include sectionSubTitle();
             margin-bottom: 50px;
           }
-  
+
           p {
             @include sectionText();
             margin-bottom: 20px;
           }
-  
+
           div {
             width: 200px;
             height: 40px;
@@ -714,7 +836,7 @@ main {
             margin-top: 200px;
           }
         }
-  
+
         .hoverImg {
           background-color: $mainColor;
           position: absolute;
@@ -724,6 +846,7 @@ main {
           height: 100%;
           border-radius: 30px;
           display: none;
+          text-indent: -99999px;
         }
       }
     }
