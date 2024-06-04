@@ -65,11 +65,11 @@ gsap.to(".box1", {
 gsap.to(".drop .contentsWrapper .text-wrapper", {
   scrollTrigger: {
     trigger: '.drop',//객체기준범위
-    start: "10% 30%",//시작 지점
+    start: "-10% 30%",//시작 지점
     end: "80% 80%",//끝 지점
     // end: "+=500"//시작 부분부터 500px까지 스크롤 한 후종료
     scrub: 1,//부드러운 스크러빙
-    //markers: true,개발가이드선
+    markers: true,//개발가이드선
   },
   scale: 1,
   borderRadius: 0,
