@@ -1,6 +1,7 @@
 /*===== color =====*/
 /*===== font =====*/
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 /*===== border-radius =====*/
 /*===== animation =====*/
 @keyframes title {
@@ -18,22 +19,6 @@
   }
   100% {
     transform: translateX(-1480px);
-  }
-}
-@keyframes svg1 {
-  0% {
-    stroke-dashoffset: 2007.6986083984;
-  }
-  100% {
-    stroke-dashoffset: 1000;
-  }
-}
-@keyframes svg2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes aboutTitle {
@@ -258,6 +243,7 @@ main .main {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  padding-bottom: 100px;
 }
 main .main .backGroundColor {
   position: absolute;
@@ -355,7 +341,7 @@ main .about .drop .backGroundColor {
 }
 main .about .drop .contentsWrapper {
   position: relative;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -365,6 +351,11 @@ main .about .drop .contentsWrapper .text-wrapper {
   transform: scale(2);
 }
 main .about .drop .contentsWrapper .text-wrapper .subTitle {
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 30px;
+}
+main .about .drop .contentsWrapper .text-wrapper .subTitle div {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", cursive;
   font-size: 150px;
   font-weight: 600;
@@ -374,8 +365,47 @@ main .about .drop .contentsWrapper .text-wrapper .subTitle {
   font-size: 80px;
   line-height: 1.3;
   margin-bottom: 50px;
-  opacity: 1;
-  transform: translateY(0px);
+}
+main .about .drop .contentsWrapper .text-wrapper .subTitle div div {
+  display: inline-block;
+  height: 200px;
+}
+main .about .drop .contentsWrapper .text-wrapper .subTitle div:first-child {
+  animation: show 5s linear infinite;
+}
+@keyframes show {
+  0% {
+    margin-top: -400px;
+  }
+  5% {
+    margin-top: -100px;
+  }
+  33% {
+    margin-top: -100px;
+  }
+  38% {
+    margin-top: -100px;
+  }
+  66% {
+    margin-top: -100px;
+  }
+  69% {
+    margin-top: 0px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -400px;
+  }
+}
+main .about .drop .contentsWrapper .text-wrapper .subTitle div:last-child {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  letter-spacing: 5px;
 }
 main .about .drop .contentsWrapper .text-wrapper .text {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -671,7 +701,7 @@ main .project .title {
   color: #333;
   text-transform: uppercase;
   text-align: center;
-  padding: 100px 0 50px;
+  padding: 0 0 50px;
   opacity: 0;
 }
 main .project .project-container {
@@ -738,7 +768,7 @@ main .project .project-container .project-wrapper .hoverImg {
 }
 
 /************ 1400 */
-@media (min-width: 1000px) and (max-width: 1399px) {
+@media (min-width: 1000px) and (max-width: 1390px) {
   main {
     /*===== main =====*/
     /*===== about =====*/
@@ -790,10 +820,10 @@ main .project .project-container .project-wrapper .hoverImg {
     transform: translateX(0px);
   }
   main .project {
-    height: 100vw;
+    height: 100vh;
   }
   main .project .backGroundColor {
-    height: 100vw;
+    height: 100vh;
   }
   main .project .title {
     padding: 0 0 30px;
