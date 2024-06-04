@@ -1,38 +1,9 @@
+history.scrollRestoration = "manual"; // 새로고침 위치 기억
+
+/*===== 클릭시 이미지 생성  =====*/
+
 /*===== main  =====*/
 /*=== text ===*/
-// var textWrapper = document.querySelector('.mainTitle-wrapper .letters');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-// anime.timeline({ loop: 0 })
-//   .add({
-//     targets: '.mainTitle-wrapper .letter',
-//     rotateY: [-90, 0],
-//     duration: 1300,
-//     delay: (el, i) => 45 * i
-//   }).add({
-//     targets: '.mainTitle-wrapper',
-//     opacity: 1,
-//     duration: 1000,
-//     easing: "easeOutExpo",
-//     delay: 800
-//   });
-
-// var textWrapper = document.querySelector('.mainTitle-wrapper2 .letters');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-// anime.timeline({ loop: 0 })
-// .add({
-//   targets: '.mainTitle-wrapper2 .letter',
-//   rotateY: [-90, 0],
-//   duration: 1300,
-//   delay: (el, i) => 45 * i + 1000
-// }).add({
-//   targets: '.mainTitle-wrapper2',
-//   opacity: 1,
-//   duration: 1000,
-//   easing: "easeOutExpo",
-//   delay: 0
-// });
 var textWrapper = document.querySelector('.ml1');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -72,6 +43,7 @@ anime.timeline({loop: 2})
     easing: "easeOutExpo",
     delay: 1000
   });
+
 /*=== box ===*/
 gsap.to(".box1", {
   scrollTrigger: {
@@ -98,16 +70,9 @@ $(window).on('scroll', () => {
     $('.face').removeClass('show');
   }
 })
+
 /*=== drop ===*/
-// $(window).on('scroll', () => {
-//   let dropHt = $('.drop').offset().top - 50;
-//   if (scrollY > dropHt) {
-//     $('.drop .contentsWrapper').addClass('show');
-    
-//   } else {
-//     $('.drop .contentsWrapper' ).removeClass('show');
-//   }
-// })
+
 gsap.to(".drop .contentsWrapper .text-wrapper", {
   scrollTrigger: {
     trigger: '.drop',//객체기준범위
@@ -124,7 +89,7 @@ gsap.to(".drop .contentsWrapper .text-wrapper", {
 });
 
 $(window).on('scroll', () => {
-  let dropHt = $('.drop .contentsWrapper .text-wrapper').offset().top - 300;
+  let dropHt = $('.drop .contentsWrapper .text-wrapper').offset().top - 350;
   if (scrollY > dropHt) {
     $('.glitters').addClass('show');
 
@@ -132,6 +97,7 @@ $(window).on('scroll', () => {
     $('.glitters').removeClass('show');
   }
 })
+
 /*===== skill & tool =====*/
 /*=== title ===*/
 /*=== 날라오는 박스 ===*/
@@ -155,14 +121,3 @@ $(window).on('scroll', () => {
     $('.project').removeClass('show');
   }
 })
-
-
-
-// 패스 길이 구하는 식
-/*
-const logo = document.querySelectorAll("#facePaths .facePath");
-
-for(let i = 0; i < logo.length; i++) {
-    console.log(`${i+1}번째 path의 총 길이 ${logo[i].getTotalLength()}`);
-}
-*/

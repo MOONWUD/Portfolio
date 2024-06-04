@@ -91,7 +91,7 @@ body {
   justify-content: space-around;
   gap: 3vw;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -203,7 +203,7 @@ body {
   width: 100%;
   padding: 50px 5vw;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -223,17 +223,17 @@ body {
 .footer .text .click a::after {
   z-index: -1;
   content: "";
-  width: 0;
+  width: 100%;
   height: 20px;
   background-color: #89B2F4;
   position: absolute;
   top: 0;
-  left: 0;
-  transition: 0.3s all;
+  right: 0;
+  transition: 0.3s ease-out;
 }
 .footer .text .click a:hover::after {
   content: "";
-  width: 100%;
+  width: 0%;
 }
 
 /****** mouseEmoji ******/
@@ -317,14 +317,6 @@ main .main .mainTitle-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-main .main .mainTitle-container::-moz-selection {
-  color: #fff;
-  background-color: #89B2F4;
-}
-main .main .mainTitle-container::selection {
-  color: #fff;
-  background-color: #89B2F4;
 }
 main .main .mainTitle-container .mainTitle-wrapper {
   overflow: hidden;
@@ -487,11 +479,11 @@ main .about .drop .contentsWrapper .glitters .item {
   display: grid;
   place-items: center;
   position: absolute;
-  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
   color: #fff;
+  font-size: 20px;
   font-weight: 600;
 }
 main .about .drop .contentsWrapper .glitters .item:hover {
@@ -504,7 +496,7 @@ main .about .drop .contentsWrapper .glitters .item1 {
   transform: rotate(15deg);
 }
 main .about .drop .contentsWrapper .glitters .item2 {
-  top: 0%;
+  top: -10%;
   left: 40%;
   transform: rotate(-10deg);
 }
@@ -659,7 +651,7 @@ main .skillTool .skill-wrapper {
   border-radius: 30px;
   padding: 32px 30px 30px 35px;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
@@ -682,7 +674,7 @@ main .skillTool .skill-wrapper .text-wrapper {
   transition: 0.3s;
 }
 main .project {
-  height: 80vw;
+  height: 70vw;
   width: 100%;
   margin: 100px auto 200px;
   padding: 100px 5vw;
@@ -692,7 +684,7 @@ main .project {
 main .project .backGroundColor {
   background-color: #FFFDF3;
   width: 130vw;
-  height: 80vw;
+  height: 70vw;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -717,7 +709,7 @@ main .project .title {
   font-size: 50px;
   color: #333;
   text-align: center;
-  padding: 200px 0 100px;
+  padding: 100px 0;
   opacity: 0;
 }
 main .project .project-container {
@@ -749,7 +741,7 @@ main .project .project-container .project-wrapper .text-wrapper h3 {
 }
 main .project .project-container .project-wrapper .text-wrapper p {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -761,7 +753,7 @@ main .project .project-container .project-wrapper .text-wrapper div {
   display: grid;
   place-items: center;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #89B2F4;
