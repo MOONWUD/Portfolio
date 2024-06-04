@@ -14,6 +14,8 @@ https://codepen.io/scottkellum/pen/WWeXab
 https://codepen.io/crioco/pen/wzLWEN
 https://codepen.io/Coderesting/pen/RwrgRWj (Y)
 
+https://codepen.io/osublake/pen/VwaKMpw/2152a28cffe2c2c0cca8a3e47f7b21c6?editors=0010
+
 - 마우스에 따라 흩어지는 이벤트
 https://codepen.io/gayane-gasparyan/pen/LYJEoZM
 
@@ -43,5 +45,8 @@ https://chpofo.tistory.com/47
 - gsap
 https://gsap.com/docs/v3/Plugins/DrawSVGPlugin
 ScrollTrigger, SplitText
+https://www.designkits.co.kr/blog/web-css/animation/GSAP-ScrollTrigger
+
+https://codepen.io/GreenSock/pen/YzyaKrq
 
 - Drop
