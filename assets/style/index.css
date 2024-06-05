@@ -665,34 +665,10 @@ main .skillTool .skill-wrapper .text-wrapper {
   transition: 0.3s;
 }
 main .project {
-  height: 60vw;
-  width: 100%;
-  margin: 100px auto 150px;
-  padding: 100px 5vw;
-  overflow: hidden;
-  position: relative;
-}
-main .project .backGroundColor {
+  border-radius: 500px;
+  margin: 100px 0;
   background-color: #FFFDF3;
-  width: 120vw;
-  height: 60vw;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main .project.show .title {
-  opacity: 1;
-}
-main .project.show .title .letter {
-  display: inline-block;
-  animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-}
-main .project.show .project-container {
-  opacity: 1;
-  transform: translateY(-30px);
+  padding: 50px 0 120px;
 }
 main .project .title {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -700,32 +676,71 @@ main .project .title {
   font-size: 50px;
   color: #333;
   text-transform: uppercase;
+  margin: 0 0 30px;
   text-align: center;
-  padding: 0 0 50px;
-  opacity: 0;
 }
-main .project .project-container {
-  opacity: 0;
-  transition: 0.5s;
+main .project .projectHorizontal {
+  overflow-x: hidden;
   display: flex;
   gap: 30px;
-  animation: project 35s linear infinite;
-  width: 3200px;
 }
-main .project .project-container .project-wrapper {
-  background-color: #fff;
+main .project .projectHorizontal .projectContainer .project-wrapper-text {
+  padding: 0 50px 0 120px;
+  width: 500px;
+  height: max(70vh, 500px);
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #333;
+  text-transform: uppercase;
+  color: #89B2F4;
+  display: grid;
+  grid-template-columns: 1fr 78px;
+  place-items: center;
+}
+main .project .projectHorizontal .projectContainer .project-wrapper-text img {
+  transition: 0.3s;
+  width: 60%;
+  animation: mov 1s infinite;
+}
+@keyframes mov {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: 2px;
+  }
+  40% {
+    margin-left: 5px;
+  }
+  50% {
+    margin-left: 8px;
+  }
+  60% {
+    margin-left: 10px;
+  }
+  90% {
+    margin-left: 5px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+main .project .projectHorizontal .projectContainer .project-wrapper {
+  margin: 0 auto;
   position: relative;
-  width: 400px;
-  height: 500px;
-  border: 1px solid rgba(137, 178, 244, 0.5);
+  width: 500px;
+  height: max(70vh, 500px);
+  border: 1px solid #89B2F4;
   border-radius: 30px;
-  padding: 50px 32px;
+  background-color: #fff;
+  padding: 50px 35px;
   box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
 }
-main .project .project-container .project-wrapper:hover .hoverImg {
-  display: block;
+main .project .projectHorizontal .projectContainer .project-wrapper:hover .hoverImg {
+  opacity: 1;
 }
-main .project .project-container .project-wrapper .text-wrapper h3 {
+main .project .projectHorizontal .projectContainer .project-wrapper a .text-wrapper h3 {
   font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
   font-size: 30px;
@@ -733,7 +748,7 @@ main .project .project-container .project-wrapper .text-wrapper h3 {
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-main .project .project-container .project-wrapper .text-wrapper p {
+main .project .projectHorizontal .projectContainer .project-wrapper a .text-wrapper p {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -741,30 +756,33 @@ main .project .project-container .project-wrapper .text-wrapper p {
   color: #333;
   margin-bottom: 20px;
 }
-main .project .project-container .project-wrapper .text-wrapper div {
-  width: 200px;
-  height: 40px;
-  display: grid;
-  place-items: center;
+main .project .projectHorizontal .projectContainer .project-wrapper a .text-wrapper div {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  color: #333;
   color: #89B2F4;
+  width: 180px;
+  height: 30px;
+  display: grid;
+  place-items: center;
   border: 1px solid #89B2F4;
   border-radius: 30px;
-  margin-top: 200px;
+  margin-top: 80%;
 }
-main .project .project-container .project-wrapper .hoverImg {
-  background-color: #89B2F4;
+main .project .projectHorizontal .projectContainer .project-wrapper a .hoverImg {
+  opacity: 0;
+  transition: 0.3s;
   position: absolute;
   top: 0;
   left: 0;
+  background-color: #89B2F4;
+  border: 1px solid #89B2F4;
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  display: none;
-  text-indent: -99999px;
+  text-indent: -9999px;
 }
 
 /************ 1400 */
