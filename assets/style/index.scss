@@ -746,7 +746,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       opacity: 0;
-      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+      box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.3);
 
       .subTitle {
         @include sectionSubTitle(#fff);
@@ -794,6 +794,7 @@ main {
       margin-left: 999px;
       transition: 1s;
       .projectContainer {
+        padding: 10px;
         .project-wrapper-text {
           padding: 0 50px 0 120px;
           width: 500px;
@@ -833,6 +834,7 @@ main {
           }
         }
         .project-wrapper {
+
           margin: 0 auto;
           position: relative;
           width: 500px;
@@ -841,7 +843,7 @@ main {
           border-radius: 30px;
           background-color: #fff;
           padding: 50px 35px;
-          box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+          box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.3);
           &:hover {
             .hoverImg {
               opacity: 1;

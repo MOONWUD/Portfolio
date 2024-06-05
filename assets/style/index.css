@@ -644,7 +644,7 @@ main .skillTool .skill-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   opacity: 0;
-  box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+  box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.3);
 }
 main .skillTool .skill-wrapper:hover {
   background-color: transparent;
@@ -703,6 +703,9 @@ main .project .projectHorizontal {
   margin-left: 999px;
   transition: 1s;
 }
+main .project .projectHorizontal .projectContainer {
+  padding: 10px;
+}
 main .project .projectHorizontal .projectContainer .project-wrapper-text {
   padding: 0 50px 0 120px;
   width: 500px;
@@ -754,7 +757,7 @@ main .project .projectHorizontal .projectContainer .project-wrapper {
   border-radius: 30px;
   background-color: #fff;
   padding: 50px 35px;
-  box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.5);
+  box-shadow: 5px 5px 10px rgba(206, 206, 206, 0.3);
 }
 main .project .projectHorizontal .projectContainer .project-wrapper:hover .hoverImg {
   opacity: 1;
