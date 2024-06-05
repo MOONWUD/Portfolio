@@ -670,7 +670,7 @@ main {
   .skillTool {
     padding: 50px 5vw 0;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     overflow: hidden;
     width: 100%;
 
@@ -757,7 +757,22 @@ main {
 
   /*===== project=====*/
   .project {
-    border-radius: 500px;
+    &.show {
+      .title {
+        opacity: 1;
+
+        .letter {
+          display: inline-block;
+          animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+      }
+     .projectHorizontal {
+      opacity: 1;
+      margin-left: 0;
+      }
+    }
+
+    border-radius: 2000px;
     margin: 100px 0;
     background-color: $subBgColor;
     padding: 50px 0 120px;
@@ -765,11 +780,15 @@ main {
       @include sectionTitle();
       margin: 0 0 30px;
       text-align: center;
+      opacity: 0;
     }
     .projectHorizontal {
-      overflow-x: hidden;
+      overflow: hidden;
       display: flex;
       gap: 30px;
+      opacity: 0;
+      margin-left: 999px;
+      transition: 1s;
       .projectContainer {
         .project-wrapper-text {
           padding: 0 50px 0 120px;

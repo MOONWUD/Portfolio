@@ -102,8 +102,16 @@ $(window).on('scroll', () => {
 
 /*===== project =====*/
 /*=== title ===*/
-/*=== 가로스크롤 ===*/
+$(window).on('scroll', () => {
+  let projectHt = $('.project').offset().top - 500;
+  if (scrollY > projectHt) {
+    $('.project').addClass('show');
 
+  } else {
+    $('.project').removeClass('show');
+  }
+})
+/*=== 가로스크롤 ===*/
 gsap.registerPlugin(ScrollTrigger);
 
 let sections = gsap.utils.toArray(".projectContainer");
