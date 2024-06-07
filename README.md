@@ -40,10 +40,7 @@
     `<body>`   
      `<!--===== js pluIgn =====-->`    
     `</body>`     
-  
-## SCSS
-   
-## JavaScript & jQuery
+
 
 # 스타일 가이드 #
   
