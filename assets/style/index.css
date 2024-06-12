@@ -879,7 +879,7 @@ main .project .projectHorizontal .projectContainer .project-wrapper a .hoverImg 
   }
 }
 /*********** 1000 */
-@media (max-width: 1001px) {
+@media (min-width: 500px) and (max-width: 1001px) {
   main {
     /*===== main =====*/
     /*===== about =====*/
@@ -940,4 +940,5 @@ main .project .projectHorizontal .projectContainer .project-wrapper a .hoverImg 
   main .project .title {
     padding: 0 0 30px;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+/*********** 430 *//*# sourceMappingURL=index.css.map */

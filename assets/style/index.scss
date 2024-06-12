@@ -1,13 +1,11 @@
 /*===== color =====*/
 $mainColor: #89B2F4;
-$subColor: #FFF6EA;
-$subLightColor: #FFEDD8;
+$pointColor: #FFB531;
 $subDarkColor: #32160f;
 $mainBgColor: #F5F4EC;
 $subBgColor: #FFFDF3;
 $textColor: #333;
 $subTextColor: #666;
-
 /*===== font =====*/
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
@@ -41,7 +39,7 @@ $subTextColor: #666;
   font-weight: 500;
   font-size: 30px;
   color: $color;
-  text-transform: uppercase;
+  text-transform: uppercase;    
 }
 
 @mixin sectionText ($color: $textColor) {
@@ -497,7 +495,7 @@ main {
             transform: translateY(0px);
             
             span {
-              background-color: #FFB531;
+              background-color: $pointColor;
               color: #fff;
             }
           }
@@ -724,13 +722,13 @@ main {
         color: $textColor;
         border: 1px solid $mainColor;
         .subTitle {
-          color: #FFB531;
+          color: $pointColor;
         }
         .text-wrapper {
 
           p {
             span {
-              color: #FFB531;
+              color: $pointColor;
             }
           }
         }
