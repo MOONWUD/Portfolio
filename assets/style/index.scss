@@ -801,7 +801,7 @@ main {
           @include sectionSubTitle();
           color: #89B2F4;
           display: grid;
-        grid-template-columns: 1fr 78px;
+          grid-template-columns: 1fr 78px;
           place-items: center;
           img {
             transition: 0.3s;
@@ -833,7 +833,6 @@ main {
           }
         }
         .project-wrapper {
-
           margin: 0 auto;
           position: relative;
           width: 500px;
