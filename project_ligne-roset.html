@@ -105,7 +105,7 @@
           </ul>
         </li>
         <li class="viewSite">
-          <a href="#">VIEW SITE</a>
+          <a href="https://moonwud.github.io/LIGNE-ROSET/" target="_blank">VIEW SITE</a>
         </li>
       </ul>
     </aside>
@@ -194,14 +194,63 @@
       </section>
 
 
-      <!--==== probloemSolution -->
-      <section class="probloemSolution contentSection">
+      <!--==== problemSolution -->
+      <section class="problemSolution contentSection">
         <h2 class="title">Problem & <br>
           Solution
         </h2>
         <div class="content">
-          <!-- 아직 !!!!!!!!!        
-          고민 필요....!!!  -->
+          <ul class="problemContainer">
+            <li class="problemWrapper">
+              <h3 class="subTitle">Problem <span>01</span></h3>
+              <p class="problem">jQuery로 fullpage를 구현하니까 scroll이 부드럽지 않다 !</p>
+              <p class="problemSub">
+                behavior: 'smooth'를  사용해 스크롤을 부드럽게 적용했으나 여전히 버벅거림 <br>
+                fullpage.js를 활용해보았지만, 다른 이벤트가 적용되지 않아 실패했음
+              </p>
+              <p class="solution">gsap ScrollTrigger와 ScrollToPlugin를 사용해 부드러운 fullpage 스타일 스크롤 구현완료 !</p>
+              <div class="solutionImg">
+                <img src="./assets/images/LigneRoset/solution1.png" alt="solutionImg">
+              </div>
+            </li>
+            <li class="problemWrapper">
+              <h3 class="subTitle">Problem <span>02</span></h3>
+              <p class="problem">한 요소가 두 sention을 이동하는 event를 구현하고자 했으나 무료플러그인의 한계로 구현 불가능 ! </p>
+              <p class="problemSub">
+                behavior: 'smooth'를  사용해 스크롤을 부드럽게 적용했으나 여전히 버벅거림 <br>
+                fullpage.js를 활용해보았지만, 다른 이벤트가 적용되지 않아 실패했음
+              </p>
+              <p class="solution">gsap ScrollTrigger를 활용해 한 요소인 것처럼 구현 완료 !</p>
+              <div class="solutionImg">
+                <img src="./assets/images/LigneRoset/solution2.png" alt="solutionImg">
+              </div>
+            </li>
+            <li class="problemWrapper">
+              <h3 class="subTitle">Problem <span>03</span></h3>
+              <p class="problem">hover 이벤트가 영역이 아닌 곳에서도 이벤트 발생하는 문제 발생 !</p>
+              <p class="problemSub">
+                behavior: 'smooth'를  사용해 스크롤을 부드럽게 적용했으나 여전히 버벅거림 <br>
+                fullpage.js를 활용해보았지만, 다른 이벤트가 적용되지 않아 실패했음
+              </p>
+              <p class="solution">부모요소에 hover 이벤트를 주지 않고, <br>
+                a태그에 직접적으로 스타일과 이벤트를 주어 정확한 영역 적용 !</p>
+              <div class="solutionImg">
+                <img src="./assets/images/LigneRoset/solution3.png" alt="solutionImg">
+              </div>
+            </li>
+            <li class="problemWrapper">
+              <h3 class="subTitle">Problem <span>04</span></h3>
+              <p class="problem">margin을 활용해 위아래 가운데 정렬을 맞췄으나 화면 크기에 따라 정렬이 무너진다 !</p>
+              <p class="problemSub">
+                behavior: 'smooth'를  사용해 스크롤을 부드럽게 적용했으나 여전히 버벅거림 <br>
+                fullpage.js를 활용해보았지만, 다른 이벤트가 적용되지 않아 실패했음
+              </p>
+              <p class="solution">display gird의 place-items의 center 값을 주어 어느 PC 사이즈에서도 가운데에 있도록 구현 완료 !</p>
+              <div class="solutionImg">
+                <img src="./assets/images/LigneRoset/solution4.png" alt="solutionImg">
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -223,12 +272,12 @@
             <li>처음 기획했던 100%를 완성하진 못했지만,<br>  
               더 많은 시간이 주어진다면 해결하지 못한 수 많은 숙제를 풀고 싶다는 마음이 크다.   </li>
           </ul>
-          <div class="workDaily">
-            <a href="https://github.com/MOONWUD/LIGNE-ROSET" target="_blank">
-              <p>더 많은 이야기가 궁금하다면 작업일지로</p>
-              <img src="./assets/images/arrow.png" alt="arrow">
-            </a>
-          </div>
+        </div>
+        <div class="workDaily">
+          <a href="https://github.com/MOONWUD/LIGNE-ROSET" target="_blank">
+            <p>더 많은 이야기가 궁금하다면 작업일지로</p>
+            <img src="./assets/images/arrow.png" alt="arrow">
+          </a>
         </div>
       </section>
 
