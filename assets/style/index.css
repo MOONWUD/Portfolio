@@ -817,65 +817,37 @@ main .project .projectHorizontal .projectContainer .project-wrapper a .hoverImg 
 }
 
 /************ 1400 */
-@media (min-width: 1000px) and (max-width: 1390px) {
+@media (min-width: 1000px) and (max-width: 1500px) {
   main {
     /*===== main =====*/
     /*===== about =====*/
-    /*===== skillTool =====*/
     /*===== project=====*/
   }
+  main .main {
+    padding-bottom: 300px;
+  }
   main .main .mainTitle-container {
-    font-size: 100px;
+    font-size: 130px;
   }
   main .about {
     /*=== Drop ===*/
   }
-  main .about .drop .backGroundColor {
-    border-radius: 0 0 50% 50%;
+  main .about .drop .contentsWrapper .text-wrapper .subTitle div {
+    font-size: 75px;
   }
-  main .about .drop .contentsWrapper {
-    top: 40%;
+  main .project.show .title {
+    opacity: 1;
   }
-  main .about .drop .contentsWrapper .glitters .item1 {
-    left: 15%;
+  main .project.show .title .letter {
+    display: inline-block;
+    animation: title 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   }
-  main .about .drop .contentsWrapper .glitters .item5 {
-    right: 15%;
+  main .project.show .projectHorizontal {
+    opacity: 1;
+    margin-left: 0;
   }
-  main .about .drop .contentsWrapper .glitters .glitter3 {
-    top: 55%;
-  }
-  main .about .drop .contentsWrapper .glitters .glitter4 {
-    top: 80%;
-    left: 80%;
-    transform: scale(0.5);
-    animation: glitter4 2s infinite;
-  }
-  @keyframes glitter4 {
-    50% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0.5);
-    }
-  }
-  main .about .drop .contentsWrapper .glitters .glitter6 {
-    top: 0%;
-  }
-  main .skillTool.show .skill2 {
-    transform: translateX(0px);
-  }
-  main .skillTool.show .skill1 {
-    transform: translateX(0px);
-  }
-  main .project {
-    height: 100vh;
-  }
-  main .project .backGroundColor {
-    height: 100vh;
-  }
-  main .project .title {
-    padding: 0 0 30px;
+  main .project .projectHorizontal .projectContainer .project-wrapper a .text-wrapper div {
+    margin-top: 50%;
   }
 }
 /*********** 1000 */

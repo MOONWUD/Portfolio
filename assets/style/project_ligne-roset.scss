@@ -1,0 +1,130 @@
+/*===== color =====*/
+$mainColor: #89B2F4;
+$pointColor: #FFB531;
+$subDarkColor: #32160f;
+$mainBgColor: #F5F4EC;
+$subBgColor: #FFFDF3;
+$textColor: #333;
+$subTextColor: #666;
+/*===== font =====*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+@mixin mainTitle {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', cursive;
+  font-size: 150px;
+  font-weight: 600;
+  color: $mainColor;
+  text-transform: uppercase;
+}
+
+@mixin sectionTitle ($color: $textColor) {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin aboutText ($color: $textColor) {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $color;
+}
+
+@mixin sectionSubTitle ($color: $textColor) {
+  font-family: "Kanit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: $color;
+  text-transform: uppercase;    
+}
+
+@mixin sectionText ($color: $textColor) {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color;
+}
+
+/*===== border-radius =====*/
+$borderRadius: 30px;
+
+/*===== animation =====*/
+@keyframes title {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes project {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-370px * 4))
+  }
+}
+
+@keyframes aboutTitle {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes item {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+// Breakpoints
+$breakpoint-mobile: 500px;
+$breakpoint-tablet: 1000px;
+$breakpoint-desktop: 1500px;
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile + 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
