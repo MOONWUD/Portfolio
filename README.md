@@ -47,8 +47,10 @@
 # 디렉토리 구성 #
 
 ## 240615_토
- - 스크롤에 따른 java event 작업
- - menu toggle 작업
+ - 스크롤에 따른 java event 작업     
+ - menu toggle 작업     
+   -> menuBtn과 menu 영역을 분리해서 작업했으나 매끄럽게 toggle이 작동하지 않는 문제 발생     
+   => html 전체를 수정하여 menuBtn과 menu를 한 wrapper로 묶었음
 
 ## 240614_금
  - 이미지 작업하기(애버파킹, 아더에러, 리네로제)    
