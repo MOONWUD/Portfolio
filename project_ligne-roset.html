@@ -36,6 +36,7 @@
   <script src="./assets/Js/jquery-3.7.1.min.js"></script>
   <script src="./assets/Js/jquery-ui.min.js"></script>
   <script defer src="./assets/Js/global.js"></script>
+  <script defer src="./assets/Js/projectGlobal.js"></script>
 
 </head>
 
@@ -48,29 +49,31 @@
   <!--===== header_nav =====-->
   <header>
     <div class="menuBtn">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="menu">
-      <div class="eyes">
-        <div class="eye left">
-          눈
-          <span class="pupil">눈동자</span>
+      <div class="menu">
+        <div class="eyes">
+          <div class="eye left">
+            눈
+            <span class="pupil">눈동자</span>
+          </div>
+          <div class="eye right">
+            눈
+            <span class="pupil">눈동자</span>
+          </div>
         </div>
-        <div class="eye right">
-          눈
-          <span class="pupil">눈동자</span>
-        </div>
+        <ul class="menuList">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">EVER PARKING</a></li>
+          <li><a href="#">ADERERROR</a></li>
+          <li><a href="#">LIGNE ROSET</a></li>
+          <li><a href="#">BRICKSAND</a></li>
+          <li><a href="#">PETHROOM</a></li>
+        </ul>
       </div>
-      <ul class="menuList">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">EVER PARKING</a></li>
-        <li><a href="#">ADERERROR</a></li>
-        <li><a href="#">LIGNE ROSET</a></li>
-        <li><a href="#">BRICKSAND</a></li>
-        <li><a href="#">PETHROOM</a></li>
-      </ul>
+      <div class="btnWrapper">
+        <div class="btn btn2"></div>
+        <div class="btn btn3"></div>
+        <div class="btn btn1"></div>
+      </div>
     </div>
   </header>
 
@@ -201,7 +204,7 @@
         </h2>
         <div class="content">
           <ul class="problemContainer">
-            <li class="problemWrapper">
+            <li class="problemWrapper problem1">
               <h3 class="subTitle">Problem <span>01</span></h3>
               <p class="problem">jQuery로 fullpage를 구현하니까 scroll이 부드럽지 않다 !</p>
               <p class="problemSub">
@@ -213,7 +216,7 @@
                 <img src="./assets/images/LigneRoset/solution1.png" alt="solutionImg">
               </div>
             </li>
-            <li class="problemWrapper">
+            <li class="problemWrapper problem2">
               <h3 class="subTitle">Problem <span>02</span></h3>
               <p class="problem">한 요소가 두 sention을 이동하는 event를 구현하고자 했으나 무료플러그인의 한계로 구현 불가능 ! </p>
               <p class="problemSub">
@@ -225,7 +228,7 @@
                 <img src="./assets/images/LigneRoset/solution2.png" alt="solutionImg">
               </div>
             </li>
-            <li class="problemWrapper">
+            <li class="problemWrapper problem3">
               <h3 class="subTitle">Problem <span>03</span></h3>
               <p class="problem">hover 이벤트가 영역이 아닌 곳에서도 이벤트 발생하는 문제 발생 !</p>
               <p class="problemSub">
@@ -238,7 +241,7 @@
                 <img src="./assets/images/LigneRoset/solution3.png" alt="solutionImg">
               </div>
             </li>
-            <li class="problemWrapper">
+            <li class="problemWrapper problem4">
               <h3 class="subTitle">Problem <span>04</span></h3>
               <p class="problem">margin을 활용해 위아래 가운데 정렬을 맞췄으나 화면 크기에 따라 정렬이 무너진다 !</p>
               <p class="problemSub">

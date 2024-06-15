@@ -1,6 +1,17 @@
 history.scrollRestoration = "manual"; // 새로고침 위치 기억
 
-/*===== 클릭시 이미지 생성  =====*/
+/*===== header =====*/
+let prevScroll = window.scrollY;
+$(window).on('scroll', () => {
+  let currentScroll = window.scrollY;
+  if (prevScroll > currentScroll) {
+    $('header').show();
+
+  } else {
+    $('header').hide();
+    prevScroll = currentScroll;
+  }
+})
 
 /*===== main  =====*/
 /*=== title ===*/

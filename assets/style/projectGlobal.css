@@ -38,47 +38,67 @@ header {
   top: 40px;
   right: 40px;
   position: fixed;
-  z-index: 99999;
+  z-index: 999999;
 }
 header .menuBtn {
-  transition: 0.3s;
+  z-index: 99999;
+}
+header .menuBtn.toggle .btnWrapper .btn {
+  z-index: 9999;
+}
+header .menuBtn.toggle .btnWrapper .btn1 {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  transform: rotate(-45deg);
+}
+header .menuBtn.toggle .btnWrapper .btn3 {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  transform: rotate(45deg);
+}
+header .menuBtn.toggle .btnWrapper .btn2 {
+  display: none;
+}
+header .menuBtn.toggle .menu {
+  top: -90px;
+  right: -90px;
+}
+header .menuBtn .btnWrapper {
+  position: absolute;
+  top: 0px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  z-index: 9999;
 }
-header .menuBtn.active div:first-child {
-  transform: rotate(-45deg);
-}
-header .menuBtn.active div:last-child {
-  transform: translateY(-10px) rotate(45deg);
-}
-header .menuBtn.active div:nth-child(2) {
-  display: none;
-}
-header .menuBtn:hover div {
+header .menuBtn .btnWrapper:hover .btn {
   background-color: #333;
 }
-header .menuBtn div {
+header .menuBtn .btnWrapper .btn {
+  transition: 0.3s;
   width: 40px;
   height: 5px;
   background-color: #89B2F4;
   border-radius: 5px;
   display: block;
+  z-index: 9999;
 }
-header .menu {
-  display: none;
+header .menuBtn .menu {
+  transition: 1s;
   width: 500px;
   height: 500px;
   border-radius: 50%;
   background-color: #FFFDF3;
   position: fixed;
-  top: -90px;
-  right: -90px;
+  top: -600px;
+  right: -600px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-header .menu .eyes {
+header .menuBtn .menu .eyes {
   position: absolute;
   top: 150px;
   left: 50px;
@@ -86,7 +106,7 @@ header .menu .eyes {
   display: flex;
   justify-content: center;
 }
-header .menu .eyes .eye {
+header .menuBtn .menu .eyes .eye {
   width: 60px;
   height: 70px;
   border-radius: 50%;
@@ -94,7 +114,7 @@ header .menu .eyes .eye {
   position: relative;
   overflow: hidden;
 }
-header .menu .eyes .eye .pupil {
+header .menuBtn .menu .eyes .eye .pupil {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -105,7 +125,7 @@ header .menu .eyes .eye .pupil {
   top: calc(50% - 5px - 2px);
   transition: all ease 0.1s;
 }
-header .menu .menuList {
+header .menuBtn .menu .menuList {
   position: absolute;
   top: 240px;
   left: 200px;
@@ -114,27 +134,27 @@ header .menu .menuList {
   text-align: end;
   gap: 10px;
 }
-header .menu .menuList li:first-child {
+header .menuBtn .menu .menuList li:first-child {
   margin-bottom: 10px;
 }
-header .menu .menuList li:first-child a {
+header .menuBtn .menu .menuList li:first-child a {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #89B2F4;
 }
-header .menu .menuList li a {
+header .menuBtn .menu .menuList li a {
   position: relative;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #FFB531;
 }
-header .menu .menuList li a:hover::after {
+header .menuBtn .menu .menuList li a:hover::after {
   content: "";
   width: 100%;
 }
-header .menu .menuList li a::after {
+header .menuBtn .menu .menuList li a::after {
   content: "";
   width: 0%;
   height: 10px;
@@ -267,10 +287,17 @@ main .contentsWrapper .mainImgItem img {
   z-index: 9999;
 }
 main .contentsWrapper .contentSection {
+  transition: 0.8s;
+  opacity: 0;
+  transform: translateY(-100px);
   padding: 0 50px 100px;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 60px 1fr;
+}
+main .contentsWrapper .contentSection.show {
+  opacity: 1;
+  transform: translateY(0px);
 }
 main .contentsWrapper .contentSection .title {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -387,11 +414,23 @@ main .contentsWrapper .publishing .content .publishingLIst li span {
   font-weight: 700;
 }
 main .contentsWrapper .problemSolution {
+  transition: 0.8s;
+  opacity: 0;
   grid-template-rows: 120px 1fr;
 }
+main .contentsWrapper .problemSolution.show .title {
+  opacity: 1;
+}
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 0.8s;
   border-left: 1px solid #666;
   padding: 0 0 80px 25px;
+}
+main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper.active {
+  opacity: 1;
+  transform: translateY(0px);
 }
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper .subTitle {
   margin-bottom: 20px;

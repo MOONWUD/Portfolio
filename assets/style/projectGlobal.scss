@@ -82,134 +82,157 @@ header {
   top: 40px;
   right: 40px;
   position: fixed;
-  z-index: 99999;
+  z-index: 999999;
 
   .menuBtn {
-    &.active {
-      div {
-        &:first-child {
-          transform: rotate(-45deg);
+    &.toggle {
+      .btnWrapper {
+        .btn {
+          z-index: 9999;
         }
 
-        &:last-child {
+        .btn1 {
+          position: absolute;
+          top: 10px;
+          right: 0px;
+          transform:  rotate(-45deg);
+        }
+        
+        .btn3 {
+          position: absolute;
+          top: 10px;
+          right: 0px;
 
-          transform: translateY(-10px) rotate(45deg);
+          transform: rotate(45deg);
         }
 
-        &:nth-child(2) {
+        .btn2 {
           display: none;
         }
       }
-    }
 
-    &:hover {
-      div {
-        background-color: $textColor;
+      .menu {
+        top: -90px;
+        right: -90px;
       }
+
     }
 
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    z-index: 9999;
-
-    div {
-      width: 40px;
-      height: 5px;
-      background-color: $mainColor;
-      border-radius: 5px;
-      display: block;
-    }
-  }
-
-  .menu {
-    display: none;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background-color: $subBgColor;
-    position: fixed;
-    top: -90px;
-    right: -90px;
-
-    .eyes {
+    z-index: 99999;
+    
+    .btnWrapper {
       position: absolute;
-      top: 150px;
-      left: 50px;
-      text-indent: -9999px;
-      display: flex;
-      justify-content: center;
-
-      .eye {
-        width: 60px;
-        height: 70px;
-        border-radius: 50%;
-        background-color: #fff;
-        position: relative;
-        overflow: hidden;
-
-        .pupil {
-          width: 25px;
-          height: 25px;
-          border-radius: 50%;
-          background-color: $subDarkColor;
-          display: block;
-          position: absolute;
-          left: calc(50% - 10px/2 - 2px);
-          top: calc(50% - 10px/2 - 2px);
-          transition: all ease .1s;
-        }
-      }
-    }
-
-    .menuList {
-      position: absolute;
-      top: 240px;
-      left: 200px;
+      top: 0px;
+      right: 0px;
       display: flex;
       flex-direction: column;
-      text-align: end;
-      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      &:hover {
+        .btn {
+          background-color: $textColor;
+        }
+      }
+      .btn {
+        transition: 0.3s;
+        width: 40px;
+        height: 5px;
+        background-color: $mainColor;
+        border-radius: 5px;
+        display: block;
+        z-index: 9999;
+        
+      }
+    }
 
-      li {
-        &:first-child {
-          margin-bottom: 10px;
+    .menu {
+      transition: 1s;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background-color: $subBgColor;
+      position: fixed;
+      top: -600px;
+      right: -600px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      .eyes {
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        text-indent: -9999px;
+        display: flex;
+        justify-content: center;
 
-          a {
-            @include Text($w_xl, 20px, $mainColor);
+        .eye {
+          width: 60px;
+          height: 70px;
+          border-radius: 50%;
+          background-color: #fff;
+          position: relative;
+          overflow: hidden;
+
+          .pupil {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: $subDarkColor;
+            display: block;
+            position: absolute;
+            left: calc(50% - 10px/2 - 2px);
+            top: calc(50% - 10px/2 - 2px);
+            transition: all ease .1s;
           }
         }
+      }
 
-        a {
-          &:hover {
-            &::after {
-              content: "";
-              width: 100%;
+      .menuList {
+        position: absolute;
+        top: 240px;
+        left: 200px;
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        gap: 10px;
+
+        li {
+          &:first-child {
+            margin-bottom: 10px;
+
+            a {
+              @include Text($w_xl, 20px, $mainColor);
             }
           }
 
-          position: relative;
+          a {
+            &:hover {
+              &::after {
+                content: "";
+                width: 100%;
+              }
+            }
 
-          &::after {
-            content: "";
-            width: 0%;
-            height: 10px;
-            background-color: rgba(255, 179, 49, 0.3);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            transition: 0.3s
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 0%;
+              height: 10px;
+              background-color: rgba(255, 179, 49, 0.3);
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transition: 0.3s
+            }
+
+            @include Text($w_xl, 20px, $pointColor);
           }
-
-          @include Text($w_xl, 20px, $pointColor);
         }
       }
     }
   }
 }
+
 
 
 /*======== main */
@@ -227,7 +250,7 @@ main {
     background-color: $subBgColor;
     display: grid;
     place-items: center;
-  
+
     .centerItem {
       .title {
         margin-bottom: 50px;
@@ -323,25 +346,36 @@ main {
       display: grid;
       place-items: center;
       margin-bottom: 60px;
+
       img {
         width: 70%;
         z-index: 9999;
       }
     }
 
-    
+
     /*=== contentsSection 공통 레이아웃 */
     .contentSection {
+      &.show {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      transition: 0.8s;
+      opacity: 0;
+      transform: translateY(-100px);
       padding: 0 50px 100px;
       display: grid;
       grid-template-columns: 300px 1fr;
       grid-template-rows: 60px 1fr;
+
       .title {
         @include Text($w_xl, $s_lg, $mainColor);
         line-height: 1;
         grid-column: 1 / 2;
         grid-row: 1/ 2;
       }
+
       .content {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
@@ -355,6 +389,7 @@ main {
       .content {
         padding-top: 10px;
         grid-row: 1 / 3;
+
         p {
           @include Text($w_md, $s_md, $textColor);
           line-height: 1.5;
@@ -369,15 +404,18 @@ main {
         .designContents_wrapper {
           li {
             margin-bottom: 40px;
+
             .subTitle {
               @include Text($w_md, $s_sm, $textColor);
               margin-bottom: 20px;
             }
           }
+
           .keyword {
             .keywordList {
               display: flex;
               gap: 20px;
+
               li {
                 transition: 0.3s;
                 max-width: 150px;
@@ -389,6 +427,7 @@ main {
                 @include Text($w_lg, $s_md, $textColor);
                 border-radius: 40px;
                 border: 1px solid transparent;
+
                 &:hover {
                   border: 1px solid $pointColor;
                   background-color: transparent;
@@ -396,15 +435,18 @@ main {
               }
             }
           }
+
           .color {
             .colorList {
               display: flex;
               gap: 25px;
+
               li {
                 text-align: center;
                 @include Text($w_md, $s_sm, $textColor);
                 max-width: 100px;
                 min-width: 50px;
+
                 img {
                   width: 100%;
                   margin-bottom: 10px;
@@ -412,11 +454,13 @@ main {
               }
             }
           }
+
           .font {
             .koFont {
               @include Text($w_xl, 30px, $textColor);
               margin-bottom: 10px;
             }
+
             .enFont {
               @include Text($w_xl, 30px, $textColor)
             }
@@ -435,8 +479,10 @@ main {
           gap: 15px;
           @include Text($w_md, $s_md, $textColor);
           padding-left: 25px;
+
           li {
             position: relative;
+
             &::after {
               content: "";
               width: 10px;
@@ -448,6 +494,7 @@ main {
               left: -25px;
               transform: translateY(-50%);
             }
+
             span {
               font-weight: $w_xl;
             }
@@ -459,16 +506,34 @@ main {
 
     /*=== problemSolution */
     .problemSolution {
+      &.show {
+        .title {
+          opacity: 1;
+        }
+      }
+
+      transition: 0.8s;
+      opacity: 0;
       grid-template-rows: 120px 1fr;
+
       .content {
         .problemContainer {
           .problemWrapper {
+            &.active {
+              opacity: 1;
+              transform: translateY(0px);
+            }
+
+            opacity: 0;
+            transform: translateY(-100px);
+            transition: 0.8s;
             border-left: 1px solid $subTextColor;
             padding: 0 0 80px 25px;
-            
+
             .subTitle {
               margin-bottom: 20px;
               @include Text($w_lg, 20px, $textColor);
+
               span {
                 @include Text($w_lg, 50px, $pointColor);
               }
@@ -486,10 +551,12 @@ main {
                 transform: translateY(-50%);
                 left: -31px;
               }
+
               position: relative;
               @include Text($w_lg, $s_md, $textColor);
               margin-bottom: 10px;
             }
+
             .problemSub {
               @include Text($w_sm, $s_sm, $subTextColor);
               margin-bottom: 40px;
@@ -508,6 +575,7 @@ main {
                 transform: translateY(-50%);
                 left: -31px;
               }
+
               position: relative;
               @include Text($w_md, $s_md, $textColor);
               margin-bottom: 20px;
@@ -520,9 +588,11 @@ main {
     /*=== review */
     .review {
       grid-template-rows: 60px 1fr 30px;
+
       .content {
         padding-top: 10px;
         grid-row: 1 / 3;
+
         .textWrapper {
           li {
             @include Text($w_md, $s_md, $textColor);
@@ -531,27 +601,34 @@ main {
         }
 
       }
+
       .workDaily {
         grid-row: 3 / 4;
         grid-column: 1 / 3;
+
         a {
           padding-top: 30px;
           display: flex;
           gap: 10px;
+
           p {
             @include Text($w_xl, $s_md, $textColor);
           }
+
           img {
             width: 20px;
             transition: 0.3s;
             animation: arrow 0.8s infinite;
+
             @keyframes arrow {
               0% {
                 transform: translate(0px, 0px);
               }
+
               50% {
                 transform: translate(4px, -4px);
               }
+
               100% {
                 transform: translate(0px, 0px);
               }

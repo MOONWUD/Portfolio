@@ -23,21 +23,6 @@ const emojiMov = () => {
 
 emojiMov();
 
-
-/*===== header =====*/
-let prevScroll = window.scrollY;
-$(window).on('scroll', () => {
-  let currentScroll = window.scrollY;
-  if (prevScroll > currentScroll) {
-    $('header').show();
-
-  } else {
-    $('header').hide();
-    prevScroll = currentScroll;
-  }
-})
-
-
 /*===== 눈알 굴러가는 이벤트 =====*/
 var eyeball = $(".pupil");
 
