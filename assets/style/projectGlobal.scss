@@ -45,23 +45,12 @@ $s_lg: 50px;
   font-weight: $weight;
   font-size: $size;
   color: $color;
+  line-height: 1.6;
 }
 
 
-/****** mouseEmoji ******/
-.logo-emoji {
-  width: 40px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  user-select: none;
-  will-change: transform;
-  z-index: 999999;
 
-  img {
-    width: 100%;
-  }
-}
+
 
 /*===== style =====*/
 *::selection {
@@ -226,6 +215,7 @@ header {
             }
 
             @include Text($w_xl, 20px, $pointColor);
+            line-height: 1.2;
           }
         }
       }
@@ -321,13 +311,26 @@ main {
           background-color: $mainColor;
           border: 1px solid $mainColor;
           @include Text($w_lg, 20px, #fff);
-          display: grid;
-          place-items: center;
           border-radius: 40px;
-
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.8s;
+          padding: 0 50px;
+          transition: 0.3s;
+          img {
+            height: 20px;
+            display: none;
+          }
           &:hover {
+            gap: 20px;
+            justify-content: space-between;
             background-color: transparent;
             color: $mainColor;
+            img {
+              display: block;
+            }
           }
         }
       }
@@ -345,11 +348,12 @@ main {
       height: 110vh;
       display: grid;
       place-items: center;
+      padding-bottom: 100px;
       margin-bottom: 60px;
 
       img {
         width: 70%;
-        z-index: 9999;
+        z-index: 9;
       }
     }
 
@@ -367,11 +371,11 @@ main {
       */
       padding: 0 50px 100px;
       display: grid;
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: 260px 1fr;
       grid-template-rows: 60px 1fr;
 
       .title {
-        @include Text($w_xl, $s_lg, $mainColor);
+        @include Text($w_xl, 40px, $mainColor);
         line-height: 1;
         grid-column: 1 / 2;
         grid-row: 1/ 2;
@@ -443,14 +447,37 @@ main {
               gap: 25px;
 
               li {
+                &:nth-child(1) {
+                  .colorChip {
+                    background-color: #F6F6F6;
+                  }
+                }
+                &:nth-child(2) {
+                  .colorChip {
+                    background-color: #ddd;
+                  }
+                }
+                &:nth-child(3) {
+                  .colorChip {
+                    background-color: #777;
+                  }
+                }
+                &:nth-child(4) {
+                  .colorChip {
+                    background-color: #222;
+                  }
+                }
                 text-align: center;
                 @include Text($w_md, $s_sm, $textColor);
                 max-width: 100px;
                 min-width: 50px;
 
-                img {
-                  width: 100%;
-                  margin-bottom: 10px;
+                .colorChip {
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 50%;
+                  box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.3 );
+                  margin-bottom: 15px;
                 }
               }
             }
@@ -559,12 +586,12 @@ main {
 
               position: relative;
               @include Text($w_lg, $s_md, $textColor);
-              margin-bottom: 10px;
+              margin-bottom: 15px;
             }
 
             .problemSub {
               @include Text($w_sm, $s_sm, $subTextColor);
-              margin-bottom: 40px;
+              margin-bottom: 50px;
             }
 
             .solution {

@@ -1,22 +1,6 @@
 @charset "UTF-8";
 /*===== color =====*/
 /*===== font =====*/
-/****** mouseEmoji ******/
-.logo-emoji {
-  width: 40px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  will-change: transform;
-  z-index: 999999;
-}
-.logo-emoji img {
-  width: 100%;
-}
-
 /*===== style =====*/
 *::-moz-selection {
   background-color: rgba(252, 134, 158, 0.5);
@@ -142,6 +126,7 @@ header .menuBtn .menu .menuList li:first-child a {
   font-weight: 700;
   font-size: 20px;
   color: #89B2F4;
+  line-height: 1.6;
 }
 header .menuBtn .menu .menuList li a {
   position: relative;
@@ -149,6 +134,8 @@ header .menuBtn .menu .menuList li a {
   font-weight: 700;
   font-size: 20px;
   color: #FFB531;
+  line-height: 1.6;
+  line-height: 1.2;
 }
 header .menuBtn .menu .menuList li a:hover::after {
   content: "";
@@ -189,12 +176,14 @@ main .aside_fixed .centerItem .title p {
   font-weight: 400;
   font-size: 16px;
   color: #89B2F4;
+  line-height: 1.6;
 }
 main .aside_fixed .centerItem .title h1 {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 50px;
   color: #89B2F4;
+  line-height: 1.6;
 }
 main .aside_fixed .centerItem .subText {
   margin-bottom: 50px;
@@ -202,6 +191,7 @@ main .aside_fixed .centerItem .subText {
   font-weight: 400;
   font-size: 16px;
   color: #333;
+  line-height: 1.6;
 }
 main .aside_fixed .centerItem .text {
   margin-bottom: 50px;
@@ -209,6 +199,7 @@ main .aside_fixed .centerItem .text {
   font-weight: 500;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
 }
 main .aside_fixed .centerItem .skill {
   margin-bottom: 100px;
@@ -218,6 +209,7 @@ main .aside_fixed .centerItem .skill p {
   font-weight: 500;
   font-size: 16px;
   color: #666;
+  line-height: 1.6;
   margin-bottom: 5px;
 }
 main .aside_fixed .centerItem .skill ul {
@@ -225,6 +217,7 @@ main .aside_fixed .centerItem .skill ul {
   font-weight: 500;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
   display: flex;
   gap: 20px;
   margin-bottom: 3px;
@@ -257,13 +250,28 @@ main .aside_fixed .centerItem .viewSite a {
   font-weight: 500;
   font-size: 20px;
   color: #fff;
-  display: grid;
-  place-items: center;
+  line-height: 1.6;
   border-radius: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  padding: 0 50px;
+  transition: 0.3s;
+}
+main .aside_fixed .centerItem .viewSite a img {
+  height: 20px;
+  display: none;
 }
 main .aside_fixed .centerItem .viewSite a:hover {
+  gap: 20px;
+  justify-content: space-between;
   background-color: transparent;
   color: #89B2F4;
+}
+main .aside_fixed .centerItem .viewSite a:hover img {
+  display: block;
 }
 main .contentsWrapper {
   /*=== mainImgItem */
@@ -280,11 +288,12 @@ main .contentsWrapper .mainImgItem {
   height: 110vh;
   display: grid;
   place-items: center;
+  padding-bottom: 100px;
   margin-bottom: 60px;
 }
 main .contentsWrapper .mainImgItem img {
   width: 70%;
-  z-index: 9999;
+  z-index: 9;
 }
 main .contentsWrapper .contentSection {
   /* &.show {
@@ -298,14 +307,15 @@ main .contentsWrapper .contentSection {
    */
   padding: 0 50px 100px;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 260px 1fr;
   grid-template-rows: 60px 1fr;
 }
 main .contentsWrapper .contentSection .title {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 40px;
   color: #89B2F4;
+  line-height: 1.6;
   line-height: 1;
   grid-column: 1/2;
   grid-row: 1/2;
@@ -323,6 +333,7 @@ main .contentsWrapper .objective .content p {
   font-weight: 400;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
   line-height: 1.5;
 }
 main .contentsWrapper .design .content .designContents_wrapper li {
@@ -333,6 +344,7 @@ main .contentsWrapper .design .content .designContents_wrapper li .subTitle {
   font-weight: 400;
   font-size: 16px;
   color: #333;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 main .contentsWrapper .design .content .designContents_wrapper .keyword .keywordList {
@@ -351,6 +363,7 @@ main .contentsWrapper .design .content .designContents_wrapper .keyword .keyword
   font-weight: 500;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
   border-radius: 40px;
   border: 1px solid transparent;
 }
@@ -368,18 +381,35 @@ main .contentsWrapper .design .content .designContents_wrapper .color .colorList
   font-weight: 400;
   font-size: 16px;
   color: #333;
+  line-height: 1.6;
   max-width: 100px;
   min-width: 50px;
 }
-main .contentsWrapper .design .content .designContents_wrapper .color .colorList li img {
-  width: 100%;
-  margin-bottom: 10px;
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(1) .colorChip {
+  background-color: #F6F6F6;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(2) .colorChip {
+  background-color: #ddd;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(3) .colorChip {
+  background-color: #777;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(4) .colorChip {
+  background-color: #222;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li .colorChip {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.3);
+  margin-bottom: 15px;
 }
 main .contentsWrapper .design .content .designContents_wrapper .font .koFont {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 30px;
   color: #333;
+  line-height: 1.6;
   margin-bottom: 10px;
 }
 main .contentsWrapper .design .content .designContents_wrapper .font .enFont {
@@ -387,6 +417,7 @@ main .contentsWrapper .design .content .designContents_wrapper .font .enFont {
   font-weight: 700;
   font-size: 30px;
   color: #333;
+  line-height: 1.6;
 }
 main .contentsWrapper .publishing .content .publishingLIst {
   display: flex;
@@ -396,6 +427,7 @@ main .contentsWrapper .publishing .content .publishingLIst {
   font-weight: 400;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
   padding-left: 25px;
 }
 main .contentsWrapper .publishing .content .publishingLIst li {
@@ -448,12 +480,14 @@ main .contentsWrapper .problemSolution .content .problemContainer .problemWrappe
   font-weight: 500;
   font-size: 20px;
   color: #333;
+  line-height: 1.6;
 }
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper .subTitle span {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
   font-size: 50px;
   color: #FFB531;
+  line-height: 1.6;
 }
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper .problem {
   position: relative;
@@ -461,7 +495,8 @@ main .contentsWrapper .problemSolution .content .problemContainer .problemWrappe
   font-weight: 500;
   font-size: 18px;
   color: #333;
-  margin-bottom: 10px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper .problem::after {
   content: "";
@@ -479,7 +514,8 @@ main .contentsWrapper .problemSolution .content .problemContainer .problemWrappe
   font-weight: 300;
   font-size: 16px;
   color: #666;
-  margin-bottom: 40px;
+  line-height: 1.6;
+  margin-bottom: 50px;
 }
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper .solution {
   position: relative;
@@ -487,6 +523,7 @@ main .contentsWrapper .problemSolution .content .problemContainer .problemWrappe
   font-weight: 400;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 main .contentsWrapper .problemSolution .content .problemContainer .problemWrapper .solution::after {
@@ -513,6 +550,7 @@ main .contentsWrapper .review .content .textWrapper li {
   font-weight: 400;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
   margin-bottom: 30px;
 }
 main .contentsWrapper .review .workDaily {
@@ -529,6 +567,7 @@ main .contentsWrapper .review .workDaily a p {
   font-weight: 700;
   font-size: 18px;
   color: #333;
+  line-height: 1.6;
 }
 main .contentsWrapper .review .workDaily a img {
   width: 20px;
