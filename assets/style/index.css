@@ -629,8 +629,8 @@ main .skillTool .skill1 {
   transform: translateX(-1000px);
 }
 main .skillTool .skill-wrapper {
+  transition: 0.8s;
   margin: 0 auto 30px;
-  transition: 0.3s;
   width: 800px;
   background-color: #89B2F4;
   border: 1px solid #89B2F4;
