@@ -98,9 +98,12 @@ $(window).on('scroll', () => {
 })
 
 */
-/*===== menuToggle */
-$(function () {
-  $('header .menuBtn').on('click', () => {
-    $('.menuBtn').toggleClass('toggle');
-  });
-});
+$(window).on('scroll', () => {
+  let upHt = $('main').offset().top + $('main').height() * 0.7;
+  if(scrollY > upHt ) {
+    $('.up').addClass('on')
+  } else {
+    $('.up').removeClass('on')
+
+  }
+})

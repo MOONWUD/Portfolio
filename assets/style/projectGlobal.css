@@ -17,139 +17,133 @@ body {
   background-color: #F5F4EC;
 }
 
+/*===== up */
+.up {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px #b9b9b9;
+}
+.up.on {
+  display: block;
+}
+.up img {
+  width: 40px;
+}
+.up:hover {
+  animation: up 0.5s infinite;
+}
+@keyframes up {
+  0% {
+    bottom: 43px;
+  }
+  50% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 43px;
+  }
+}
+
 /*===== header_nav */
 header {
-  top: 40px;
-  right: 40px;
   position: fixed;
-  z-index: 999999;
-}
-header .menuBtn {
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 99999;
 }
-header .menuBtn.toggle .btnWrapper .btn {
-  z-index: 9999;
-}
-header .menuBtn.toggle .btnWrapper .btn1 {
+header .home {
   position: absolute;
-  top: 10px;
-  right: 0px;
-  transform: rotate(-45deg);
+  top: -3px;
+  left: 20px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0px 0px 5px #89B2F4;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgba(137, 178, 244, 0.5);
+  padding: 20px 40px;
+  transition: 0.5s;
 }
-header .menuBtn.toggle .btnWrapper .btn3 {
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  transform: rotate(45deg);
+header .home:hover {
+  box-shadow: 0px 0px 1px #89B2F4;
+  border: 2px solid #89B2F4;
 }
-header .menuBtn.toggle .btnWrapper .btn2 {
-  display: none;
-}
-header .menuBtn.toggle .menu {
-  top: -90px;
-  right: -90px;
-}
-header .menuBtn .btnWrapper {
-  position: absolute;
-  top: 0px;
-  right: 0px;
+header .home a {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
-}
-header .menuBtn .btnWrapper:hover .btn {
-  background-color: #333;
-}
-header .menuBtn .btnWrapper .btn {
-  transition: 0.3s;
-  width: 40px;
-  height: 5px;
-  background-color: #89B2F4;
-  border-radius: 5px;
-  display: block;
-  z-index: 9999;
-}
-header .menuBtn .menu {
-  transition: 1s;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background-color: #FFFDF3;
-  position: fixed;
-  top: -600px;
-  right: -600px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-header .menuBtn .menu .eyes {
-  position: absolute;
-  top: 150px;
-  left: 50px;
-  text-indent: -9999px;
-  display: flex;
   justify-content: center;
-}
-header .menuBtn .menu .eyes .eye {
-  width: 60px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-header .menuBtn .menu .eyes .eye .pupil {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: #32160f;
-  display: block;
-  position: absolute;
-  left: calc(50% - 5px - 2px);
-  top: calc(50% - 5px - 2px);
-  transition: all ease 0.1s;
-}
-header .menuBtn .menu .menuList {
-  position: absolute;
-  top: 240px;
-  left: 200px;
-  display: flex;
-  flex-direction: column;
-  text-align: end;
   gap: 10px;
 }
-header .menuBtn .menu .menuList li:first-child {
-  margin-bottom: 10px;
+header .home a img {
+  width: 18px;
 }
-header .menuBtn .menu .menuList li:first-child a {
+header .home a p {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   color: #89B2F4;
   line-height: 1.6;
+  line-height: 0.8;
 }
-header .menuBtn .menu .menuList li a {
-  position: relative;
+header .menuWrapper {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: end;
+}
+header .menuWrapper:hover .menu {
+  display: block;
+}
+header .menuWrapper .btnWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 6px;
+}
+header .menuWrapper .btnWrapper .btn {
+  width: 35px;
+  height: 4px;
+  background-color: #89B2F4;
+  border-radius: 4px;
+}
+header .menuWrapper .btnWrapper .btn2 {
+  width: 30px;
+}
+header .menuWrapper .menu {
+  display: none;
+  transition: 0.8s;
+}
+header .menuWrapper .menu .menuList {
+  width: 200px;
+  text-align: end;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: #FFB531;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333;
   line-height: 1.6;
-  line-height: 1.2;
 }
-header .menuBtn .menu .menuList li a:hover::after {
+header .menuWrapper .menu .menuList li a {
+  position: relative;
+}
+header .menuWrapper .menu .menuList li a:hover::after {
   content: "";
   width: 100%;
 }
-header .menuBtn .menu .menuList li a::after {
+header .menuWrapper .menu .menuList li a::after {
   content: "";
-  width: 0%;
+  transition: 0.8s;
+  width: 0;
   height: 10px;
   background-color: rgba(255, 179, 49, 0.3);
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: 0.3s;
 }
 
 /*======== main */
@@ -260,6 +254,10 @@ main .aside_fixed .centerItem .viewSite a {
   padding: 0 50px;
   transition: 0.3s;
 }
+main .aside_fixed .centerItem .viewSite a:last-child {
+  background-color: transparent;
+  color: #89B2F4;
+}
 main .aside_fixed .centerItem .viewSite a img {
   height: 20px;
   display: none;
@@ -312,9 +310,9 @@ main .contentsWrapper .contentSection {
 }
 main .contentsWrapper .contentSection .title {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  color: #89B2F4;
+  font-weight: 500;
+  font-size: 30px;
+  color: #666;
   line-height: 1.6;
   line-height: 1;
   grid-column: 1/2;
@@ -553,35 +551,6 @@ main .contentsWrapper .review .content .textWrapper li {
   line-height: 1.6;
   margin-bottom: 30px;
 }
-main .contentsWrapper .review .workDaily {
-  grid-row: 3/4;
-  grid-column: 1/3;
-}
-main .contentsWrapper .review .workDaily a {
-  padding-top: 30px;
-  display: flex;
-  gap: 10px;
-}
-main .contentsWrapper .review .workDaily a p {
-  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
-}
-main .contentsWrapper .review .workDaily a img {
-  width: 20px;
-  transition: 0.3s;
-  animation: arrow 0.8s infinite;
-}
-@keyframes arrow {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(4px, -4px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
+main .contentsWrapper .review .content .textWrapper li span {
+  background-color: rgba(255, 179, 49, 0.4);
 }/*# sourceMappingURL=projectGlobal.css.map */
