@@ -356,14 +356,15 @@ main {
 
     /*=== contentsSection 공통 레이아웃 */
     .contentSection {
-      &.show {
+     /* &.show {
         opacity: 1;
         transform: translateY(0px);
       }
 
       transition: 0.8s;
       opacity: 0;
-      transform: translateY(-100px);
+      transform: translateY(-100px); 
+      */
       padding: 0 50px 100px;
       display: grid;
       grid-template-columns: 300px 1fr;
@@ -506,6 +507,7 @@ main {
 
     /*=== problemSolution */
     .problemSolution {
+      /*
       &.show {
         .title {
           opacity: 1;
@@ -514,11 +516,13 @@ main {
 
       transition: 0.8s;
       opacity: 0;
+      */
       grid-template-rows: 120px 1fr;
 
       .content {
         .problemContainer {
           .problemWrapper {
+            /*
             &.active {
               opacity: 1;
               transform: translateY(0px);
@@ -526,6 +530,7 @@ main {
 
             opacity: 0;
             transform: translateY(-100px);
+            */
             transition: 0.8s;
             border-left: 1px solid $subTextColor;
             padding: 0 0 80px 25px;

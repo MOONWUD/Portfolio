@@ -1,5 +1,6 @@
-/*===== scroll event */
-/*=== objective */
+/*
+// ===== scroll event 
+// === objective
 $(window).on('scroll', () => {
   let objectiveHt = $('main .contentsWrapper .objective').offset().top - 300;
   if (scrollY > objectiveHt) {
@@ -9,7 +10,7 @@ $(window).on('scroll', () => {
     $('.objective').removeClass('show');
   }
 })
-/*=== design */
+// === design 
 $(window).on('scroll', () => {
   let designHt = $('main .contentsWrapper .design').offset().top - 250;
   if (scrollY > designHt) {
@@ -19,7 +20,7 @@ $(window).on('scroll', () => {
     $('.design').removeClass('show');
   }
 })
-/*=== design */
+// === design 
 $(window).on('scroll', () => {
   let publishingHt = $('main .contentsWrapper .publishing').offset().top - 300;
   if (scrollY > publishingHt) {
@@ -29,9 +30,9 @@ $(window).on('scroll', () => {
     $('.publishing').removeClass('show');
   }
 })
-/*=== review */
+// === review 
 $(window).on('scroll', () => {
-  let reviewHt = $('main .contentsWrapper .review').offset().top - 300;
+  let reviewHt = $('main .contentsWrapper .review').offset().top - 500;
   if (scrollY > reviewHt) {
     $('.review').addClass('show');
     
@@ -39,7 +40,7 @@ $(window).on('scroll', () => {
     $('.review').removeClass('show');
   }
 })
-/*=== review */
+// === review 
 $(window).on('scroll', () => {
   let problemSolutionHt = $('main .contentsWrapper .problemSolution').offset().top - 300;
   if (scrollY > problemSolutionHt) {
@@ -49,7 +50,7 @@ $(window).on('scroll', () => {
     $('.problemSolution ').removeClass('show');
   }
 })
-/*===  problem */
+// ===  problem
 $(window).on('scroll', () => {
   let problemSolutionHt = $('main .contentsWrapper .problemSolution').offset().top - 300;
   if (scrollY > problemSolutionHt) {
@@ -96,7 +97,7 @@ $(window).on('scroll', () => {
   }
 })
 
-
+*/
 /*===== menuToggle */
 $(function () {
   $('header .menuBtn').on('click', () => {
