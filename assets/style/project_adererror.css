@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/*===== color =====*/
+/*===== font =====*/
+main .contentsWrapper {
+  /*===== mainImg */
+  /*===== contentSection 공통 레이아웃 */
+  /*===== part */
+  /*===== timeLine */
+  /*===== design */
+  /*===== review */
+}
+main .contentsWrapper .contentSection .content .listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 25px;
+}
+main .contentsWrapper .contentSection .content .listWrapper .listStyle {
+  position: relative;
+}
+main .contentsWrapper .contentSection .content .listWrapper .listStyle span {
+  font-weight: 700;
+}
+main .contentsWrapper .contentSection .content .listWrapper .listStyle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+}
+main .contentsWrapper .part {
+  grid-template-rows: 60px 1fr 30px;
+}
+main .contentsWrapper .part .content {
+  padding-top: 10px;
+  grid-row: 1/3;
+}
+main .contentsWrapper .part .content ul {
+  display: flex;
+  gap: 20px;
+}
+main .contentsWrapper .part .content ul li {
+  transition: 0.3s;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0 30px;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  border-radius: 40px;
+  border: 1px solid #333;
+  background-color: transparent;
+}
+main .contentsWrapper .part .content ul li:hover {
+  border: 1px solid transparent;
+  background-color: rgba(137, 178, 244, 0.4);
+}
+main .contentsWrapper .timeLine .content .timeLineWrapper {
+  margin-bottom: 40px;
+}
+main .contentsWrapper .timeLine .content .timeLineWrapper .subTitle {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+main .contentsWrapper .timeLine .content .timeLineWrapper .listWrapper {
+  padding-top: 20px;
+  margin-left: 5px;
+  border-left: 2px dotted rgba(255, 179, 49, 0.4);
+}
+main .contentsWrapper .timeLine .content .timeLineWrapper .listWrapper .listStyle {
+  position: relative;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+main .contentsWrapper .timeLine .content .timeLineWrapper .listWrapper .listStyle span {
+  font-weight: 700;
+  padding-right: 20px;
+}
+main .contentsWrapper .timeLine .content .timeLineWrapper .listWrapper .listStyle::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-top: 8px solid #FFB531;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -34.5px;
+}
+main .contentsWrapper .timeLine .content .resultWrapper .subTitle {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(1) .colorChip {
+  background-color: #FFFFFF;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(2) .colorChip {
+  background-color: #F3F3F3;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(3) .colorChip {
+  background-color: #0000C5;
+}
+main .contentsWrapper .design .content .designContents_wrapper .color .colorList li:nth-child(4) .colorChip {
+  background-color: #000000;
+}
+main .contentsWrapper .design .content .designContents_wrapper .font .text p span {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  padding-right: 10px;
+}
+main .contentsWrapper .review .content div {
+  margin-bottom: 40px;
+}
+main .contentsWrapper .review .content div .subTitle {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+main .contentsWrapper .review .content div .listWrapper .listStyle::after {
+  content: "";
+  top: 13px;
+  left: -25px;
+}
+main .contentsWrapper .review .content div .listWrapper .listStyle span {
+  font-weight: 700;
+}/*# sourceMappingURL=project_adererror.css.map */
