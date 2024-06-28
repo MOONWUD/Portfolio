@@ -41,6 +41,29 @@ main {
     .design {
       .content {
         .designContents_wrapper {
+          .keyword {
+            .keywordList {
+              display: flex;
+              gap: 20px;
+
+              li {
+                transition: 0.3s;
+                padding: 0 25px;
+                height: 40px;
+                display: grid;
+                place-items: center;
+                background-color: rgba(255, 179, 49, 0.30);
+                @include Text($w_lg, $s_md, $textColor);
+                border-radius: 40px;
+                border: 1px solid transparent;
+
+                &:hover {
+                  border: 1px solid $pointColor;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
           .color {
             .colorList {
               li {
@@ -85,34 +108,6 @@ main {
       }
     }
 
-    /*===== publishing */
-    .publishing {
-      .content {
-        padding-top: 20px;
-        grid-row: 1 / 3;
-        a {
-          display: flex;
-          gap: 15px;
-          p {
-            @include Text ($w_xl, 20px, $textColor );
-          }
-          img {
-            width: 20px;
-            height: 20px;
-            @keyframes move {
-             0% { transform: translateY(-10px); } 
-             20% { transform: translateY(-5px); } 
-             40% { transform: translateY(-2px); } 
-             50% { transform: translateY(0); } 
-             60% { transform: translateY(-2px); } 
-             80% { transform: translateY(-5px); } 
-             100% { transform: translateY(-10px); } 
-            }
-            animation: move 0.7s infinite;
-          }
-        }
-      }
-    }
 
     /*===== review */
     .review {
