@@ -1,5 +1,5 @@
 @import "./project_val.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 
@@ -422,13 +422,21 @@ main {
           }
 
           .font {
-            .koFont {
-              @include Text($w_xl, 30px, $textColor);
-              margin-bottom: 10px;
-            }
-
-            .enFont {
-              @include Text($w_xl, 30px, $textColor)
+            .text {
+              p {
+                @include Text($w_xl, 30px, $textColor);
+                margin-bottom: 10px;
+                span {
+                  @include Text($w_md, $s_sm, $subTextColor);
+                  display: inline-block;
+                  width: 80px;
+                }
+              }
+  
+              .enFont {
+                @include Text($w_xl, 30px, $textColor);
+                font-family: "Radio Canada Big", sans-serif;
+              }
             }
           }
         }
