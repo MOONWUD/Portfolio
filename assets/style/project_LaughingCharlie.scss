@@ -3,9 +3,9 @@
 
 main {
   .contentsWrapper {
+
     /*===== mainImg */
-    .mainImgItem {    
-    }
+    .mainImgItem {}
 
     /*===== contentSection 공통 레이아웃 */
     .contentSection {
@@ -16,12 +16,15 @@ main {
           gap: 15px;
           @include Text($w_md, $s_md, $textColor);
           padding-left: 25px;
+
           .listStyle {
-              position: relative;
-              span {
-                font-weight: $w_xl;
-              }
-              &::after {
+            position: relative;
+
+            span {
+              font-weight: $w_xl;
+            }
+
+            &::after {
               content: "";
               width: 10px;
               height: 10px;
@@ -64,6 +67,7 @@ main {
               }
             }
           }
+
           .color {
             .colorList {
               li {
@@ -72,11 +76,13 @@ main {
                     background-color: #00AD4D;
                   }
                 }
+
                 &:nth-child(2) {
                   .colorChip {
                     background-color: #FF2108;
                   }
                 }
+
                 &:nth-child(3) {
                   .colorChip {
                     background-color: #FFD100;
@@ -85,20 +91,24 @@ main {
               }
             }
           }
+
           .font {
             .text {
               p {
                 @include Text($w_xl, 30px, $textColor);
                 margin-bottom: 10px;
+
                 span {
                   @include Text($w_md, $s_sm, $subTextColor);
                   width: 100px;
                   display: inline-block;
                 }
               }
+
               .titleFont {
                 font-family: "Poetsen One", sans-serif;
               }
+
               .pointFont {
                 font-family: "Bagel Fat One", system-ui;
               }
@@ -108,16 +118,105 @@ main {
       }
     }
 
+    /*=== problemSolution */
+    .problemSolution {
+      /*
+          &.show {
+            .title {
+              opacity: 1;
+            }
+          }
+    
+          transition: 0.8s;
+          opacity: 0;
+          */
+      grid-template-rows: 120px 1fr;
+
+      .content {
+        .problemContainer {
+          .problemWrapper {
+            /*
+                &.active {
+                  opacity: 1;
+                  transform: translateY(0px);
+                }
+    
+                opacity: 0;
+                transform: translateY(-100px);
+                */
+            transition: 0.8s;
+            border-left: 1px solid $subTextColor;
+            padding: 0 0 80px 25px;
+
+            .subTitle {
+              margin-bottom: 20px;
+              @include Text($w_lg, 20px, $textColor);
+
+              span {
+                @include Text($w_lg, 50px, $pointColor);
+              }
+            }
+
+            .problem {
+              &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $subTextColor;
+                position: absolute;
+                top: 15px;
+                // transform: translateY(-50%);
+                left: -31px;
+              }
+
+              position: relative;
+              @include Text($w_lg, $s_md, $textColor);
+              margin-bottom: 15px;
+            }
+
+            .problemSub {
+              @include Text($w_sm, $s_sm, $subTextColor);
+              margin-bottom: 50px;
+            }
+
+            .solution {
+              &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid $subTextColor;
+                background-color: $mainBgColor;
+                position: absolute;
+                top: 15px;
+                left: -31px;
+              }
+
+              span {
+                @include Text($w_sm, $s_sm, $subTextColor);
+              }
+
+              position: relative;
+              @include Text($w_md, $s_md, $textColor);
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
 
     /*===== review */
     .review {
       .content {
         div {
           margin-bottom: 40px;
+
           .subTitle {
             @include Text($w_md, $s_sm, $textColor);
             margin-bottom: 20px;
           }
+
           .listWrapper {
             .listStyle {
               &::after {
@@ -125,6 +224,7 @@ main {
                 top: 13px;
                 left: -25px;
               }
+
               span {
                 font-weight: $w_xl;
               }

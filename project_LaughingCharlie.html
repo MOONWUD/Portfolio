@@ -92,11 +92,12 @@
           <ul>
             <li># SCSS</li>
             <li># GSAP</li>
-            <li># Media Query</li>
+            <li># MediaQuery</li>
           </ul>
           <ul>
             <li># JavaScript</li>
             <li># jQuery</li>
+            <li># Swiper</li>
           </ul>
         </li>
         <li class="viewSite">
@@ -182,11 +183,13 @@
         <h2 class="title">Publishing</h2>
         <div class="content">
           <ul class="publishingLIst">
-            <li><span>GSAP</span> ScrollTo와 ScrollTrigger를 fullpage를 구현</li>
+            <li><span>GSAP</span> ScrollTrigger를 활용한 다양한 스크롤 이벤트</li>
             <li><span>SCSS</span>의 @mixin과 @include 활용</li>
             <li>gird와 flex를 활용해 레이아웃 제작 / 제어</li>
             <li>css animation을 활용해 다양한 움직임 적용</li>
-            <li><span>Media Query</span>를 활용한 <span>반응형</span> 웹페이지 구현</li>
+            <li><span>MediaQuery</span>를 활용한 <span>반응형</span> 웹페이지 구현</li>
+            <li>PC : <span>1920px</span>기준 최적화</li>
+            <li>Mobile : <span>430px</span>기준 최적화</li>
           </ul>
         </div>
       </section>
@@ -201,52 +204,86 @@
           <ul class="problemContainer">
             <li class="problemWrapper problem1">
               <h3 class="subTitle">Problem <span>01</span></h3>
-              <p class="problem">jQuery로 fullpage를 구현하니까 scroll이 부드럽지 않다 !</p>
-              <p class="problemSub">
-                behavior: 'smooth'를  사용해 스크롤을 부드럽게 적용했으나 여전히 버벅거림 <br>
-                fullpage.js를 활용해보았지만, 다른 이벤트가 적용되지 않아 실패했음
+              <p class="problem">header 배경에 blur처리를 하고 싶어 filter를 활용하면 <br>
+                배경이 아니라 전체에 blur가 씌워짐 !
               </p>
-              <p class="solution">gsap ScrollTrigger와 ScrollToPlugin를 사용해 부드러운 fullpage 스타일 스크롤 구현완료 !</p>
+              <p class="problemSub">
+                새로운 bg 영역을 만들어 blur처리 했지만 자연스럽지 않음
+              </p>
+              <p class="solution">잠시 잊고 있었던 backdrop filter의 blur를 활용하였더니 원하는 느낌을 줘 해결 !</p>
               <div class="solutionImg">
-                <img src="./assets/images/LigneRoset/solution1.png" alt="solutionImg">
+                <img src="./assets/images/LaughingCharlie/p1.png" alt="solutionImg">
               </div>
             </li>
             <li class="problemWrapper problem2">
               <h3 class="subTitle">Problem <span>02</span></h3>
-              <p class="problem">한 요소가 두 sention을 이동하는 event를 구현하고자 했으나 무료플러그인의 한계로 구현 불가능 ! </p>
-              <p class="problemSub">
-                transform을 이용해서 두 section의 겹치는 요소가 viewport같은 위치에 있도록 구현했지만<br>
-                여전히 어색하여 요소가 스르륵 이동하게 구현하는 방법을 고려
+              <p class="problem">Main 이미지 위에 텍스트를 고정하기 위해서<br>
+                position을 활용하니 알 수 없는 이유로 레이아웃이 무너진다 !
               </p>
-              <p class="solution">gsap ScrollTrigger를 활용해 한 요소인 것처럼 구현 완료 !</p>
+              <p class="problemSub">
+                각 이미지와 텍스트를 감싸는 요소를 만들어서 처리했지만 여전히 무너짐
+              </p>
+              <p class="solution">grid를 활용해 이미지와 텍스트를 같은 선상에 있도록 만들어 해결 !</p>
               <div class="solutionImg">
-                <img src="./assets/images/LigneRoset/solution2.png" alt="solutionImg">
+                <img src="./assets/images/LaughingCharlie/p2.png" alt="solutionImg">
               </div>
             </li>
             <li class="problemWrapper problem3">
               <h3 class="subTitle">Problem <span>03</span></h3>
-              <p class="problem">hover 이벤트가 영역이 아닌 곳에서도 이벤트 발생하는 문제 발생 !</p>
+              <p class="problem">자연스러운 가로 드래그가 이어지지 않는 문제 발생 !</p>
               <p class="problemSub">
-                같은 버튼 스타일을 사용하였지만, 하나만 이상하게 제대로 작동하지 않아 원인을 찾음 <br>
-                a태그를 감싸고 있는 부모요소에 margin: 0 auto;를 줘 가운데 정렬한 것이 원인.<br>
-                문제가 되는 버튼에만 margin값을 초기화
+                여러 클릭 드래그를 구현했지만, 실패했음<br>
+                아마 내가 구성한 css에 근본적인 문제가 있을 것으로 추정
               </p>
-              <p class="solution">부모요소에 hover 이벤트를 주지 않고, <br>
-                a태그에 직접적으로 스타일과 이벤트를 주어 정확한 영역 적용 !</p>
+              <p class="solution">클릭 드래그에서 벗어나 스와이퍼를 이용하여 해결 !</p>
               <div class="solutionImg">
-                <img src="./assets/images/LigneRoset/solution3.png" alt="solutionImg">
+                <img src="./assets/images/LaughingCharlie/p3.png" alt="solutionImg">
               </div>
             </li>
             <li class="problemWrapper problem4">
               <h3 class="subTitle">Problem <span>04</span></h3>
-              <p class="problem">margin을 활용해 위아래 가운데 정렬을 맞췄으나 화면 크기에 따라 정렬이 무너진다 !</p>
-              <p class="problemSub">
-                미디어쿼리를 활용해 맞추려고 했으나<br>
-                다양한 PC사이즈를 감당할 수 없었음
+              <p class="problem">pc header와 달리 mo header에는 스와이퍼를 넣으려 하니 <br>
+                전체적인 레이아웃이 무너짐
               </p>
-              <p class="solution">display gird의 place-items의 center 값을 주어 어느 PC 사이즈에서도 가운데에 있도록 구현 완료 !</p>
+              <p class="problemSub">
+                jQuery를 활용한 미디어쿼리를 사용하니 새로고침이 필수이며,<br>
+                자연스럽지 않은 움직임이 문제임
+              </p>
+              <p class="solution">pc와 mo을 따로 만들어서 해결<br>
+                <span>( 근본적으로 mo를 먼저 작업하지 않은 것이 문제라 판단 )</span>
+              </p>
               <div class="solutionImg">
-                <img src="./assets/images/LigneRoset/solution4.png" alt="solutionImg">
+                <img src="./assets/images/LaughingCharlie/p4.png" alt="solutionImg">
+              </div>
+            </li>
+            <li class="problemWrapper problem5">
+              <h3 class="subTitle">Problem <span>05</span></h3>
+              <p class="problem">작은 사이즈의 기기(13인치 노트북)로 접속했을 때<br>
+                text nowrap이 활성화되지 않고 줄바꿈 되는 문제 발생 !
+              </p>
+              <p class="solution">
+                요소의 전체적인 가로 사이즈를 늘려 해결
+              </p>
+              <div class="solutionImg">
+                <img src="./assets/images/LaughingCharlie/p5.png" alt="solutionImg">
+              </div>
+            </li>
+            <li class="problemWrapper problem6">
+              <h3 class="subTitle">Problem <span>06</span></h3>
+              <p class="problem">
+                walk section과 pogle section에 스와이퍼를<br>
+                버튼이 있을 때만 활성화 시키려고 prependTo()와 appendTo()를 활용하여<br>
+                구현하였지만 움직임이 부드럽지 않음 !
+              </p>
+              <p class="problemSub">
+                jQuery를 활용한 미디어쿼리를 사용하니 새로고침이 필수이며,<br>
+                자연스럽지 않은 움직임이 문제임
+              </p>
+              <p class="solution">java의 animate를 이용해 marginLeft로 움직이고,<br>
+                버튼이 2번만 활성화되게 설정 !
+              </p>
+              <div class="solutionImg">
+                <img src="./assets/images/LaughingCharlie/p6.png" alt="solutionImg">
               </div>
             </li>
           </ul>
@@ -260,25 +297,28 @@
         <div class="content">
           <ul class="textWrapper">
             <li>
-              이번 프로젝트는 작업일지와 변수, 가이드라인을 더욱 꼼꼼하게 작업했다.<br>     
+              이번 프로젝트는 <span>작업일지와 변수, 가이드라인</span>을 더욱 <span>꼼꼼하게 작업</span>했다.<br>     
               새로운 프로젝트에 들어갈 때마다 치밀해지는 나를 발견할 수 있었다.<br>              
               저번 작업 초기에 고려하지 못한 부분이 나중에<br>             
-              큰 걸림돌이 되었던 것을 기록, 기억해 매번 더 나은 나로 성장하고 있다.  
+              큰 걸림돌이 되었던 것을 <span>기록, 기억</span>해 매번 더 나은 나로 성장하고 있다.  
+            </li>
+            <li>
+              테블릿을 디자인하지 않았다는 내용 추가 ! 
             </li>
             <li>
               다만 아쉬운 점은 반응형 웹을 구현할 때 모바일 먼저 작업하지 못한 것이다.<br>             
-              하지만 이번 작업을 통해서 모바일을 먼저 작업하는 이유를 명확하게 알았고,<br>             
+              하지만 이번 작업을 통해서 <span>모바일을 먼저 작업하는 이유</span>를 명확하게 알았고,<br>             
               다음번에는 같은 실수를 반복하지 않을 것이다. 
             </li>
             <li>
               반응형을 작업하면서 가장 힘들었던 점은<br>           
               변화하는 사이즈에 대응하여 단위 고려해야한다는 것이다.<br>             
               세세하게 분기점을 둬 작업할 순 없는 일이다.<br>              
-              유연한 단위를 사용하는 것이 가장 중요하다 느꼈다. 
+              <span>유연한 단위를 사용</span>하는 것이 가장 중요하다 느꼈다. 
             </li>
             <li>
               이번 프로젝트는 애정을 담아 즐겁게 작업했다.<br>          
-              좋아하는 일을 할 때 능률이 월등히 높다.<br> 
+              <span>좋아하는 일을 할 때 능률이 월등히 높다.</span><br> 
               나에게 떨어진 과업이 설령 좋지 않다하더라도<br>
               그 순간만큼은 사랑에 빠진 것처럼 몰입해야겠다 생각했다.<br>
             </li>
