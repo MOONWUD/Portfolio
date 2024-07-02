@@ -794,6 +794,7 @@ main .project .projectHorizontal .projectContainer .project-wrapper a .text-wrap
   margin-top: 80%;
 }
 main .project .projectHorizontal .projectContainer .project-wrapper a .hoverImg {
+  overflow: hidden;
   padding: 50px 35px;
   opacity: 0;
   transition: 0.3s;
@@ -814,6 +815,12 @@ main .project .projectHorizontal .projectContainer .project-wrapper a .hoverImg 
   text-transform: uppercase;
   margin-bottom: 50px;
   color: #fff;
+}
+main .project .projectHorizontal .projectContainer .project-wrapper a .iphone img {
+  width: 120%;
+}
+main .project .projectHorizontal .projectContainer .project-wrapper a .macbook img {
+  width: 100%;
 }
 
 /************ 1400 */

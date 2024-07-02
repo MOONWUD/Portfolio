@@ -870,6 +870,7 @@ main {
               }
             }
             .hoverImg {
+              overflow: hidden;
               padding: 50px 35px; 
               opacity: 0;
               transition: 0.3s;
@@ -885,6 +886,16 @@ main {
                 @include sectionSubTitle();
                 margin-bottom: 50px;
                 color: #fff;
+              }
+            }
+            .iphone {
+              img {
+                width: 120%;
+              }
+            }
+            .macbook {
+              img {
+                width: 100%;
               }
             }
           }
