@@ -164,7 +164,7 @@ header .menuWrapper .menu .menuList li a::after {
 /*======== main */
 main {
   display: grid;
-  grid-template-columns: minmax(300px, 500px) 1fr;
+  grid-template-columns: minmax(400px, 500px) 1fr;
   /*===== aside_fixed */
   /*===== contentsWrapper */
 }
@@ -176,6 +176,7 @@ main .aside_fixed {
   background-color: #FFFDF3;
   display: grid;
   place-items: center;
+  padding: 0 50px;
 }
 main .aside_fixed .centerItem .title {
   margin-bottom: 50px;
@@ -193,6 +194,7 @@ main .aside_fixed .centerItem .title h1 {
   font-size: 50px;
   color: #89B2F4;
   line-height: 1.6;
+  line-height: 1;
 }
 main .aside_fixed .centerItem .subText {
   margin-bottom: 50px;
@@ -303,6 +305,7 @@ main .contentsWrapper .mainImgItem {
   place-items: center;
   padding-bottom: 100px;
   margin-bottom: 60px;
+  overflow: hidden;
 }
 main .contentsWrapper .mainImgItem img {
   width: 70%;

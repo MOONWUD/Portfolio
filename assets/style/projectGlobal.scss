@@ -162,7 +162,7 @@ header {
 /*======== main */
 main {
   display: grid;
-  grid-template-columns: minmax(300px, 500px) 1fr;
+  grid-template-columns: minmax(400px, 500px) 1fr;
 
 
   /*===== aside_fixed */
@@ -174,17 +174,18 @@ main {
     background-color: $subBgColor;
     display: grid;
     place-items: center;
-
+    padding: 0 50px;
     .centerItem {
       .title {
         margin-bottom: 50px;
 
         p {
-          @include Text($w_md, $s_sm, $mainColor)
+          @include Text($w_md, $s_sm, $mainColor);
         }
 
         h1 {
-          @include Text($w_xl, $s_lg, $mainColor)
+          @include Text($w_xl, $s_lg, $mainColor);
+          line-height: 1;
         }
       }
 
@@ -288,7 +289,7 @@ main {
       place-items: center;
       padding-bottom: 100px;
       margin-bottom: 60px;
-
+      overflow: hidden;
       img {
         width: 70%;
         z-index: 9;

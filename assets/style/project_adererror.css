@@ -48,6 +48,7 @@ main .contentsWrapper .part .content {
 }
 main .contentsWrapper .part .content ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 main .contentsWrapper .part .content ul li {
