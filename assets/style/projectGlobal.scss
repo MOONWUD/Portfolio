@@ -383,11 +383,12 @@ main {
           .color {
             .colorList {
               display: flex;
-              gap: 25px;
+              
 
               li {
                 &:nth-child(1) {
                   .colorChip {
+                    border-radius: 30px 0 0 30px;
                     background-color: #F6F6F6;
                   }
                 }
@@ -406,15 +407,19 @@ main {
                     background-color: #222;
                   }
                 }
+                &:last-child {
+                  .colorChip {
+                    border-radius: 0 30px 30px 0;
+                  }
+                }
                 text-align: center;
                 @include Text($w_md, $s_sm, $textColor);
                 max-width: 100px;
                 min-width: 50px;
 
                 .colorChip {
-                  width: 80px;
-                  height: 80px;
-                  border-radius: 50%;
+                  width: 100px;
+                  height: 50px;
                   box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.3 );
                   margin-bottom: 15px;
                 }
