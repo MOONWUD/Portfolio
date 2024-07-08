@@ -90,6 +90,7 @@ header .home a p {
   line-height: 0.8;
 }
 header .menuWrapper {
+  cursor: pointer;
   position: absolute;
   top: 30px;
   right: 40px;
